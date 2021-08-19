@@ -5,6 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 65px 0 100px;
+    &.p0{
+      padding: 0;
+    }
   }
   &__title{
     grid-column: 2/ 4;

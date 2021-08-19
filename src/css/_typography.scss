@@ -94,6 +94,11 @@
   font-size: 60px;
   line-height: 1.3;
 }
+.text-11 {
+  @extend %g-400;
+  font-size: 50px;
+  line-height: 1.3;
+}
 
 .text-gold {
   background-image: linear-gradient(90deg, rgba(238, 206, 131, 1) 0%, rgba(200, 162, 55, 1) 18%, rgba(255, 222, 135, 1) 37%, rgba(206, 169, 64, 1) 52%, rgba(200, 162, 55, 1) 54%, rgba(215, 174, 68, 1) 75%, rgba(162, 106, 13, 1) 95%);
@@ -118,6 +123,18 @@
 .title-3 {
   @extend %g-700;
   font-size: 25px;
+  line-height: 1.3;
+}
+
+
+.title-10 {
+  @extend %g-700;
+  font-size: 40px;
+  line-height: 1.3;
+}
+.title-9 {
+  @extend %g-700;
+  font-size: 45px;
   line-height: 1.3;
 }
 
@@ -181,6 +198,12 @@
 .color-grey {
   color: #C5C5C5;
 }
+.color-7{
+  color: #777777;
+}
+.colorfff{
+  color: #ffffff;
+}
 .text-hover-gradient {
   transition: all .3s;
 }
@@ -204,4 +227,7 @@
 
 .pl-19{
   padding-left: 19px;
+}
+.linh15{
+  line-height: 1.5;
 }

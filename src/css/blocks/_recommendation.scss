@@ -1,0 +1,20 @@
+.recommendation {
+  grid-column: 1 / 6;
+
+  &__inner {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 46x 0
+
+  }
+  &__slider {
+    grid-column: 2/6;
+    margin-top: 91px;
+  }
+  &__title{
+    grid-column: 2/5;
+  }
+
+
+}

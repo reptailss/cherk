@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.slider-nav {
+.slider-apartment .slider-nav {
   overflow: hidden;
   width: 100px;
   flex-shrink: 0;
@@ -50,14 +50,12 @@
 
 }
 
-.slider-nav .swiper-slide {
+.slider-apartment .slider-nav .swiper-slide {
   width: 100px;
-  height: 100px;
+  height: 100px!important;
 }
 
-//.slider-nav .swiper-slide img {
-//  max-height: 100%;
-//}
+
 
 .swiper-scrollbar {
   background-color: rgba(#ffff, .2);

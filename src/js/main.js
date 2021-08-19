@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     })
 
+    // id for svg
     function randomInteger(min, max) {
-        // случайное число от min до (max+1)
         let rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);
     }
@@ -47,13 +47,16 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).toggleClass('active-hover');
     })
 
+// slider
+
+
 
     function swiperAppartment() {
         let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
 
         sliderWrapperGalerry.forEach(item => {
 
-            let mySwiperNav = new Swiper(item.querySelector('.slider-nav'), {
+           let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
                 slidesPerView: 4,
                 spaceBetween: 0,
                 loopedSlides: 4,
@@ -72,33 +75,72 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             })
-            let mySwiper = new Swiper(item.querySelector('.slider-main'), {
-                autoHeight: true,
+            let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
+                 calculateHeight:true,
                 spaceBetween: 0,
                 loop: true,
                 loopedSlides: 5,
                 thumbs: {
-                    swiper: mySwiperNav,
+                    swiper: swiperAprtNav,
                 },
 
 
             })
 
-            mySwiper.update();
-            mySwiperNav.update();
+
         })
     }
 
     swiperAppartment();
 
+
+    function swiperAppartmentCard() {
+        let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-card-js');
+
+        sliderWrapperGalerry.forEach(item => {
+
+            let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
+                slidesPerView: 4,
+                spaceBetween: 0,
+                loopedSlides: 4,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                loop: false,
+                direction: 'vertical',
+                scrollbar: {
+                    el: item.querySelector('.swiper-scrollbar'),
+                    draggable: true,
+
+
+                },
+                autoHeight: true,
+
+
+            })
+            let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
+                calculateHeight:true,
+                spaceBetween: 0,
+                loop: true,
+                loopedSlides: 5,
+                thumbs: {
+                    swiper: swiperAprtNav,
+                },
+
+
+            })
+
+            swiperAprtMain.update();
+            swiperAprtNav.update();
+        })
+    }
     function reinitSwiper(swiper) {
         setTimeout(function () {
             swiper.update();
         }, 500);
     }
 
-    reinitSwiper(swiperAppartment());
-
+    swiperAppartmentCard();
 
     function swiperFeedback() {
         let sliderWrapperGalerry2 = document.querySelectorAll('.slider-feedback-js');
@@ -126,7 +168,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     swiperFeedback();
 
-
     function swiperCrew() {
         let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-js');
 
@@ -151,16 +192,78 @@ window.addEventListener('DOMContentLoaded', () => {
 
     swiperCrew();
 
+    function swiperCardAppartment() {
+        let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
 
-    $('.tabs-wrapper').each(function () {
-        let ths = $(this);
-        ths.find('.tab-item').not(':first').hide();
-        ths.find('.tab').click(function () {
-            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-        }).eq(0).addClass('active');
-    });
+        sliderWrapperGalerry5.forEach(item => {
 
+            let mySwiperNav5 = new Swiper(item.querySelector('.slider-nav'), {
+                slidesPerView: 7.5,
+                spaceBetween: 15,
+                loopedSlides: 4,
+
+                direction: 'horizontal',
+                scrollbar: {
+                    el: item.querySelector('.swiper-scrollbar'),
+                    draggable: true,
+
+
+                },
+                autoHeight: true,
+
+
+            })
+            let mySwiper5 = new Swiper(item.querySelector('.slider-main'), {
+                autoHeight: true,
+                spaceBetween: 0,
+                loop: true,
+                loopedSlides: 5,
+                thumbs: {
+                    swiper: mySwiperNav5,
+                },
+
+
+            })
+
+
+        })
+    }
+
+    swiperCardAppartment();
+
+
+
+
+    function swiperRecommend() {
+        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-recommendation-js');
+
+        sliderWrapperGalerry3.forEach(item => {
+
+
+            let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
+                    slidesPerView: 2.425,
+                    spaceBetween: 123,
+                calculateHeight:true,
+
+                    loop: true,
+                    navigation: {
+                        nextEl: item.querySelector('.swiper-button-next-btn'),
+                        prevEl: item.querySelector('.swiper-button-prev-btn'),
+                    },
+
+
+                })
+
+            ;
+
+        })
+    }
+
+    swiperRecommend();
+
+
+
+//phone mask
 
     function maskPhonefun(selectorInput) {
 
@@ -190,26 +293,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     maskPhonefun($('.phone-input-js'));
-
-
-    // function accor() {
-    //     const accor = document.querySelectorAll('.accor-js');
-    //     accor.forEach(function (item) {
-    //         item.querySelector('.accor-title-js').on('click', () => {
-    //             item.querySelector('accor-text-js').toggleClass('active');
-    //         })
-    //     })
-    // }
-    //
-    // accor();
-
-    $('.accor-title-js').on('click', function () {
-        $(this).parent().find('.accor-text-js').toggleClass('active');
-        $(this).toggleClass('active');
-
-    })
-
-
     $(".phone-input-js-focus").focus(function () {
         $(this).parent().addClass('focus');
     });
@@ -223,6 +306,41 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).parents(".jq-selectbox").find('.jq-selectbox__select-text').removeClass('color-white');
     })
 
+    //tabs
+
+    $('.tabs-wrapper').each(function () {
+        let ths = $(this);
+        ths.find('.tab-item').not(':first').hide();
+        ths.find('.tab').click(function () {
+            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass('active');
+    });
+
+
+    $('.accor-title-js').on('click', function () {
+        $(this).parent().find('.accor-text-js').toggleClass('active');
+        $(this).toggleClass('active');
+
+    })
+
+    //scroll
+
+    let currentParagraphName = document.getElementById('current-paragraph-name');
+    let currentParagraphPercent = document.getElementById('current-paragraph-percent');
+
+    new ScrollProgress.Init(
+        "#cursor",
+        "menu",
+        progress => {
+            currentParagraphName.innerText = document.getElementById(progress.Id).innerText;
+            currentParagraphPercent.innerText = progress.Percent + '%';
+        },
+        id => {
+            document.querySelectorAll('a[href*="link"]').forEach(element => element.classList.remove('active-meny-item'));
+            document.querySelector(`[href="#${id}"]`).classList.add('active-meny-item');
+        }
+    );
 });
 
 
