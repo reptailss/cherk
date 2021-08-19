@@ -1,0 +1,29 @@
+.footer {
+  &__inner {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 39px 0 41px;
+    position: relative;
+  }
+
+  &__copy {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__unp {
+    grid-column: 3/4;
+    padding-left: 17px;
+  }
+
+  &__developer {
+    grid-column: 4/5;
+    margin-left: auto;
+    &-link{
+      border-bottom: 1px solid rgba(#fff,.2);
+    }
+  }
+}

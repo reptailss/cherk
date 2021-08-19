@@ -1,16 +1,30 @@
 .crew{
-  width: calc(100% + 105px);
   &__inner {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 82px 0 0;
-    margin-bottom: 101px;
     position: relative;
   }
   &__slider {
     grid-column: 2/6;
     margin-top: 91px;
+  }
+  &__title{
+    grid-column: 2/5;
+  }
+  &__img{
+    grid-column: 2/3;
+    background-image: url(../img/mask-2.png);
+    background-repeat: repeat;
+    height: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
   }
 
 }

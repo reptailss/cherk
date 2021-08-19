@@ -1,0 +1,102 @@
+.social{
+  &__inner {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 0px 0 0px;
+align-items: center;
+    position: relative;
+  }
+
+  &__box {
+    grid-column: 2/4;
+
+  }
+
+  &__img{
+    grid-column: 4/5;
+    background-image: url(../img/mask-2.png);
+    background-repeat: repeat;
+    height: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    z-index: -1;
+    padding-top: 92px;
+    &-phone{
+      max-width: 414px;
+      margin:  0 auto;
+      object-fit: contain;
+    }
+  }
+  &-text{
+    margin-top: 22px;
+  }
+  &__button{
+    grid-column: 2/3;
+    margin-top: 56px;
+    display: flex;
+    align-items:stretch;
+    width: 72%;
+    max-width: 635px;
+    &-link{
+      width: 50%;
+      max-width: 100%;
+      padding: 24px 0;
+      border: 1px solid rgba(#fff, .6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      &-instagram:hover{
+        background: linear-gradient(87.1deg, #FFCF01 0%, #FF5901 34.37%, #FD0154 66.67%, #D901B6 100%);
+      }
+      &-telegram:hover{
+      background-color: #10ADDE;;
+      }
+
+      &-img{
+        margin-right: 17px;
+        transition: all .3s;
+      }
+    }
+  }
+  &__icon{
+    width: 30px;
+    height: 30px;
+    transition: all .3s;
+    &-telegram{
+      fill: #10ADDE;
+      .active-hover &{
+        fill: #fff;
+      }
+    }
+  }
+  &__instagram-div{
+    background-image: url(../img/icons/instagram.svg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+    transition: all .3s;
+    &.icon-soc{
+      transition: all .3s;
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/icons/instagram-hover.svg);
+     .active-hover &{
+       background-image: url(../img/icons/instagram.svg);
+      }
+      &:hover{
+        background-image: url(../img/icons/instagram.svg);
+      }
+    }
+    &:hover{
+      background-image: url(../img/icons/instagram-hover.svg);
+    }
+  }
+
+}
+

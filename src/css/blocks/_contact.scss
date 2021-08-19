@@ -1,0 +1,83 @@
+.contact {
+  &__inner {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    align-items: center;
+    position: relative;
+  }
+
+  &__box {
+    grid-column: 2/3;
+
+  }
+
+  &__map {
+    grid-column: 4/5;
+  }
+  &__img{
+    grid-column: 2/3;
+    background-image: url(../img/mask-2.png);
+    background-repeat: repeat;
+    height: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+  &__adress{
+    margin-top: 13px;
+  }
+  &__mt{
+    margin-top: 72px;
+  }
+  &__social{
+    display: flex;
+    &-item{
+      &.mr{
+        margin-right: 54px;
+      }
+    }
+
+  }
+  &--social__list{
+    display: flex;
+  }
+  &--social__item{
+    margin-right: 22px;
+  }
+  &__phone{
+    &-item{
+      padding-left: 49px;
+      position: relative;
+      &-phone{
+        display: flex;
+        align-items: center;
+        &-span{
+          margin-left: 14px;
+        }
+      }
+      &:after{
+        position: absolute;
+        content:'';
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+
+      }
+      &-phone:After{
+        background-image: url(../img/icons/phone-contact.svg);
+      }
+      &-email:After{
+        background-image: url(../img/icons/email-contact.svg);
+      }
+    }
+  }
+}

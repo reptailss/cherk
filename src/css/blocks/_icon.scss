@@ -33,6 +33,19 @@
       fill: #A226DC;
     }
   }
+  &__facebook{
+    fill: #ffffff;
+    &:hover {
+      fill: #167BD8;
+    }
+    &.active{
+      fill: #167BD8;
+    }
+  }
+  &__social{
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .arrow-b{

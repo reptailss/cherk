@@ -48,8 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-
-
     function swiperAppartment() {
         let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
 
@@ -109,26 +107,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper2 = new Swiper(item.querySelector('.slider-feedback__container'), {
-                slidesPerView: 2,
-                spaceBetween: 50,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                autoHeight:true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    autoHeight: true,
+                    navigation: {
+                        nextEl: item.querySelector('.swiper-button-next-btn'),
+                        prevEl: item.querySelector('.swiper-button-prev-btn'),
+                    },
 
 
+                })
 
-            })
-
-          ;
+            ;
         })
     }
 
     swiperFeedback();
-
 
 
     function swiperCrew() {
@@ -138,15 +134,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                slidesPerView: 4.76,
+                    slidesPerView: 4.76,
                     spaceBetween: 30,
                     loop: true,
-                    autoHeight:true,
                     navigation: {
                         nextEl: item.querySelector('.swiper-button-next-btn'),
                         prevEl: item.querySelector('.swiper-button-prev-btn'),
                     },
-
 
 
                 })
@@ -158,8 +152,6 @@ window.addEventListener('DOMContentLoaded', () => {
     swiperCrew();
 
 
-
-
     $('.tabs-wrapper').each(function () {
         let ths = $(this);
         ths.find('.tab-item').not(':first').hide();
@@ -168,8 +160,6 @@ window.addEventListener('DOMContentLoaded', () => {
             ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
         }).eq(0).addClass('active');
     });
-
-
 
 
     function maskPhonefun(selectorInput) {
@@ -201,10 +191,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
     maskPhonefun($('.phone-input-js'));
 
-    $( ".phone-input-js-focus" ).focus(function() {
+
+    // function accor() {
+    //     const accor = document.querySelectorAll('.accor-js');
+    //     accor.forEach(function (item) {
+    //         item.querySelector('.accor-title-js').on('click', () => {
+    //             item.querySelector('accor-text-js').toggleClass('active');
+    //         })
+    //     })
+    // }
+    //
+    // accor();
+
+    $('.accor-title-js').on('click', function () {
+        $(this).parent().find('.accor-text-js').toggleClass('active');
+        $(this).toggleClass('active');
+
+    })
+
+
+    $(".phone-input-js-focus").focus(function () {
         $(this).parent().addClass('focus');
     });
-    $('.phone-input-js-focus').focusout(function(){
+    $('.phone-input-js-focus').focusout(function () {
         $(this).parent().removeClass('focus');
     });
     $('.option-js').on('click', function () {
