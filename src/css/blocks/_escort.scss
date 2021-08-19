@@ -1,0 +1,34 @@
+.escort{
+  &__inner{
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 63px 0 86px;
+    height: 100%;
+
+
+  }
+  &__title{
+    grid-column: 2/4;
+    max-width: 730px;
+  }
+  &__list{
+    margin-top: 69px;
+    grid-auto-rows: auto;
+    grid-column: 2/5;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &--info{
+    padding: 267px 25px 26px;
+  }
+  &--text{
+    margin-top: 10px;
+  }
+  &--item{
+    width: calc(25% - 30px);
+    margin: 0 15px  15px 15px;
+  }
+}

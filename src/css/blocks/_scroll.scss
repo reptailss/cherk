@@ -1,0 +1,26 @@
+.scroll {
+  grid-column: 3 / 4;
+  padding: 33px 0 26px;
+  display: flex;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+
+    &-text {
+      transition: all .3s;
+    }
+
+    &:hover &-text {
+      background: linear-gradient(90deg, rgba(238, 206, 131, 1) 0%, rgba(200, 162, 55, 1) 20%, rgba(255, 222, 135, 1) 36%, rgba(232, 201, 112, 1) 53%, rgba(215, 174, 68, 1) 73%, rgba(162, 106, 13, 1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__arrow {
+    margin-top: 8px;
+  }
+}

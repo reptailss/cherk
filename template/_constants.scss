@@ -1,0 +1,166 @@
+//colors
+
+$color-primary: #79a4a4;
+$color-text:  #6b6b6b;
+$color-title: #ffff;
+
+
+$breakpoints: (
+        '2300': ('(max-width: 2300px)'),
+        '1800': ('(max-width: 1800px)'),
+        '1600': ('(max-width: 1600px)'),
+        '1250': ('(max-width:  1250px)'),
+        '1100': ('(max-width:  1100px)'),
+        '900': ('(max-width:  900px)'),
+        '850': ('(max-width: 850px)'),
+        '700': ('(max-width: 700px)'),
+        '600': ('(max-width: 600px)'),
+        '400': ('(max-width: 400px)'),
+);
+
+
+// Myriad Pro
+%myriad-i-300 {
+  font-family: 'Myriad Pro';
+  font-weight: 300;
+  font-style: italic;
+}
+%myriad-i-400 {
+  font-family: 'Myriad Pro';
+  font-weight: 400;
+  font-style: italic;
+}
+%myriad-i-600 {
+  font-family: 'Myriad Pro';
+  font-weight: 600;
+  font-style: italic;
+}
+%myriad-i-700 {
+  font-family: 'Myriad Pro';
+  font-weight: 700;
+  font-style: italic;
+}
+%myriad-i-900 {
+  font-family: 'Myriad Pro';
+  font-weight: 900;
+  font-style: italic;
+}
+
+%myriad-300 {
+  font-family: 'Myriad Pro';
+  font-weight: 300;
+  font-style: normal;
+}
+%myriad-400 {
+  font-family: 'Myriad Pro';
+  font-weight: 400;
+  font-style: normal;
+}
+%myriad-600 {
+  font-family: 'Myriad Pro';
+  font-weight: 600;
+  font-style: normal;
+}
+%myriad-700 {
+  font-family: 'Myriad Pro';
+  font-weight: 700;
+  font-style: normal;
+}
+%myriad-900 {
+  font-family: 'Myriad Pro';
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+// Gotham
+%gotham-i-300 {
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: italic;
+}
+%gotham-i-400 {
+  font-family: 'Gotham';
+  font-weight: 400;
+  font-style: italic;
+}
+%gotham-i-500 {
+  font-family: 'Gotham';
+  font-weight: 500;
+  font-style: italic;
+}
+%gotham-i-600 {
+  font-family: 'Gotham';
+  font-weight: 600;
+  font-style: italic;
+}
+%gotham-i-700 {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-style: italic;
+}
+%gotham-i-900 {
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-style: italic;
+}
+
+%gotham-300 {
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
+}
+%gotham-400 {
+  font-family: 'Gotham';
+  font-weight: 400;
+  font-style: normal;
+}
+%gotham-500 {
+  font-family: 'Gotham';
+  font-weight: 500;
+  font-style: normal;
+}
+%gotham-600 {
+  font-family: 'Gotham';
+  font-weight: 600;
+  font-style: normal;
+}
+%gotham-700 {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-style: normal;
+}
+%gotham-900 {
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+//raj
+%raj-300 {
+  font-family: 'Rajdhani';
+  font-weight: 300;
+  font-style: normal;
+}
+%raj-400 {
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-style: normal;
+}
+%raj-500 {
+  font-family: 'Rajdhani';
+  font-weight: 500;
+  font-style: normal;
+}
+%raj-600 {
+  font-family: 'Rajdhani';
+  font-weight: 600;
+  font-style: normal;
+}
+%raj-700 {
+  font-family: 'Rajdhani';
+  font-weight: 700;
+  font-style: normal;
+}
+

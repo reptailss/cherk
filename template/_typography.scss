@@ -1,0 +1,65 @@
+
+.title-h1 {
+  line-height: 60px;
+  font-size: 59px;
+  @extend %gotham-700;
+  color: $color-title;
+  @include respond-to('1600') {
+    font-size: 50px;
+  }
+  @include respond-to('1250') {
+    font-size: 40px;
+  }
+  @include respond-to('850') {
+    font-size: 30px;
+  }
+  @include respond-to('600') {
+    font-size: 18px;
+  }
+  @include respond-to('400') {
+    font-size: 12px;
+  }
+
+}
+
+.title-h2 {
+  font-size: 32px;
+  @extend %gotham-700;
+  color: $color-title;
+  text-transform: uppercase;
+
+  @include respond-to('1600') {
+    font-size: 28px;
+  }
+  @include respond-to('1250') {
+    font-size: 18px;
+  }
+  @include respond-to('600') {
+    font-size: 16px;
+  }
+
+}
+
+.title-h3 {
+  @extend %gotham-400;
+  font-size: 33px;
+  @include respond-to('1250') {
+    font-size: 24px;
+  }
+  @include respond-to('600') {
+    font-size: 18px;
+  }
+}
+
+.text-1 {
+  font-size: 14px;
+  @extend %myriad-400;
+  line-height: 26px;
+  color: #747474;
+}
+
+.subtitle{
+  @extend %raj-700;
+  font-size: 14px;
+  color: #b3b3b3;
+}

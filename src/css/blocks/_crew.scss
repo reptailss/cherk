@@ -1,0 +1,16 @@
+.crew{
+  width: calc(100% + 105px);
+  &__inner {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 82px 0 0;
+    margin-bottom: 101px;
+    position: relative;
+  }
+  &__slider {
+    grid-column: 2/6;
+    margin-top: 91px;
+  }
+
+}

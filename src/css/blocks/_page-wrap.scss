@@ -1,0 +1,26 @@
+.page-wrap{
+  display: grid;
+  grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+  &-top{
+    position: relative;
+    &:after{
+      content:'';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      max-width: 805px;
+      background-image: url(../img/top-fon.png);
+      z-index: -2;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  &-apartment{
+    padding-top: 102px;
+  }
+  &-garant{
+    padding-top: 101px;
+  }
+}

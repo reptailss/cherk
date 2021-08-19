@@ -1,0 +1,60 @@
+.project-block{
+  margin-top: 134px;
+  @include respond-to('1600') {
+    margin-top: 75px;
+  }
+  @include respond-to('1250') {
+    margin-top: 50px;
+  }
+  @include respond-to('600') {
+    margin-top: 25px;
+  }
+  &__list{
+    grid-column: 2/6;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    display: grid;
+    grid-row-gap: 30px;
+    @include respond-to('400') {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  &__item{
+
+    &-info{
+
+    }
+  }
+  &__img{
+    width: 100%;
+    object-fit: cover;
+  }
+  &__info{
+    padding: 46px 33px 20px;
+    @include respond-to('850') {
+      padding: 20px 0;
+    }
+    &-img{
+      width: 106px;
+      height: 113px;
+    }
+  }
+  &__title{
+    margin-top: 26px;
+    @extend %gotham-600;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__link{
+    margin-top: 20px;
+    padding: 13px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    @extend  %myriad-400;
+    @include respond-to('850') {
+      display: block;
+      text-align: center;
+    }
+
+  }
+}

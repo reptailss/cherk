@@ -1,0 +1,43 @@
+.form-apartment{
+  grid-column: 1/6;
+  &__inner{
+    display: grid;
+    grid-column: 1/6;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+  }
+  &__form{
+   grid-column: 2/3;
+  }
+  &__img{
+
+    background-image: url(../img/prod-mask.png);
+    background-repeat: repeat;
+    height: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    max-width: 100%;
+    &-1{
+      grid-column: 3/4;
+    }
+    &-2{
+      grid-column: 5/6;
+    }
+  }
+  &__info{
+    grid-column: 4/5;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-title{
+      margin-left: -80px;
+      max-width: 550px;
+    }
+  }
+
+
+}

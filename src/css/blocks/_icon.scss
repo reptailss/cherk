@@ -1,0 +1,94 @@
+.icon {
+  transition: all .3s;
+  cursor: pointer;
+
+  &__one{
+    width: 18px;
+    height: 18px;
+  }
+  &__telegram-one {
+    fill: #fff;
+    &:hover {
+      fill: #10ADDE;
+    }
+    &.active{
+      fill: #10ADDE;
+    }
+  }
+  &__phone-one{
+    fill: #ffffff;
+    &:hover {
+      fill: #23CF35;
+    }
+    &.active{
+      fill: #23CF35;
+    }
+  }
+  &__viber-one{
+    fill: #ffffff;
+    &:hover {
+      fill: #A226DC;
+    }
+    &.active{
+      fill: #A226DC;
+    }
+  }
+}
+
+.arrow-b{
+  width: 21px;
+  height: 20px;
+  fill:#fff
+}
+.arrow{
+
+  fill: #fff;
+  &__elem{
+    transition: all .3s;
+  }
+  &__elem-0{
+    stop-color: #ffffff;
+  }
+  &__elem-1{
+    stop-color: #ffffff;
+  }
+  &__elem-2{
+    stop-color: #ffffff;
+  }
+  &__elem-3{
+    stop-color: #ffffff;
+  }
+  &__elem-4{
+    stop-color: #ffffff;
+  }
+  &__elem-5{
+    stop-color: #ffffff;
+  }
+  .active-hover  &__elem-0{
+    stop-color: #EECE83;
+  }
+  .active-hover  &__elem-1{
+    stop-color: #C8A237;
+  }
+  .active-hover &__elem-2{
+    stop-color: #FFDE87;
+  }
+  .active-hover &__elem-3{
+    stop-color: #E8C970;
+  }
+  .active-hover &__elem-4{
+    stop-color: #D7AE44;
+  }
+  .active-hover &__elem-5{
+    stop-color: #A26A0D;
+  }
+  &-r{
+    width: 27px;
+    height: 10px;
+  }
+  &-r-min{
+    width: 28px;
+    height: 20px;
+  }
+}
+
