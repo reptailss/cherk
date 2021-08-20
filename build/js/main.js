@@ -86,6 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             })
+            swiperAprtMain.update();
+            swiperAprtNav.update();
 
 
         })
@@ -93,13 +95,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     swiperAppartment();
 
+    function reinitSwiper(swiper) {
+        setTimeout(function () {
+            swiper.update();
+        }, 500);
+    }
 
     function swiperAppartmentCard() {
-        let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-card-js');
+        let sliderWrapperGalerry2 = document.querySelectorAll('.slider-apartment-card-js');
 
-        sliderWrapperGalerry.forEach(item => {
+        sliderWrapperGalerry2.forEach(item => {
 
-            let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
+            let swiperAprtNav2 = new Swiper(item.querySelector('.slider-nav'), {
                 slidesPerView: 4,
                 spaceBetween: 0,
                 loopedSlides: 4,
@@ -118,26 +125,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             })
-            let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
+            let swiperAprtMain2 = new Swiper(item.querySelector('.slider-main'), {
                 calculateHeight:true,
                 spaceBetween: 0,
                 loop: true,
                 loopedSlides: 5,
                 thumbs: {
-                    swiper: swiperAprtNav,
+                    swiper: swiperAprtNav2,
                 },
 
 
             })
+            swiperAprtMain2.update();
+            swiperAprtNav2.update();
 
-            swiperAprtMain.update();
-            swiperAprtNav.update();
+
         })
-    }
-    function reinitSwiper(swiper) {
-        setTimeout(function () {
-            swiper.update();
-        }, 500);
     }
 
     swiperAppartmentCard();
@@ -230,9 +233,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     swiperCardAppartment();
-
-
-
 
     function swiperRecommend() {
         let sliderWrapperGalerry3 = document.querySelectorAll('.slider-recommendation-js');
