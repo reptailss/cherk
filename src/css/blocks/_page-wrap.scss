@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
   &-top{
     position: relative;
+    transition: all .3s;
     &:after{
       content:'';
       position: absolute;
@@ -15,6 +16,9 @@
       z-index: -2;
       background-size: cover;
       background-repeat: no-repeat;
+    }
+    &.hide:after{
+      background-image: none;
     }
   }
   &-apartment{

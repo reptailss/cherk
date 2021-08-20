@@ -858,7 +858,7 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-style: normal; }
 
-.title-3, .title-10, .title-9, .title-5, .title, .title-2, .title-8 {
+.title-3, .title-10, .title-9, .title-5, .title, .title-11, .title-2, .title-8 {
   font-family: 'Gilroy';
   font-weight: 700;
   font-style: normal; }
@@ -949,6 +949,10 @@ button.swiper-pagination-bullet {
   font-size: 55px;
   line-height: 1.3; }
 
+.title-11 {
+  font-size: 60px;
+  line-height: 1.3; }
+
 .title-2 {
   font-size: 65px;
   line-height: 1.3; }
@@ -988,6 +992,9 @@ button.swiper-pagination-bullet {
 
 .colorfff {
   color: #ffffff; }
+
+.bg000 {
+  background-color: #000000; }
 
 .text-hover-gradient {
   -webkit-transition: all .3s;
@@ -1081,6 +1088,9 @@ button {
 .overflow {
   overflow-x: hidden; }
 
+.overflow-y {
+  overflow: hidden; }
+
 .header {
   grid-column: 2 / 5; }
   .header__inner {
@@ -1171,7 +1181,10 @@ button {
   display: grid;
   grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr; }
   .page-wrap-top {
-    position: relative; }
+    position: relative;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
     .page-wrap-top:after {
       content: '';
       position: absolute;
@@ -1184,6 +1197,8 @@ button {
       z-index: -2;
       background-size: cover;
       background-repeat: no-repeat; }
+    .page-wrap-top.hide:after {
+      background-image: none; }
   .page-wrap-apartment {
     padding-top: 102px; }
   .page-wrap-garant {
@@ -3553,3 +3568,96 @@ input[pseudo="-webkit-media-controls-timeline" i]::-internal-track-segment-highl
   .slider-recommendation__arrow-svg {
     width: 35px;
     height: 20px; }
+
+.menu {
+  grid-column: 1 / 6;
+  min-height: calc(100vh - 102px);
+  position: absolute;
+  top: 102px;
+  left: 0;
+  -webkit-transform: translateY(-120vh);
+      -ms-transform: translateY(-120vh);
+          transform: translateY(-120vh);
+  background-color: #000;
+  z-index: 50;
+  width: 100%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .menu.active {
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0); }
+  .menu__inner {
+    grid-column: 1 / 6;
+    padding: 0 0 102px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr; }
+  .menu__list {
+    grid-column: 2/3;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 98px; }
+  .menu__img {
+    grid-column: 3/5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    height: 100%; }
+    .menu__img-hover {
+      -webkit-animation: opaciti-anime 1s;
+      /* Safari 4+ */
+      /* Fx 5+ */
+      /* Opera 12+ */
+      animation: opaciti-anime 1s;
+      /* IE 10+, Fx 29+ */ }
+    .menu__img-item {
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain; }
+  .menu__item {
+    margin-top: 115px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .menu__item:hover {
+      color: #ffffff; }
+
+@-webkit-keyframes opaciti-anime {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

@@ -151,6 +151,11 @@
   line-height: 1.3;
 }
 
+.title-11 {
+  @extend %g-700;
+  font-size: 60px;
+  line-height: 1.3;
+}
 
 .title-2 {
   @extend %g-700;
@@ -203,6 +208,9 @@
 }
 .colorfff{
   color: #ffffff;
+}
+.bg000{
+  background-color: #000000;
 }
 .text-hover-gradient {
   transition: all .3s;

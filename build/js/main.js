@@ -2,19 +2,52 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     //burger
-    const burgerBtn = document.querySelector('.burger'),
+    const burgerBtn = document.querySelector('.burger-js'),
         burgerSpan = document.querySelector('.burger-span'),
         menuList = document.querySelector('.portfolio-menu__list');
 
     function burgerOpen() {
-        burgerSpan.classList.toggle('active');
-        menuList.classList.toggle('active');
+        $('.menu').toggleClass('active')
+        $('body').toggleClass('bg000')
+        $('.page-wrap-top').toggleClass('hide');
     }
 
-    burgerBtn.addEventListener('click', (e) => {
-        burgerOpen();
-
+    $('.burger-js').on('click', () => {
+       burgerOpen()
     })
+
+    //menu
+
+
+    $('.hover-menu-js').hover(
+        function () {
+            $(this).toggleClass('active-hover');
+
+            let dataImg = $(this).data('img');
+            let menuImg = $('.menu__img-item')
+
+            if(menuImg.attr('src') !== dataImg){
+                if(menuImg.hasClass() !== 'menu__img-hover'){
+                    // menuImg.addClass('menu__img-hover');
+                }
+
+                setTimeout(()=>{
+                    menuImg.attr('src', `./img/${dataImg}.png`)
+
+                },500)
+                setTimeout(()=> {
+                    // menuImg.removeClass('menu__img-hover');
+                },500)
+
+            }
+
+
+        },
+    )
+
+
+
+
 
     // id for svg
     function randomInteger(min, max) {
@@ -50,13 +83,12 @@ window.addEventListener('DOMContentLoaded', () => {
 // slider
 
 
-
     function swiperAppartment() {
         let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
 
         sliderWrapperGalerry.forEach(item => {
 
-           let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
+            let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
                 slidesPerView: 4,
                 spaceBetween: 0,
                 loopedSlides: 4,
@@ -76,7 +108,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             })
             let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
-                 calculateHeight:true,
+                calculateHeight: true,
                 spaceBetween: 0,
                 loop: true,
                 loopedSlides: 5,
@@ -126,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             })
             let swiperAprtMain2 = new Swiper(item.querySelector('.slider-main'), {
-                calculateHeight:true,
+                calculateHeight: true,
                 spaceBetween: 0,
                 loop: true,
                 loopedSlides: 5,
@@ -243,7 +275,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
                     slidesPerView: 2.425,
                     spaceBetween: 123,
-                calculateHeight:true,
+                    calculateHeight: true,
 
                     loop: true,
                     navigation: {
@@ -260,7 +292,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     swiperRecommend();
-
 
 
 //phone mask
