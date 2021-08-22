@@ -172,6 +172,11 @@
   font-size: 94px;
   line-height: 1.4;
 }
+.title-12 {
+  @extend %g-700;
+  font-size: 140px;
+  line-height: 1.4;
+}
 
 
 .white {
@@ -183,6 +188,16 @@
   1px -1px 0 #ffff,
   -1px 1px 0 #ffff,
   -1px -1px 0 #ffff;
+  color: #000;
+  transition: all 1s;
+
+}
+
+.black01 {
+  text-shadow: 1px 1px 0 rgba(#fff,.1),
+  1px -1px 0  rgba(#fff,.1),
+  -1px 1px 0  rgba(#fff,.1),
+  -1px -1px 0  rgba(#fff,.1);
   color: #000;
   transition: all 1s;
 

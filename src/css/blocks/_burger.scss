@@ -5,13 +5,14 @@
         -webkit-background-size: cover;
         background-size: cover;
         cursor: pointer;
-        transition: all .3s;
+        transition: background 700ms linear;
         background-image: url(../img/icons/burger.svg);
         &:hover{
             opacity: .5;
         }
         &.active{
-
             background-image: url(../img/icons/burger-close.svg);
         }
     }
+
+

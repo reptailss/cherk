@@ -3,65 +3,74 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //burger
 
-    const div = document.createElement('div');
-    div.style.overflowY = 'scroll';
-    div.style.width =  '50px';
-    div.style.height = '50px';
-    div.style.visibility = 'hidden';
-    document.body.appendChild(div);
-    const scrollWidth = div.offsetWidth - div.clientWidth;
-    document.body.removeChild(div);
+    function scrollbarWidth() {
+        var block = $('<div>').css({'height': '50px', 'width': '50px'}),
+            indicator = $('<div>').css({'height': '200px'});
 
-    const burgerBtn = document.querySelector('.burger-js'),
-        burgerSpan = document.querySelector('.burger-span'),
-        menuList = document.querySelector('.portfolio-menu__list');
+        $('body').append(block.append(indicator));
+        var w1 = $('div', block).innerWidth();
+        block.css('overflow-y', 'scroll');
+        var w2 = $('div', block).innerWidth();
+        $(block).remove();
+        return (w1 - w2);
+    }
+
 
     function burgerOpen() {
-
+        document.documentElement.style.marginRight = `${scrollbarWidth()}px`;
         $('.menu').toggleClass('active')
-        $('body').toggleClass('bg000')
+        setTimeout($('body').toggleClass('bg000'),
+            500
+        )
+        document.documentElement.classList.add('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
-        $('.burger-js').toggleClass('active');
+        setTimeout($('.burger-js').toggleClass('active'), 500)
+
 
     }
 
-    $('.burger-js').on('click', () => {
-       burgerOpen()
+    function burgerClose() {
 
+        $('.menu').toggleClass('active')
+        setTimeout($('body').toggleClass('bg000'),
+            500
+        )
+
+        document.documentElement.classList.remove('overflow-y');
+        $('.page-wrap-top').toggleClass('hide');
+        setTimeout($('.burger-js').toggleClass('active'), 500)
+        document.documentElement.style.marginRight = "";
+
+
+    }
+
+    var isMenuShow = false;
+
+    $('.burger-js').on('click', () => {
+
+        if (isMenuShow) {
+            burgerClose();
+            isMenuShow = false;
+        } else {
+            burgerOpen();
+            isMenuShow = true;
+        }
     })
 
-    //menu
 
+    //menu
 
 
     $('.hover-menu-js').hover(
         function () {
             $(this).toggleClass('active-hover');
-
             let dataImg = $(this).data('img');
-            let menuImg = $('.menu__img-item')
-
-            if(menuImg.attr('src') !== dataImg){
-                if(menuImg.hasClass() !== 'menu__img-hover'){
-                    // menuImg.addClass('menu__img-hover');
-                }
-
-                setTimeout(()=>{
-                    menuImg.attr('src', `./img/${dataImg}.png`)
-
-                },500)
-                setTimeout(()=> {
-                    // menuImg.removeClass('menu__img-hover');
-                },500)
-
-            }
+            document.querySelector('.menu__img-item').style.backgroundImage = `url('./img/${dataImg}.png')`;
+            document.querySelector('.menu__img-item-text').style.backgroundImage = `url('./img/${dataImg}-text.png')`;
 
 
-        },
+        }
     )
-
-
-
 
 
     // id for svg
@@ -268,7 +277,6 @@ window.addEventListener('DOMContentLoaded', () => {
     swiperHitOn();
 
 
-
     function swiperCardAppartment() {
         let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
 
@@ -383,19 +391,44 @@ window.addEventListener('DOMContentLoaded', () => {
 
     $('.tabs-wrapper').each(function () {
         let ths = $(this);
-        ths.find('.tab-item').not(':first').hide();
+        ths.find('.tab-item').not(':first').hide(1000);
         ths.find('.tab').click(function () {
             ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+            ths.find('.tab-item').hide().eq($(this).index()).fadeIn(1000)
         }).eq(0).addClass('active');
     });
 
 
+
+
+
     $('.accor-title-js').on('click', function () {
-        $(this).parent().find('.accor-text-js').toggleClass('active');
-        $(this).toggleClass('active');
+        let text = $(this).parent().find('.accor-text-js');
+        let ths = $(this);
+
+        if ($(this).hasClass('active')) {
+            text.animate({
+                opacity:0
+            },"slow");
+        function hide(){
+            text.removeClass('active')
+            ths.removeClass('active')
+        }
+            setTimeout(hide, 700)
+
+        } else {
+            text.animate({
+                opacity:1
+            },"slow");
+            function show(){
+
+            }
+            $(this).addClass('active');
+            text.addClass('active');
+        }
 
     })
+
 
     //scroll
 

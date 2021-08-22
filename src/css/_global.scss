@@ -3,14 +3,15 @@ html{
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -o-box-sizing:border-box;
-  -ms-box-sizing:border-box
+  -ms-box-sizing:border-box;
+  position: relative;
 }
 body {
   font-weight: 300;
   font-style: normal;
   color: #ffffff;
   background-color:#101211;
-  transition: all .3s;
+  transition: background 700ms linear;
   @extend %g-400;
 
 }
@@ -67,6 +68,8 @@ button {
   &-two{
     background-image: url(../img/mask-2.png);
   }
+
+
 }
 
 .scroll-bar::-webkit-scrollbar{

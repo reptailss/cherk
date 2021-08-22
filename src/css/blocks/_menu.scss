@@ -4,11 +4,11 @@
   position: absolute;
   top: 108px;
   left: 0;
-  transform: translateY(-240vh);
+  transform: translateX(-120vw);
   background-color: #000;
   z-index: 50;
   width: 100%;
-  transition: all .3s;
+  transition: all .9s;
 
   &.active {
     transform: translate(0);
@@ -31,7 +31,7 @@
   }
 
   &__img {
-    grid-column: 3/5;
+    grid-column: 4/5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,6 +40,8 @@
     height: 100%;
     max-width: 925px;
     width: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
 
     &-hover {
       -webkit-animation: opaciti-anime 1s; /* Safari 4+ */
@@ -49,10 +51,24 @@
     }
 
     &-item {
-      transition: all .3s;
+      transition: background 700ms linear;
       height: 100%;
-      object-fit: contain;
-
+      background-repeat: no-repeat;
+      width: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      position: relative;
+      &-text{
+        position: absolute;
+        left: -67px;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
     }
   }
 
@@ -60,6 +76,7 @@
     margin-top: 115px;
     cursor: pointer;
     transition: all .3s;
+    background-color: #000000;
 
     &:hover {
       color: #ffffff;
