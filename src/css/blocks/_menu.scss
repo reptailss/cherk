@@ -2,9 +2,9 @@
   grid-column: 1 / 6;
   min-height: calc(100vh - 102px);
   position: absolute;
-  top: 102px;
+  top: 108px;
   left: 0;
-  transform: translateY(-120vh);
+  transform: translateY(-240vh);
   background-color: #000;
   z-index: 50;
   width: 100%;
@@ -38,6 +38,8 @@
     justify-content: center;
     transition: all .3s;
     height: 100%;
+    max-width: 925px;
+    width: 100%;
 
     &-hover {
       -webkit-animation: opaciti-anime 1s; /* Safari 4+ */

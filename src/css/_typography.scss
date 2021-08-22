@@ -106,66 +106,71 @@
   -webkit-text-fill-color: transparent;
   @extend %g-600;
 }
-
+.title-12 {
+  @extend %g-700;
+  font-size: 20px;
+  line-height: 1.4;
+}
 
 .title-6 {
   font-size: 22px;
-  line-height: 1.3;
+  line-height: 1.4;
   @extend %g-600;
 }
 
 .title-7 {
   font-size: 24px;
   line-height: 26px;
+  line-height: 1.4;
   @extend %g-600;
 }
 
 .title-3 {
   @extend %g-700;
   font-size: 25px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 
 .title-10 {
   @extend %g-700;
   font-size: 40px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 .title-9 {
   @extend %g-700;
   font-size: 45px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .title-5 {
   @extend %g-700;
   font-size: 50px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 
 .title {
   @extend %g-700;
   font-size: 55px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .title-11 {
   @extend %g-700;
   font-size: 60px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .title-2 {
   @extend %g-700;
   font-size: 65px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 .title-8 {
   @extend %g-700;
   font-size: 94px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 
@@ -198,7 +203,10 @@
 }
 
 .color05 {
-  color: rgba(#fff, .5);
+   color: rgba(#fff, .5);
+ }
+.color07 {
+  color: rgba(#fff, .7);
 }
 .color-grey {
   color: #C5C5C5;
@@ -239,3 +247,4 @@
 .linh15{
   line-height: 1.5;
 }
+

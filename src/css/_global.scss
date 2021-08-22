@@ -10,6 +10,7 @@ body {
   font-style: normal;
   color: #ffffff;
   background-color:#101211;
+  transition: all .3s;
   @extend %g-400;
 
 }

@@ -2,21 +2,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     //burger
+
+    const div = document.createElement('div');
+    div.style.overflowY = 'scroll';
+    div.style.width =  '50px';
+    div.style.height = '50px';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    const scrollWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+
     const burgerBtn = document.querySelector('.burger-js'),
         burgerSpan = document.querySelector('.burger-span'),
         menuList = document.querySelector('.portfolio-menu__list');
 
     function burgerOpen() {
+
         $('.menu').toggleClass('active')
         $('body').toggleClass('bg000')
         $('.page-wrap-top').toggleClass('hide');
+        $('.burger-js').toggleClass('active');
+
     }
 
     $('.burger-js').on('click', () => {
        burgerOpen()
+
     })
 
     //menu
+
 
 
     $('.hover-menu-js').hover(
@@ -226,6 +241,33 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     swiperCrew();
+
+
+    function swiperHitOn() {
+        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
+
+        sliderWrapperGalerry3.forEach(item => {
+
+
+            let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
+                    slidesPerView: 4,
+                    spaceBetween: 100,
+                    loop: true,
+                    navigation: {
+                        nextEl: item.querySelector('.swiper-button-next-btn'),
+                        prevEl: item.querySelector('.swiper-button-prev-btn'),
+                    },
+
+
+                })
+
+            ;
+        })
+    }
+
+    swiperHitOn();
+
+
 
     function swiperCardAppartment() {
         let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');

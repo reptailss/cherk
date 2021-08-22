@@ -8,6 +8,9 @@
   &__wrapper {
     display: flex;
     align-items: stretch !important;
+    &-hit-on{
+      align-items: flex-end!important;
+    }
   }
 
   &__slide {
