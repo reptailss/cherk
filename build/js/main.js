@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     $('.burger-js').on('click', () => {
-       burgerOpen()
+        burgerOpen()
     })
 
     //menu
@@ -26,28 +26,27 @@ window.addEventListener('DOMContentLoaded', () => {
             let dataImg = $(this).data('img');
             let menuImg = $('.menu__img-item')
 
-            if(menuImg.attr('src') !== dataImg){
-                if(menuImg.hasClass() !== 'menu__img-hover'){
+            if (menuImg.attr('src') !== dataImg) {
+                if (menuImg.hasClass() !== 'menu__img-hover') {
                     // menuImg.addClass('menu__img-hover');
                 }
 
-                setTimeout(()=>{
+                setTimeout(() => {
                     menuImg.attr('src', `./img/${dataImg}.png`)
 
-                },500)
-                setTimeout(()=> {
+                }, 500)
+                setTimeout(() => {
                     // menuImg.removeClass('menu__img-hover');
-                },500)
+                }, 500)
 
             }
-
-
         },
     )
 
 
-
-
+    $('.benefits-item__link').hover(function () {
+        $('.benefits-item__link').toggleClass('active-hover')
+    })
 
     // id for svg
     function randomInteger(min, max) {
@@ -80,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).toggleClass('active-hover');
     })
 
-// slider
+    // slider
 
 
     function swiperAppartment() {
@@ -184,20 +183,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper2 = new Swiper(item.querySelector('.slider-feedback__container'), {
-                    slidesPerView: 2,
-                    spaceBetween: 50,
-                    loop: true,
-                    loopFillGroupWithBlank: true,
-                    autoHeight: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                slidesPerView: 2,
+                spaceBetween: 50,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoHeight: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
         })
     }
 
@@ -210,18 +209,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                    slidesPerView: 4.76,
-                    spaceBetween: 30,
-                    loop: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                slidesPerView: 4.76,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
         })
     }
 
@@ -273,20 +272,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
-                    slidesPerView: 2.425,
-                    spaceBetween: 123,
-                    calculateHeight: true,
+                slidesPerView: 2.425,
+                spaceBetween: 123,
+                calculateHeight: true,
 
-                    loop: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                loop: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
 
         })
     }
@@ -294,7 +293,7 @@ window.addEventListener('DOMContentLoaded', () => {
     swiperRecommend();
 
 
-//phone mask
+    //phone mask
 
     function maskPhonefun(selectorInput) {
 
@@ -353,6 +352,12 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).parent().find('.accor-text-js').toggleClass('active');
         $(this).toggleClass('active');
 
+    })
+
+    // purchase-step add active
+
+    $('.purchase-step').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active')
     })
 
     //scroll
