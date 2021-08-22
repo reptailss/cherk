@@ -2,7 +2,7 @@
   grid-column: 1 / 6;
   min-height: calc(100vh - 102px);
   position: absolute;
-  top: 108px;
+  top: 103px;
   left: 0;
   transform: translateX(-120vw);
   background-color: #000;
@@ -60,6 +60,7 @@
       position: relative;
       &-text{
         position: absolute;
+        transition: background 700ms linear;
         left: -67px;
         width: 100%;
         top: 0;

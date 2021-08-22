@@ -1,0 +1,108 @@
+.page-wrap-benefits {
+    padding-top: 101px;
+}
+
+.benefits {
+
+    &__inner {
+        padding: 93px 0 0px;
+        display: grid;
+        grid-column: 1/6;
+        grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+        position: relative;
+    }
+
+    &__mask {
+        grid-column: 2/3;
+    }
+
+    &__title {
+        max-width: 1080px;
+        width: 100%;
+        grid-column: 2/5;
+        margin-bottom: 104px;
+
+        span {
+            line-height: 115%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        grid-column: 2/5;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &-item {
+        max-width: 468px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &__header {
+            padding: 38px 4px 33px 50px;
+            display: flex;
+            align-items: center;
+            background: #212121;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &__label {
+            max-width: 253px;
+            width: 100%;
+        }
+
+        &__icon {
+            margin-right: 30px;
+
+            img {
+                max-width: 50px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__body {
+            flex-grow: 1;
+            padding: 47px 4px 15px 50px;
+            background: #000;
+        }
+
+        &__text {
+            max-width: 380px;
+            width: 100%;
+            font-size: 20px;
+            line-height: 29px;
+            margin-bottom: 45px;
+        }
+
+        &__link {
+            max-width: 377px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            border-top: 1px solid rgba($color: #fff, $alpha: .2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            line-height: 20px;
+            transition: all ease .2s;
+
+            &.active-hover {
+
+                span {
+                    background: linear-gradient(90deg, #eece83 0%, #c8a237 20%, #ffde87 36%, #e8c970 53%, #d7ae44 73%, #a26a0d 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+            }
+        }
+    }
+}

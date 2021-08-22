@@ -72,6 +72,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     )
 
+    $('.benefits-item__link').hover(function () {
+        $('.benefits-item__link').toggleClass('active-hover')
+    })
 
     // id for svg
     function randomInteger(min, max) {
@@ -386,6 +389,14 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.option-top').on('click', function () {
         $(this).parents(".jq-selectbox").find('.jq-selectbox__select-text').removeClass('color-white');
     })
+
+
+    // purchase-step add active
+
+    $('.purchase-step').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
 
     //tabs
 
