@@ -1,0 +1,36 @@
+
+.poupap {
+  position: relative;
+  grid-column: 1 / 6;
+  position: relative;
+
+  &__inner {
+    padding: 104px 0 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+
+  }
+
+  &__text-wrapper {
+    grid-column: 2/4;
+    padding: 33px 0 40px;
+    padding-right: 150px;
+  }
+
+  &__form-block {
+    grid-column: 4/5;
+  }
+
+}
+
+.mfp-close{
+  font-size: 70px;
+  color: #ffffff!important;
+@extend %g-300;
+  &:hover{
+    opacity: .5;
+  }
+}
+
+

@@ -1,16 +1,17 @@
-html{
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  -o-box-sizing:border-box;
-  -ms-box-sizing:border-box;
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   position: relative;
 }
+
 body {
   font-weight: 300;
   font-style: normal;
   color: #ffffff;
-  background-color:#101211;
+  background-color: #101211;
   transition: background 700ms linear;
   @extend %g-400;
 
@@ -54,7 +55,7 @@ button {
 }
 
 
-.mask{
+.mask {
   background-image: url(../img/prod-mask.png);
   background-repeat: repeat;
   height: 100%;
@@ -65,26 +66,35 @@ button {
   position: absolute;
   left: 0;
   height: 100%;
-  &-two{
+
+  &-two {
     background-image: url(../img/mask-2.png);
   }
 
 
 }
 
-.scroll-bar::-webkit-scrollbar{
-  background-color:transparent;
+.scroll-bar::-webkit-scrollbar {
+  background-color: transparent;
   width: 1px;
   overflow-y: scroll;
 
 }
-.scroll-bar::-webkit-scrollbar-thumb{
+
+.scroll-bar::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
-.overflow{
+.overflow {
   overflow-x: hidden;
 }
-.overflow-y{
+
+.overflow-y {
   overflow: hidden;
+}
+
+.blur {
+  background-color: #000;
+  opacity: .5;
+  filter: blur(5px);
 }

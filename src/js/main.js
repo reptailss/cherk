@@ -441,23 +441,29 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    //scroll
 
-    let currentParagraphName = document.getElementById('current-paragraph-name');
-    let currentParagraphPercent = document.getElementById('current-paragraph-percent');
 
-    new ScrollProgress.Init(
-        "#cursor",
-        "menu",
-        progress => {
-            currentParagraphName.innerText = document.getElementById(progress.Id).innerText;
-            currentParagraphPercent.innerText = progress.Percent + '%';
+    //poupap
+
+
+    $('.open-popup-js').magnificPopup({
+        type:'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+
+        callbacks: {
+            open: function() {
+                $('section,footer').addClass('blur');
+
+            },
+            close: function() {
+                $('section,footer').removeClass('blur');
+            }
+            // e.t.c.
         },
-        id => {
-            document.querySelectorAll('a[href*="link"]').forEach(element => element.classList.remove('active-meny-item'));
-            document.querySelector(`[href="#${id}"]`).classList.add('active-meny-item');
-        }
-    );
+
+    });
+
+
 });
 
 
