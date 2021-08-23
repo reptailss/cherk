@@ -56,19 +56,21 @@
 
                 <div class="pagination">
                     <menu class="pagination__inner">
-                        <a class="pagination__item">Paragraph A</a>
-                        <a class="pagination__item">Paragraph B</a>
-                        <a class="pagination__item">Paragraph C</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
-                        <a class="pagination__item">Paragraph D</a>
+                        <div class="pagination__list">
+                            <a class="pagination__item" data-item="1" href="#choice">01</a>
+                            <a class="pagination__item" data-item="2" href="#form-apartment">02</a>
+                            <a class="pagination__item" data-item="3" href="#purchase">03</a>
+                            <a class="pagination__item" data-item="4" href="#benefits">04</a>
+                            <a class="pagination__item" data-item="5" href="#garant">05</a>
+                            <a class="pagination__item" data-item="6" href="#feedback">06</a>
+                            <a class="pagination__item" data-item="7" href="#purchase-steps">07</a>
+                            <a class="pagination__item" data-item="8" href="#authenticity">08</a>
+                            <a class="pagination__item" data-item="9" href="#crew">09</a>
+                            <a class="pagination__item" data-item="10" href="#question">10</a>
+                            <a class="pagination__item" data-item="11" href="#social">11</a>
+                            <a class="pagination__item" data-item="12" href="#form-apartment-2">12</a>
+                            <a class="pagination__item" data-item="13" href="#contact">13</a>
+                        </div>
                     </menu>
                 </div>
                 <header class="header">
@@ -210,7 +212,7 @@
         </div>
     </section>
 
-    <section class="go-home choice border-bottom" id="choice">
+    <section class="go-home choice border-bottom progress-section" id="choice">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5106,7 +5108,7 @@
 
         </div>
     </section>
-    <section class="go-home form-apartment border-bottom" id="form-apartment">
+    <section class="go-home form-apartment border-bottom progress-section" id="form-apartment">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5135,33 +5137,33 @@
                                 <div class="tab-item">
                                     <form action="" class="form form__home">
                                         <div class="form__inner">
-                                            <input class=" text-2 input form__input" id="input-1"
+                                            <input class=" text-2 input form__input" id="input-name"
                                                 placeholder="Введите имя" type="text"> <label class="form__input-label "
-                                                for="input-1"></label>
+                                                for="input-name"></label>
                                             <div class="form__item-mt form__radio-inner">
                                                 <div class="text-2 form__radio-text">
                                                     Как с Вами удобнее связаться?
                                                 </div>
                                                 <div class="form__radio form__radio-one-type">
                                                     <div class="form__radio-item form__radio-item-button ">
-                                                        <input checked class="form__radio-input viber" id="radio3"
+                                                        <input checked class="form__radio-input viber" id="radio-viber"
                                                             name="form-apartament" type="radio" />
-                                                        <label class="form__radio-label text-2" for="radio3">
+                                                        <label class="form__radio-label text-2" for="radio-viber">
                                                             <span class="form__radio-label-text">
                                                                 Viber</span>
                                                         </label>
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
-                                                        <input class="form__radio-input telegram" id="radio4"
+                                                        <input class="form__radio-input telegram" id="radio-telegram"
                                                             name="form-apartament" type="radio" />
-                                                        <label class="form__radio-label" for="radio4">
+                                                        <label class="form__radio-label" for="radio-telegram">
                                                             <span class="text-2 form__radio-label-text">Telegram</span>
                                                         </label>
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
-                                                        <input class="form__radio-input telegram-2" id="radio5"
-                                                            name="form-apartament" type="radio" />
-                                                        <label class="form__radio-label" for="radio5">
+                                                        <input class="form__radio-input telegram-2"
+                                                            id="radio-telegram-2" name="form-apartament" type="radio" />
+                                                        <label class="form__radio-label" for="radio-telegram-2">
                                                             <span class="text-2 form__radio-label-text">Telegram</span>
                                                         </label>
                                                     </div>
@@ -5506,8 +5508,7 @@
             </div>
         </div>
     </section>
-
-    <section class="go-home purchase border-bottom">
+    <section class="go-home purchase border-bottom progress-section" id="purchase">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5546,8 +5547,7 @@
             </div>
         </div>
     </section>
-
-    <section class="go-home benefits border-bottom">
+    <section class="go-home benefits border-bottom progress-section" id="benefits">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5630,8 +5630,7 @@
         </div>
         </div>
     </section>
-
-    <section class="go-home residence-permit border-bottom">
+    <section class="go-home residence-permit border-bottom progress-section" id="residence-permit">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5733,9 +5732,7 @@
         </div>
         </div>
     </section>
-
-
-    <section class="go-home garant border-bottom" id="garant">
+    <section class="go-home garant border-bottom progress-section" id="garant">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -5843,7 +5840,7 @@
             </div>
         </div>
     </section>
-    <section class="go-home feedback border-bottom" id="feedback">
+    <section class="go-home feedback border-bottom progress-section" id="feedback">
         <div class="container overflow">
             <div class="line">
                 <div class="line__item"></div>
@@ -6128,8 +6125,7 @@
             </div>
         </div>
     </section>
-
-    <section class="go-home border-bottom purchase-steps">
+    <section class="go-home border-bottom purchase-steps progress-section" id="purchase-steps">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -6234,8 +6230,7 @@
             </div>
         </div>
     </section>
-
-    <section class="go-home authenticity" id="authenticity">
+    <section class="go-home authenticity progress-section" id="authenticity">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -6316,9 +6311,7 @@
             </div>
         </div>
     </section>
-
-
-    <section class="go-home crew" id="crew">
+    <section class="go-home crew progress-section" id="crew">
         <div class="container ">
             <div class="line">
                 <div class="line__item"></div>
@@ -6785,7 +6778,7 @@
             </div>
         </div>
     </section>
-    <section class="go-home question" id="question">
+    <section class="go-home question progress-section" id="question">
         <div class="container ">
             <div class="line">
                 <div class="line__item"></div>
@@ -6944,7 +6937,7 @@
             </div>
         </div>
     </section>
-    <section class="go-home social" id="social">
+    <section class="go-home social progress-section" id="social">
         <div class="container ">
             <div class="line">
                 <div class="line__item"></div>
@@ -6992,9 +6985,7 @@
             </div>
         </div>
     </section>
-
-
-    <section class="go-home form-apartment border-bottom" id="form-apartment-2">
+    <section class="go-home form-apartment border-bottom progress-section" id="form-apartment-2">
         <div class="container">
             <div class="line">
                 <div class="line__item"></div>
@@ -7094,9 +7085,7 @@
             </div>
         </div>
     </section>
-
-
-    <section class="go-home contact" id="contact">
+    <section class="go-home contact progress-section" id="contact">
         <div class="container ">
             <div class="line">
                 <div class="line__item"></div>
@@ -7255,7 +7244,6 @@
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/scroll-progress.min.js"></script>
     <script src="js/main.js"></script>
 
 

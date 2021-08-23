@@ -281,8 +281,6 @@ window.addEventListener('DOMContentLoaded', () => {
                     nextEl: item.querySelector('.swiper-button-next-btn'),
                     prevEl: item.querySelector('.swiper-button-prev-btn'),
                 },
-
-
             })
 
                 ;
@@ -297,29 +295,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function maskPhonefun(selectorInput) {
 
+        $('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+        $('.phone-input-js').mask("+375 (999) 999-99-99");
 
-        function maskPhone() {
-            var country = $('.select-lang-js option:selected').val();
 
-
-            switch (country) {
-                case "by":
-                    selectorInput.attr("placeholder", "+375 (___) ___-__-__");
-                    selectorInput.mask("+375 (999) 999-99-99");
-                    break;
-                case "ru":
-                    selectorInput.attr("placeholder", "+7 (___) ___-__-__");
-                    selectorInput.mask("+7 (999) 999-99-99");
-                    break;
-
-            }
-        }
-
-        maskPhone();
         $('.select-lang-js').change(function () {
-            maskPhone();
-        });
+            let value = $(this).val()
+            let parentBlock = $(this).parents('.form__item-phone')
 
+            console.log(value);
+
+            if (value === "by") {
+                console.log('1');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+375 (999) 999-99-99");
+            } else if (value === "ru") {
+                console.log('2');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+7 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+7 (999) 999-99-99");
+            }
+        });
     }
 
     maskPhonefun($('.phone-input-js'));
@@ -360,23 +357,55 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).addClass('active').siblings().removeClass('active')
     })
 
-    //scroll
+    // scroll
+    const scrollProgressItem = document.querySelectorAll('.progress-section')
+    const paginationList = document.querySelector('.pagination__list')
 
-    let currentParagraphName = document.getElementById('current-paragraph-name');
-    let currentParagraphPercent = document.getElementById('current-paragraph-percent');
+    function scrollingPagination() {
 
-    new ScrollProgress.Init(
-        "#cursor",
-        "menu",
-        progress => {
-            currentParagraphName.innerText = document.getElementById(progress.Id).innerText;
-            currentParagraphPercent.innerText = progress.Percent + '%';
-        },
-        id => {
-            document.querySelectorAll('a[href*="link"]').forEach(element => element.classList.remove('active-meny-item'));
-            document.querySelector(`[href="#${id}"]`).classList.add('active-meny-item');
+        scrollProgressItem.forEach(el => {
+            const progressSectionHeight = el.offsetHeight;
+            const progressSectionOffset = offset(el).top;
+            let count = 1;
+
+
+            let progressSectionPoint = window.innerHeight - progressSectionHeight / count;
+
+            if (progressSectionHeight > window.innerHeight) {
+                progressSectionPoint = window.innerHeight - window.innerHeight / count
+            }
+
+            if ((pageYOffset > progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
+                el.classList.add('active')
+                const id = `#${el.id}`;
+                const progressItemActive = $(`.pagination__item[href="${id}"]`)
+                progressItemActive.addClass('active').siblings().removeClass('active')
+                let dataItemNum = +progressItemActive.attr('data-item')
+                if (dataItemNum < 4) {
+                    paginationList.style.top = '0px';
+                } else if (dataItemNum >= 4 && dataItemNum < 8) {
+                    paginationList.style.top = '-100px';
+                }
+                else if (dataItemNum >= 8) {
+                    paginationList.style.top = '-200px';
+                }
+
+            } else {
+                el.classList.remove('active')
+            }
+        })
+
+
+
+        function offset(el) {
+            const rect = el.getBoundingClientRect();
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
         }
-    );
+    }
+    scrollingPagination()
+    window.addEventListener('scroll', scrollingPagination)
 });
 
 

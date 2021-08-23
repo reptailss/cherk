@@ -1,10 +1,10 @@
 .menu {
   grid-column: 1 / 6;
   min-height: calc(100vh - 102px);
-  position: absolute;
+  position: fixed;
   top: 102px;
   left: 0;
-  transform: translateY(-120vh);
+  transform: translateY(calc(-100% - 102px));
   background-color: #000;
   z-index: 50;
   width: 100%;
@@ -40,10 +40,14 @@
     height: 100%;
 
     &-hover {
-      -webkit-animation: opaciti-anime 1s; /* Safari 4+ */
-      -moz-animation: opaciti-anime 1s; /* Fx 5+ */
-      -o-animation: opaciti-anime 1s; /* Opera 12+ */
-      animation: opaciti-anime 1s; /* IE 10+, Fx 29+ */
+      -webkit-animation: opaciti-anime 1s;
+      /* Safari 4+ */
+      -moz-animation: opaciti-anime 1s;
+      /* Fx 5+ */
+      -o-animation: opaciti-anime 1s;
+      /* Opera 12+ */
+      animation: opaciti-anime 1s;
+      /* IE 10+, Fx 29+ */
     }
 
     &-item {
@@ -71,8 +75,8 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-
