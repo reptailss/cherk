@@ -1,5 +1,6 @@
 .header{
     grid-column: 2 / 5;
+    min-height: 102px;
     &__inner{
         justify-content: space-between;
         display: flex;
@@ -14,10 +15,22 @@
     }
     &__info{
         display: flex;
+        align-items: center;
     }
     &__info-phone{
         display: flex;
         align-items: center;
+        &--thanks{
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &-wrap{
+            display: flex;
+            align-items: center;
+        }
+        &-text{
+            margin-top: 5px;
+        }
     }
     &__info-phone-img{
         margin-right: 7px;

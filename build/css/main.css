@@ -1495,7 +1495,8 @@ button {
           filter: blur(5px); }
 
 .header {
-  grid-column: 2 / 5; }
+  grid-column: 2 / 5;
+  min-height: 102px; }
   .header__inner {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -1518,7 +1519,11 @@ button {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .header__info-phone {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1528,6 +1533,27 @@ button {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    .header__info-phone--thanks {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    .header__info-phone-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .header__info-phone-text {
+      margin-top: 5px; }
   .header__info-phone-img {
     margin-right: 7px;
     width: 14px;
@@ -3840,7 +3866,9 @@ input[pseudo="-webkit-media-controls-timeline" i]::-internal-track-segment-highl
      object-fit: contain; }
 
 .map__img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: calc(100% - 2px);
+  margin: 0 1px; }
 
 .card-apart {
   grid-column: 1 / 6; }
@@ -4867,15 +4895,129 @@ input[pseudo="-webkit-media-controls-timeline" i]::-internal-track-segment-highl
   grid-column: 1 / 6;
   position: relative; }
   .modal-mortgage__inner {
-    padding: 104px 0 20px;
+    padding: 20px 0 20px;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr; }
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .modal-mortgage__text-wrapper {
     grid-column: 2/4;
     padding: 33px 0 40px;
-    padding-right: 150px; }
-  .modal-mortgage__form-block {
-    grid-column: 4/5; }
+    margin-top: 53px;
+    padding-right: 140px; }
+    .modal-mortgage__text-wrapper-item {
+      margin-top: 10px; }
+      .modal-mortgage__text-wrapper-item-line {
+        padding-left: 23px;
+        position: relative; }
+        .modal-mortgage__text-wrapper-item-line:after {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          width: 15px;
+          height: 1px;
+          background: -webkit-gradient(linear, left top, right top, from(#eece83), color-stop(20%, #c8a237), color-stop(36%, #ffde87), color-stop(53%, #e8c970), color-stop(73%, #d7ae44), to(#a26a0d));
+          background: -o-linear-gradient(left, #eece83 0%, #c8a237 20%, #ffde87 36%, #e8c970 53%, #d7ae44 73%, #a26a0d 100%);
+          background: linear-gradient(90deg, #eece83 0%, #c8a237 20%, #ffde87 36%, #e8c970 53%, #d7ae44 73%, #a26a0d 100%); }
+  .modal-mortgage__info-block {
+    grid-column: 4/5;
+    margin: -20px 0; }
+    .modal-mortgage__info-block-item {
+      max-width: 463px;
+      margin: 20px 0;
+      padding: 47px 53px 42px;
+      background-color: #000000;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .modal-mortgage__info-block-item-img {
+        margin-right: 41px; }
   .modal-mortgage__title {
     margin-top: 9px; }
+  .modal-mortgage__form {
+    max-width: 470px; }
+
+.thanks {
+  grid-column: 1 / 6;
+  position: relative; }
+  .thanks__inner {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr; }
+  .thanks__img {
+    max-width: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    z-index: -2;
+    position: absolute;
+    background-image: url(../img/mask-2.png);
+    height: 100%; }
+  .thanks__text-wrapper {
+    grid-column: 2/3;
+    padding: 33px 0 40px; }
+  .thanks__title {
+    margin-top: 9px; }
+  .thanks__text {
+    margin-top: 18px; }
+  .thanks__btn {
+    margin-top: 44px; }
+  .thanks__social {
+    width: 100%;
+    grid-column: 1/2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .thanks--social__list {
+    margin-top: -104px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .thanks--social__item {
+    margin: 23px 0; }
+  .thanks__img-block {
+    grid-column: 4/5; }
+    .thanks__img-block-img {
+      max-width: 100%;
+      width: calc(100% - 2px);
+      margin: 0 1px; }

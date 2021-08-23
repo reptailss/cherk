@@ -441,15 +441,18 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     // scroll
+
+    // scroll
     const scrollProgressItem = document.querySelectorAll('.progress-section')
     const paginationList = document.querySelector('.pagination__list')
 
-    function scrollingPagination() {
 
+    function scrollingPagination() {
+        console.log(pageYOffset);
         scrollProgressItem.forEach(el => {
             const progressSectionHeight = el.offsetHeight;
             const progressSectionOffset = offset(el).top;
-            let count = 1;
+            let count = 3;
 
 
             let progressSectionPoint = window.innerHeight - progressSectionHeight / count;
@@ -458,8 +461,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 progressSectionPoint = window.innerHeight - window.innerHeight / count
             }
 
-            if ((pageYOffset > progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
-                el.classList.add('active')
+            if ((pageYOffset >= progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
                 const id = `#${el.id}`;
                 const progressItemActive = $(`.pagination__item[href="${id}"]`)
                 progressItemActive.addClass('active').siblings().removeClass('active')
@@ -468,18 +470,19 @@ window.addEventListener('DOMContentLoaded', () => {
                     paginationList.style.top = '0px';
                 } else if (dataItemNum >= 4 && dataItemNum < 8) {
                     paginationList.style.top = '-100px';
-                }
-                else if (dataItemNum >= 8) {
+                } else if (dataItemNum >= 8 && dataItemNum < 12) {
                     paginationList.style.top = '-200px';
+                } else if (dataItemNum >= 12 && dataItemNum < 16) {
+                    paginationList.style.top = '-300px';
+                } else if (dataItemNum >= 16 && dataItemNum < 20) {
+                    paginationList.style.top = '-400px';
                 }
+
 
             } else {
                 el.classList.remove('active')
             }
         })
-
-
-
         function offset(el) {
             const rect = el.getBoundingClientRect();
             const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -489,6 +492,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     scrollingPagination()
     window.addEventListener('scroll', scrollingPagination)
+
 
     //poupap
 

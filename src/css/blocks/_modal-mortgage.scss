@@ -4,24 +4,58 @@
   position: relative;
 
   &__inner {
-    padding: 104px 0 20px;
+    padding: 20px 0 20px;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    align-items: center;
 
   }
 
   &__text-wrapper {
     grid-column: 2/4;
     padding: 33px 0 40px;
-    padding-right: 150px;
+    margin-top: 53px;
+    padding-right: 140px;
+    &-item{
+      margin-top: 10px;
+      &-line{
+        padding-left: 23px;
+        position: relative;
+        &:after{
+          position: absolute;
+          content:'';
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 1px;
+          background:linear-gradient(90deg, rgba(238,206,131,1) 0%, rgba(200,162,55,1) 20%, rgba(255,222,135,1) 36%, rgba(232,201,112,1) 53%, rgba(215,174,68,1) 73%, rgba(162,106,13,1) 100%);
+        }
+      }
+    }
   }
 
-  &__form-block {
+  &__info-block {
     grid-column: 4/5;
+    margin: -20px 0;
+    &-item{
+      max-width: 463px;
+      margin: 20px 0;
+      padding: 47px 53px 42px;
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      &-img{
+        margin-right: 41px;
+      }
+    }
   }
 
   &__title {
     margin-top: 9px;
+  }
+  &__form{
+    max-width: 470px;
   }
 }
