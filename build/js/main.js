@@ -440,8 +440,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
     })
 
+    // scroll
+    const scrollProgressItem = document.querySelectorAll('.progress-section')
+    const paginationList = document.querySelector('.pagination__list')
+
+    function scrollingPagination() {
+
+        scrollProgressItem.forEach(el => {
+            const progressSectionHeight = el.offsetHeight;
+            const progressSectionOffset = offset(el).top;
+            let count = 1;
 
 
+            let progressSectionPoint = window.innerHeight - progressSectionHeight / count;
+
+            if (progressSectionHeight > window.innerHeight) {
+                progressSectionPoint = window.innerHeight - window.innerHeight / count
+            }
+
+            if ((pageYOffset > progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
+                el.classList.add('active')
+                const id = `#${el.id}`;
+                const progressItemActive = $(`.pagination__item[href="${id}"]`)
+                progressItemActive.addClass('active').siblings().removeClass('active')
+                let dataItemNum = +progressItemActive.attr('data-item')
+                if (dataItemNum < 4) {
+                    paginationList.style.top = '0px';
+                } else if (dataItemNum >= 4 && dataItemNum < 8) {
+                    paginationList.style.top = '-100px';
+                }
+                else if (dataItemNum >= 8) {
+                    paginationList.style.top = '-200px';
+                }
+
+            } else {
+                el.classList.remove('active')
+            }
+        })
+
+
+
+        function offset(el) {
+            const rect = el.getBoundingClientRect();
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+        }
+    }
+    scrollingPagination()
+    window.addEventListener('scroll', scrollingPagination)
 
     //poupap
 

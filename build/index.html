@@ -11,180 +11,450 @@
 </head>
 
 <body>
-<div id="form-sale" class="mfp-hide poupap form-sale">
 
-        <div class="container">
+<div class="mfp-hide poupap form-sale" id="form-sale">
 
-            <div class="page-wrap  page-wrap-get-block">
-                <div class="poupap">
-                    <div class="poupap__inner">
-                        <div class="poupap__text-wrapper">
-                            <div class="get-block__title">
-                                <span class="title white  poupap__title-span">Заполните короткую форму </span>
-                                <span class="title black poupap__title-span"> и сдайте свою квартиру за 3-7 дней с максимальной выгодой</span>
+    <div class="container">
 
-                            </div>
+        <div class="page-wrap  page-wrap-poupap">
+            <div class="poupap">
+                <div class="poupap__inner">
+                    <div class="poupap__text-wrapper">
+                        <div class="get-block__title">
+                            <span class="title white  poupap__title-span">Заполните короткую форму </span>
+                            <span class="title black poupap__title-span"> и продайте свою квартиру за 3-7 дней с максимальной выгодой</span>
+
                         </div>
-                        <div class="poupap__form-block">
-                            <form action="" >
-                                <div class="form__inner">
-                                    <input class=" text-2 input form__input" id="input-12" placeholder="Введите имя"
-                                           type="text"> <label class="form__input-label " for="input-12"></label>
-                                    <div class="form__item-mt form__radio-inner">
-                                        <div class="text-2 form__radio-text">
-                                            Как с Вами удобнее связаться?
-                                        </div>
-                                        <div class="form__radio form__radio-one-type">
-                                            <div class="form__radio-item form__radio-item-button ">
-                                                <input checked class="form__radio-input viber" id="radio34"
-                                                       name="form-apartament"
-                                                       type="radio"/>
-                                                <label class="form__radio-label text-2" for="radio34">
+                    </div>
+                    <div class="poupap__form-block">
+                        <form action="">
+                            <div class="form__inner">
+                                <input class=" text-2 input form__input" id="input-12" placeholder="Введите имя"
+                                       type="text"> <label class="form__input-label " for="input-12"></label>
+                                <div class="form__item-mt form__radio-inner">
+                                    <div class="text-2 form__radio-text">
+                                        Как с Вами удобнее связаться?
+                                    </div>
+                                    <div class="form__radio form__radio-one-type">
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input checked class="form__radio-input viber" id="radio34"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label text-2" for="radio34">
                                                             <span class="form__radio-label-text">
                                                         Viber</span>
-                                                </label>
-                                            </div>
-                                            <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram" id="radio433"
-                                                       name="form-apartament"
-                                                       type="radio"/>
-                                                <label class="form__radio-label" for="radio433">
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram" id="radio433"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio433">
                                                             <span
                                                                     class="text-2 form__radio-label-text">Telegram</span>
-                                                </label>
-                                            </div>
-                                            <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram-2" id="radio553"
-                                                       name="form-apartament"
-                                                       type="radio"/>
-                                                <label class="form__radio-label" for="radio553">
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram-2" id="radio553"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio553">
                                                             <span
                                                                     class="text-2 form__radio-label-text">Telegram</span>
-                                                </label>
-                                            </div>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="form__item-mt form__item-phone">
-                                        <div class="select__one-type-inner select-form__inner">
-                                            <select class="select-lang-js select__one-type lang__select select-form"
-                                                    name="lang">
-                                                <option class="option option-form option-form-by option__one-type lang__option"
-                                                        selected value="by">BY
-                                                </option>
-                                                <option class="option option-form option-form-ru option__one-type lang__option"
-                                                        value="ru">RU
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <input class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                               id="phone32"
-                                               type="text">
-                                        <label class="text-2 form__input-label label-js" for="phone32">
-                                        </label>
+                                </div>
+                                <div class="form__item-mt form__item-phone">
+                                    <div class="select__one-type-inner select-form__inner">
+                                        <select class="select-lang-js select__one-type lang__select select-form"
+                                                name="lang">
+                                            <option class="option option-form option-form-by option__one-type lang__option"
+                                                    selected value="by">BY
+                                            </option>
+                                            <option class="option option-form option-form-ru option__one-type lang__option"
+                                                    value="ru">RU
+                                            </option>
+                                        </select>
                                     </div>
-                                    <div class="form__item-mt">
-                                        <div class="form__select-inner-wrap form__select-inner ">
-                                            <div class=" form__select-item-w50 form__select-item">
-                                                <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select"
-                                                            name="form-rain">
-                                                        <option class="option option-top"
-                                                                selected
-                                                                value="form-name-rain">
-                                                            Район
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-rain">
-                                                            Район
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-rain">
-                                                            Район
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-rain"> Район
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-rain">Район
-                                                        </option>
+                                    <input class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
+                                           id="phone32"
+                                           type="text">
+                                    <label class="text-2 form__input-label label-js" for="phone32">
+                                    </label>
+                                </div>
+                                <div class="form__item-mt">
+                                    <div class="form__select-inner-wrap form__select-inner ">
+                                        <div class=" form__select-item-w50 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-cat">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-cat">
+                                                        Категории объекта
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-cat">
+                                                        Категории объекта
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-cat">
+                                                        Категории объекта
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-namecatn"> Категории объекта
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-cat">Категории объекта
+                                                    </option>
 
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class=" form__select-item-w50 form__select-item">
-                                                <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select"
-                                                            name="form-room">
-                                                        <option class="option option-top"
-                                                                selected
-                                                                value="form-name-room">
-                                                            Кол. комнат
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-room">
-                                                            1 комнатная
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-room">
-                                                            2 комнатная
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-room"> 3 комнатная
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-room">
-                                                            4-х комнатная
-                                                        </option>
-
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="form__select-item-mt form__select-item-w100 form__select-item">
-                                                <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select"
-                                                            name="form-room">
-                                                        <option class="option option-top"
-                                                                selected
-                                                                value="form-name-budget">
-                                                            Бюджет
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-budget">
-                                                            1000-2000
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-budget">
-                                                            1000-2000
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-budget"> 1000-2000
-                                                        </option>
-                                                        <option class="option option-js"
-                                                                value="form-name-budget">1000-2000
-                                                        </option>
-
-                                                    </select>
-                                                </div>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class=" form__select-item-w50 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-room">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-room">
+                                                        Кол. комнат
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        1 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        2 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room"> 3 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        4-х комнатная
+                                                    </option>
 
-                                    <div class="form__item-mt">
-                                        <button class="button gradient-btn form__btn">Оценить стоимость и сроки
-                                        </button>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form__select-item-mt form__select-item-w100 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-room">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-budget">
+                                                        Бюджет
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget"> 1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">1000-2000
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                            </form>
-                        </div>
+                                <div class="form__item-mt">
+                                    <button class="button gradient-btn form__btn">Оценить стоимость и сроки
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 </div>
+<div class="mfp-hide poupap form-arenda" id="form-arenda">
 
+    <div class="container">
+
+        <div class="page-wrap  page-wrap-poupap">
+            <div class="poupap">
+                <div class="poupap__inner">
+                    <div class="poupap__text-wrapper">
+                        <div class="get-block__title">
+                            <span class="title white  poupap__title-span">Заполните короткую форму </span>
+                            <span class="title black poupap__title-span"> и сдайте свою квартиру за 3-7 дней с максимальной выгодой</span>
+
+                        </div>
+                    </div>
+                    <div class="poupap__form-block">
+                        <form action="">
+                            <div class="form__inner">
+                                <input class=" text-2 input form__input" id="input-122" placeholder="Введите имя"
+                                       type="text"> <label class="form__input-label " for="input-122"></label>
+                                <div class="form__item-mt form__radio-inner">
+                                    <div class="text-2 form__radio-text">
+                                        Как с Вами удобнее связаться?
+                                    </div>
+                                    <div class="form__radio form__radio-one-type">
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input checked class="form__radio-input viber" id="radio344"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label text-2" for="radio344">
+                                                            <span class="form__radio-label-text">
+                                                        Viber</span>
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram" id="radio4333"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio4333">
+                                                            <span
+                                                                    class="text-2 form__radio-label-text">Telegram</span>
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram-2" id="radio5532"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio5532">
+                                                            <span
+                                                                    class="text-2 form__radio-label-text">Telegram</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__item-mt form__item-phone">
+                                    <div class="select__one-type-inner select-form__inner">
+                                        <select class="select-lang-js select__one-type lang__select select-form"
+                                                name="lang">
+                                            <option class="option option-form option-form-by option__one-type lang__option"
+                                                    selected value="by">BY
+                                            </option>
+                                            <option class="option option-form option-form-ru option__one-type lang__option"
+                                                    value="ru">RU
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <input class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
+                                           id="phone323"
+                                           type="text">
+                                    <label class="text-2 form__input-label label-js" for="phone323">
+                                    </label>
+                                </div>
+                                <div class="form__item-mt">
+                                    <div class="form__select-inner-wrap form__select-inner ">
+                                        <div class=" form__select-item-w50 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-rain">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-rain">
+                                                        Район
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-rain">
+                                                        Район
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-rain">
+                                                        Район
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-rain"> Район
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-rain">Район
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class=" form__select-item-w50 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-room">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-room">
+                                                        Кол. комнат
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        1 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        2 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room"> 3 комнатная
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-room">
+                                                        4-х комнатная
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form__select-item-mt form__select-item-w100 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select"
+                                                        name="form-room">
+                                                    <option class="option option-top"
+                                                            selected
+                                                            value="form-name-budget">
+                                                        Бюджет
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget"> 1000-2000
+                                                    </option>
+                                                    <option class="option option-js"
+                                                            value="form-name-budget">1000-2000
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form__item-mt">
+                                    <button class="button gradient-btn form__btn">Оценить стоимость и сроки
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="mfp-hide poupap modal-mortgage" id="modal-mortgage">
+    <div class="container">
+
+        <div class="page-wrap  page-wrap-modal-mortgage">
+            <div class="modal-mortgage">
+                <div class="modal-mortgage__inner">
+                    <div class="modal-mortgage__text-wrapper">
+                        <div class="text-2 modal-mortgage__text">Оформим ипотеку на Вашу квартиру и подберем лучшие
+                            условия от 18 банков
+                        </div>
+                        <div class="modal-mortgage__title">
+                            <span class="title white  modal-mortgage__title-span">Заполните короткую форму </span>
+                            <span class="title black modal-mortgage__title-span"> и сдайте свою квартиру за 3-7 дней с максимальной выгодой</span>
+
+                        </div>
+                        <div class="modal-mortgage__text-wrapper">
+                            <div class="modal-mortgage__text-wrapper-item">А также получите минимум 3 предложения по
+                                ипотеке, даже если у Вас:
+                            </div>
+                            <div class="modal-mortgage__text-wrapper-item-line modal-mortgage__text-wrapper-item"> маленький ребенок</div>
+                            <div class="modal-mortgage__text-wrapper-item-line modal-mortgage__text-wrapper-item"> Вы иностранец</div>
+                            <div class="modal-mortgage__text-wrapper-item-line modal-mortgage__text-wrapper-item"> не хватает дохода для нужной суммы</div>
+                        </div>
+                        <form action="">
+                            <div class="form__inner">
+                                <input class=" text-2 input form__input" id="input-1222" placeholder="Введите имя"
+                                       type="text"> <label class="form__input-label " for="input-1222"></label>
+                                <div class="form__item-mt form__radio-inner">
+                                    <div class="text-2 form__radio-text">
+                                        Как с Вами удобнее связаться?
+                                    </div>
+                                    <div class="form__radio form__radio-one-type">
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input checked class="form__radio-input viber" id="radio3444"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label text-2" for="radio3444">
+                                                            <span class="form__radio-label-text">
+                                                        Viber</span>
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram" id="radio43334"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio43334">
+                                                            <span
+                                                                    class="text-2 form__radio-label-text">Telegram</span>
+                                            </label>
+                                        </div>
+                                        <div class="form__radio-item form__radio-item-button ">
+                                            <input class="form__radio-input telegram-2" id="radio553243"
+                                                   name="form-apartament"
+                                                   type="radio"/>
+                                            <label class="form__radio-label" for="radio553243">
+                                                            <span
+                                                                    class="text-2 form__radio-label-text">Telegram</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__item-mt form__item-phone">
+                                    <div class="select__one-type-inner select-form__inner">
+                                        <select class="select-lang-js select__one-type lang__select select-form"
+                                                name="lang">
+                                            <option class="option option-form option-form-by option__one-type lang__option"
+                                                    selected value="by">BY
+                                            </option>
+                                            <option class="option option-form option-form-ru option__one-type lang__option"
+                                                    value="ru">RU
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <input class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
+                                           id="phone32323"
+                                           type="text">
+                                    <label class="text-2 form__input-label label-js" for="phone32323">
+                                    </label>
+                                </div>
+
+
+                                <div class="form__item-mt">
+                                    <button class="button gradient-btn form__btn">Оценить возможности
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-mortgage__info-block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="menu" id="menu">
     <div class="page-wrap  page-wrap-menu">
@@ -219,7 +489,8 @@
         </div>
     </div>
 </section>
-<section class="top" id="top">
+<section class="progress-section top" id="top">
+    <!--<a class="open-popup-js" href="#modal-mortgage">efefefefewf ewf ewf we </a>-->
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -232,19 +503,19 @@
 
             <div class="pagination">
                 <menu class="pagination__inner">
-                    <a class="pagination__item" href="#escrort">Paragraph A</a>
-                    <a class="pagination__item" href="#choice">Paragraph B</a>
-                    <a class="pagination__item" href="#form-apartment">Paragraph C</a>
-                    <a class="pagination__item" href="#garant">Paragraph D</a>
-                    <a class="pagination__item" href="#feedback">Paragraph D</a>
-                    <a class="pagination__item" href="#authenticity">Paragraph D</a>
-                    <a class="pagination__item" href="#crew">Paragraph D</a>
-                    <a class="pagination__item" href="#question">Paragraph D</a>
-                    <a class="pagination__item" href="#social">Paragraph D</a>
-                    <a class="pagination__item" href="#question">Paragraph D</a>
-                    <a class="pagination__item" href="#form-apartment-2">Paragraph D</a>
-                    <a class="pagination__item" href="#contact">Paragraph D</a>
-                    <a class="pagination__item" href="#footer">Paragraph D</a>
+                    <div class="pagination__list">
+                        <a class="pagination__item" data-item="1" href="#top">01</a>
+                        <a class="pagination__item" data-item="2" href="#choice">02</a>
+                        <a class="pagination__item" data-item="3" href="#form-apartment">03</a>
+                        <a class="pagination__item" data-item="4" href="#garant">04</a>
+                        <a class="pagination__item" data-item="5" href="#feedback">05</a>
+                        <a class="pagination__item" data-item="6" href="#authenticity">06</a>
+                        <a class="pagination__item" data-item="7" href="#crew">07</a>
+                        <a class="pagination__item" data-item="8" href="#question">08</a>
+                        <a class="pagination__item" data-item="9" href="#social">09</a>
+                        <a class="pagination__item" data-item="10" href="#form-apartment-2">10</a>
+                        <a class="pagination__item" data-item="11" href="#contact">11</a>
+                    </div>
                 </menu>
             </div>
             <header class="header">
@@ -290,7 +561,8 @@
                         </div>
                         <div class="text-2 top-block__text">С полным сопровождением от поиска до заключения сделки</div>
                         <div class="top-block__btn">
-                            <a href="#form-sale" class="open-popup-js button gradient-btn top-block__btn-link" href="#">Подобрать квартиру</a>
+                            <a class="open-popup-js button gradient-btn top-block__btn-link" href="#form-sale" href="#">Подобрать
+                                квартиру</a>
                         </div>
                         <div class="top-block__info">
                             <div class="top-block__info-item">
@@ -369,7 +641,7 @@
         </div>
     </div>
 </section>
-<section class="go-home escrort" id="escrort">
+<section class="progress-section escrort" id="escrort">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -527,7 +799,7 @@
         </div>
     </div>
 </section>
-<section class="go-home choice border-bottom" id="choice">
+<section class="progress-section choice border-bottom" id="choice">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -4427,7 +4699,7 @@
 
     </div>
 </section>
-<section class="go-home form-apartment border-bottom" id="form-apartment">
+<section class="progress-section form-apartment border-bottom" id="form-apartment">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -4837,7 +5109,7 @@
         </div>
     </div>
 </section>
-<section class="go-home garant border-bottom" id="garant">
+<section class="progress-section garant border-bottom" id="garant">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -4942,7 +5214,7 @@
         </div>
     </div>
 </section>
-<section class="go-home feedback border-bottom" id="feedback">
+<section class="progress-section feedback border-bottom" id="feedback">
     <div class="container overflow">
         <div class="line">
             <div class="line__item"></div>
@@ -5195,7 +5467,7 @@
         </div>
     </div>
 </section>
-<section class="go-home authenticity" id="authenticity">
+<section class="progress-section authenticity" id="authenticity">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -5275,7 +5547,7 @@
         </div>
     </div>
 </section>
-<section class="go-home crew" id="crew">
+<section class="progress-section crew" id="crew">
     <div class="container ">
         <div class="line">
             <div class="line__item"></div>
@@ -5752,7 +6024,7 @@
         </div>
     </div>
 </section>
-<section class="go-home question" id="question">
+<section class="progress-section question" id="question">
     <div class="container ">
         <div class="line">
             <div class="line__item"></div>
@@ -5910,7 +6182,7 @@
         </div>
     </div>
 </section>
-<section class="go-home social" id="social">
+<section class="progress-section social" id="social">
     <div class="container ">
         <div class="line">
             <div class="line__item"></div>
@@ -5958,7 +6230,7 @@
         </div>
     </div>
 </section>
-<section class="go-home form-apartment border-bottom" id="form-apartment-2">
+<section class="progress-section form-apartment border-bottom" id="form-apartment-2">
     <div class="container">
         <div class="line">
             <div class="line__item"></div>
@@ -6059,7 +6331,7 @@
         </div>
     </div>
 </section>
-<section class="go-home contact" id="contact">
+<section class="progress-section contact" id="contact">
     <div class="container ">
         <div class="line">
             <div class="line__item"></div>
