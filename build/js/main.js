@@ -4,8 +4,8 @@ window.addEventListener('DOMContentLoaded', () => {
     //burger
 
     function scrollbarWidth() {
-        var block = $('<div>').css({'height': '50px', 'width': '50px'}),
-            indicator = $('<div>').css({'height': '200px'});
+        var block = $('<div>').css({ 'height': '50px', 'width': '50px' }),
+            indicator = $('<div>').css({ 'height': '200px' });
 
         $('body').append(block.append(indicator));
         var w1 = $('div', block).innerWidth();
@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).toggleClass('active-hover');
     })
 
-// slider
+    // slider
 
 
     function swiperAppartment() {
@@ -211,20 +211,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper2 = new Swiper(item.querySelector('.slider-feedback__container'), {
-                    slidesPerView: 2,
-                    spaceBetween: 50,
-                    loop: true,
-                    loopFillGroupWithBlank: true,
-                    autoHeight: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                slidesPerView: 2,
+                spaceBetween: 50,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                autoHeight: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
         })
     }
 
@@ -237,18 +237,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                    slidesPerView: 4.76,
-                    spaceBetween: 30,
-                    loop: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                slidesPerView: 4.76,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
         })
     }
 
@@ -262,18 +262,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                    slidesPerView: 4,
-                    spaceBetween: 100,
-                    loop: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                slidesPerView: 4,
+                spaceBetween: 100,
+                loop: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
         })
     }
 
@@ -326,20 +326,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
-                    slidesPerView: 2.425,
-                    spaceBetween: 123,
-                    calculateHeight: true,
+                slidesPerView: 2.425,
+                spaceBetween: 123,
+                calculateHeight: true,
 
-                    loop: true,
-                    navigation: {
-                        nextEl: item.querySelector('.swiper-button-next-btn'),
-                        prevEl: item.querySelector('.swiper-button-prev-btn'),
-                    },
+                loop: true,
+                navigation: {
+                    nextEl: item.querySelector('.swiper-button-next-btn'),
+                    prevEl: item.querySelector('.swiper-button-prev-btn'),
+                },
 
 
-                })
+            })
 
-            ;
+                ;
 
         })
     }
@@ -347,7 +347,7 @@ window.addEventListener('DOMContentLoaded', () => {
     swiperRecommend();
 
 
-//phone mask
+    //phone mask
 
     function maskPhonefun(selectorInput) {
 
@@ -419,19 +419,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if ($(this).hasClass('active')) {
             text.animate({
-                opacity:0
-            },"slow");
-        function hide(){
-            text.removeClass('active')
-            ths.removeClass('active')
-        }
+                opacity: 0
+            }, "slow");
+            function hide() {
+                text.removeClass('active')
+                ths.removeClass('active')
+            }
             setTimeout(hide, 700)
 
         } else {
             text.animate({
-                opacity:1
-            },"slow");
-            function show(){
+                opacity: 1
+            }, "slow");
+            function show() {
 
             }
             $(this).addClass('active');
@@ -444,8 +444,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const scrollProgressItem = document.querySelectorAll('.progress-section')
     const paginationList = document.querySelector('.pagination__list')
 
-    function scrollingPagination() {
 
+    function scrollingPagination() {
+        console.log(pageYOffset);
         scrollProgressItem.forEach(el => {
             const progressSectionHeight = el.offsetHeight;
             const progressSectionOffset = offset(el).top;
@@ -458,8 +459,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 progressSectionPoint = window.innerHeight - window.innerHeight / count
             }
 
-            if ((pageYOffset > progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
-                el.classList.add('active')
+            if ((pageYOffset >= progressSectionOffset - progressSectionPoint) && pageYOffset < (progressSectionOffset + progressSectionHeight)) {
                 const id = `#${el.id}`;
                 const progressItemActive = $(`.pagination__item[href="${id}"]`)
                 progressItemActive.addClass('active').siblings().removeClass('active')
@@ -468,18 +468,19 @@ window.addEventListener('DOMContentLoaded', () => {
                     paginationList.style.top = '0px';
                 } else if (dataItemNum >= 4 && dataItemNum < 8) {
                     paginationList.style.top = '-100px';
-                }
-                else if (dataItemNum >= 8) {
+                } else if (dataItemNum >= 8 && dataItemNum < 12) {
                     paginationList.style.top = '-200px';
+                } else if (dataItemNum >= 12 && dataItemNum < 16) {
+                    paginationList.style.top = '-300px';
+                } else if (dataItemNum >= 16 && dataItemNum < 20) {
+                    paginationList.style.top = '-400px';
                 }
+
 
             } else {
                 el.classList.remove('active')
             }
         })
-
-
-
         function offset(el) {
             const rect = el.getBoundingClientRect();
             const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -492,23 +493,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //poupap
 
-
     $('.open-popup-js').magnificPopup({
-        type:'inline',
+        type: 'inline',
         midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 
         callbacks: {
-            open: function() {
+            open: function () {
                 $('section,footer').addClass('blur');
 
             },
-            close: function() {
+            close: function () {
                 $('section,footer').removeClass('blur');
             }
             // e.t.c.
         },
 
     });
+
 
 
 });
