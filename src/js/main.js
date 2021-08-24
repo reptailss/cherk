@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const crewSlider = new Swiper('.slider-crew__container', {
-        slidesPerView: 4.76,
+        slidesPerView: "auto",
         spaceBetween: 30,
         loop: true,
     })
@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.slider-crew-button-next').on('click', function () { crewSlider.slideNext() })
 
     const garantSlider = new Swiper('.slider-garant__container', {
-        slidesPerView: 4.76,
+        slidesPerView: "auto",
         spaceBetween: 30,
         loop: true,
     })
@@ -358,6 +358,9 @@ window.addEventListener('DOMContentLoaded', () => {
         axis: "y",
     });
     $('.apartment__item-photos').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.feedback__item-info-box-text-2').mCustomScrollbar({
         axis: "y",
     });
     $('.card-apart__gallery').mCustomScrollbar({
