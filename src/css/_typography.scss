@@ -126,6 +126,7 @@
   line-height: 26px;
   line-height: 1.4;
   @extend %g-600;
+
 }
 
 .title-3 {
@@ -143,17 +144,35 @@
   @extend %g-700;
   font-size: 40px;
   line-height: 1.4;
+  @include respond-to('1500') {
+    font-size: 40px;
+  }
+  @include respond-to('1250') {
+    font-size: 30px;
+  }
 }
 .title-9 {
   @extend %g-700;
   font-size: 45px;
   line-height: 1.4;
+  @include respond-to('1500') {
+    font-size: 40px;
+  }
+  @include respond-to('1250') {
+    font-size: 30px;
+  }
 }
 
 .title-5 {
   @extend %g-700;
   font-size: 50px;
   line-height: 1.4;
+  @include respond-to('1500') {
+    font-size: 40px;
+  }
+  @include respond-to('1250') {
+    font-size: 30px;
+  }
 }
 
 
@@ -196,6 +215,12 @@
   @extend %g-700;
   font-size: 94px;
   line-height: 1.4;
+  @include respond-to('1500') {
+    font-size: 40px;
+  }
+  @include respond-to('1250') {
+    font-size: 30px;
+  }
 }
 
 
@@ -238,8 +263,8 @@
 }
 
 .color05 {
-   color: rgba(#fff, .5);
- }
+  color: rgba(#fff, .5);
+}
 .color07 {
   color: rgba(#fff, .7);
 }
@@ -268,6 +293,11 @@
 .w100 {
   width: 100%;
   display: block;
+  @include respond-to('700') {
+    width: auto;
+    display: inline;
+  }
+
 }
 .wf-400{
   @extend %g-400;

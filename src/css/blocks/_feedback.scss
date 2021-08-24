@@ -6,21 +6,48 @@
     padding: 82px 0 0;
     margin-bottom: 101px;
     position: relative;
+    @include respond-to('1500') {
+      margin-bottom: 40px;
+      padding: 30px 0 0;
+    }
+
   }
 
   &__title {
     grid-column: 2/3;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
 
   &__button {
     grid-column: 4/5;
     margin-left: auto;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      margin: 0;
+
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
 
   &__slider {
     overflow: hidden;
     grid-column: 2/6;
     margin-top: 91px;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
 
   &__item {
@@ -29,15 +56,29 @@
     height: 100%;
     max-width: 880px;
     width: 100%;
-
+    @include respond-to('700') {
+      flex-direction: column;
+    }
     &-img img {
       object-fit: contain;
       max-width: 365px;
       height: 100%;
+      @include respond-to('900') {
+        max-width: 283px;
+      }
+      @include respond-to('700') {
+        max-width: 100%;
+        width: 100%;
+      }
     }
 
     &-info {
       padding: 59px 35px 67px 73px;
+
+
+      @include respond-to('900') {
+        padding: 18px 14px 20px 26px;
+      }
 
       &-name {
         margin-top: 8px;
@@ -51,7 +92,9 @@
           border-bottom: 1px solid rgba(#fff, .1);
           padding: 23px 51px 24px 45px;
           position: relative;
-
+          @include respond-to('900') {
+            padding: 60px 10px 10px 0px;
+          }
           &:after {
             position: absolute;
             content: '';
@@ -70,6 +113,10 @@
           max-height: 173px;
           overflow: auto;
           padding-right: 40px;
+          @include respond-to('900') {
+            padding-right: 0;
+            padding-bottom: 20px;
+          }
 
           .mCustomScrollBox {
             padding-right: 20px;
