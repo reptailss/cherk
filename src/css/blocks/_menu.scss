@@ -1,3 +1,15 @@
+
+.page-wrap-menu{
+  min-height: calc(100vh - 102px);
+  @include respond-to('1500') {
+    min-height: calc(100vh - 68px);
+  }
+  @include respond-to('500') {
+    min-height: calc(100vh - 49px);
+  }
+}
+
+
 .menu {
   grid-column: 1 / 6;
   min-height: calc(100vh - 102px);
@@ -9,6 +21,16 @@
   z-index: 50;
   width: 100%;
   transition: all .9s;
+  height: calc(100vh - 102px);
+  overflow: auto;
+  @include respond-to('700') {
+    top: 65px;
+    min-height: calc(100vh - 68px);
+  }
+  @include respond-to('500') {
+    top: 50px;
+    min-height: calc(100vh - 49px);
+  }
 
   &.active {
     transform: translate(0);
@@ -28,6 +50,11 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 98px;
+    @include respond-to('1500') {
+      grid-column: 1/6;
+      align-items: center;
+      padding: 0;
+    }
   }
 
   &__img {
@@ -42,12 +69,18 @@
     width: 100%;
     -webkit-background-size: contain;
     background-size: contain;
-
+    @include respond-to('1500') {
+      display: none;
+    }
     &-hover {
-      -webkit-animation: opaciti-anime 1s; /* Safari 4+ */
-      -moz-animation: opaciti-anime 1s; /* Fx 5+ */
-      -o-animation: opaciti-anime 1s; /* Opera 12+ */
-      animation: opaciti-anime 1s; /* IE 10+, Fx 29+ */
+      -webkit-animation: opaciti-anime 1s;
+      /* Safari 4+ */
+      -moz-animation: opaciti-anime 1s;
+      /* Fx 5+ */
+      -o-animation: opaciti-anime 1s;
+      /* Opera 12+ */
+      animation: opaciti-anime 1s;
+      /* IE 10+, Fx 29+ */
     }
 
     &-item {
@@ -58,7 +91,13 @@
       -webkit-background-size: cover;
       background-size: cover;
       position: relative;
-      &-text{
+      @include respond-to('1900') {
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-position: center center;
+      }
+
+      &-text {
         position: absolute;
         transition: background 700ms linear;
         left: -67px;
@@ -69,6 +108,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         z-index: -1;
+        @include respond-to('1800') {
+          display: none;
+        }
       }
     }
   }
@@ -78,7 +120,9 @@
     cursor: pointer;
     transition: all .3s;
     background-color: #000000;
-
+    @include respond-to('1500') {
+      margin-top: 40px;
+    }
     &:hover {
       color: #ffffff;
     }
@@ -91,8 +135,8 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-

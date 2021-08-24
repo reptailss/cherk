@@ -3,6 +3,12 @@
   padding: 33px 0 26px;
   display: flex;
   justify-content: center;
+  @include respond-to('1250') {
+    grid-column: 2 / 5;
+  }
+  @include respond-to('700') {
+    padding: 20px 0;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -11,6 +17,9 @@
 
     &-text {
       transition: all .3s;
+      @include respond-to('700') {
+        font-size: 14px;
+      }
     }
 
     &:hover &-text {

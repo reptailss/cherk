@@ -1,19 +1,25 @@
-.social{
+.social {
   &__inner {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 0px 0 0px;
-align-items: center;
+    align-items: center;
     position: relative;
   }
 
   &__box {
     grid-column: 2/4;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
 
   }
 
-  &__img{
+  &__img {
     grid-column: 4/5;
     background-image: url(../img/mask-2.png);
     background-repeat: repeat;
@@ -25,23 +31,56 @@ align-items: center;
     text-align: center;
     z-index: -1;
     padding-top: 92px;
-    &-phone{
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      margin-top: 36px;
+      padding: 0;
+      & img {
+        height: 700px;
+      }
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+      & img {
+        height: 350px;
+      }
+    }
+
+    &-phone {
       max-width: 414px;
-      margin:  0 auto;
+      margin: 0 auto;
       object-fit: contain;
     }
   }
-  &-text{
+
+  &-text {
     margin-top: 22px;
+
   }
-  &__button{
+
+  &__text {
+    @include respond-to('700') {
+      font-size: 14px;
+    }
+  }
+
+  &__button {
     grid-column: 2/3;
     margin-top: 56px;
     display: flex;
-    align-items:stretch;
+    align-items: stretch;
     width: 72%;
     max-width: 635px;
-    &-link{
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      width: 100%;
+      max-width: 100%;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
+
+    &-link {
       width: 50%;
       max-width: 100%;
       padding: 24px 0;
@@ -50,50 +89,72 @@ align-items: center;
       align-items: center;
       justify-content: center;
       transition: all .3s;
-      &-instagram:hover{
-        background: linear-gradient(87.1deg, #FFCF01 0%, #FF5901 34.37%, #FD0154 66.67%, #D901B6 100%);
-      }
-      &-telegram:hover{
-      background-color: #10ADDE;;
+      @include respond-to('700') {
+        font-size: 9px;
+        padding: 10px 0;
       }
 
-      &-img{
+      &-instagram:hover {
+        background: linear-gradient(87.1deg, #FFCF01 0%, #FF5901 34.37%, #FD0154 66.67%, #D901B6 100%);
+      }
+
+      &-telegram:hover {
+        background-color: #10ADDE;;
+      }
+
+      &-img {
         margin-right: 17px;
         transition: all .3s;
       }
     }
   }
-  &__icon{
+
+  &__icon {
     width: 30px;
     height: 30px;
     transition: all .3s;
-    &-telegram{
+    @include respond-to('500') {
+      width: 13px;
+      height: 13px;
+    }
+
+    &-telegram {
       fill: #10ADDE;
-      .active-hover &{
+
+      .active-hover & {
         fill: #fff;
       }
     }
   }
-  &__instagram-div{
+
+  &__instagram-div {
     background-image: url(../img/icons/instagram.svg);
     -webkit-background-size: cover;
     background-size: cover;
     width: 26px;
     height: 26px;
     transition: all .3s;
-    &.icon-soc{
+
+    &.icon-soc {
       transition: all .3s;
       width: 30px;
       height: 30px;
       background-image: url(../img/icons/instagram-hover.svg);
-     .active-hover &{
-       background-image: url(../img/icons/instagram.svg);
+      @include respond-to('500') {
+        width: 13px;
+        height: 13px;
       }
-      &:hover{
+
+      .active-hover & {
+        background-image: url(../img/icons/instagram.svg);
+      }
+
+      &:hover {
         background-image: url(../img/icons/instagram.svg);
       }
     }
-    &:hover{
+
+    &:hover {
       background-image: url(../img/icons/instagram-hover.svg);
     }
   }

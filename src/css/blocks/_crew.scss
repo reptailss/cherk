@@ -1,37 +1,43 @@
-.crew{
+.crew {
   &__inner {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 82px 0 0;
     position: relative;
-    &-hit-on{
+
+    &-hit-on {
       padding: 0;
     }
   }
+
   &__slider {
+    overflow: hidden;
     grid-column: 2/6;
 
-    &-hit-on{
+    &-hit-on {
       margin: 0;
     }
   }
-  &__title{
+
+  &__title {
     grid-column: 2/5;
-    &-wrap{
+
+    &-wrap {
       grid-column: 1/6;
       display: grid;
       grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     }
 
-    &-hit-on{
+    &-hit-on {
       background-image: url(../img/mask-3.png);
       padding-bottom: 91px;
       padding-top: 82px;
     }
 
   }
-  &__img{
+
+  &__img {
     grid-column: 2/3;
     background-image: url(../img/mask-2.png);
     background-repeat: repeat;
@@ -43,7 +49,8 @@
     position: absolute;
     left: 0;
     z-index: -1;
-    &-hit-on{
+
+    &-hit-on {
       position: absolute;
       left: 0;
       background-image: url(../img/mask-3.png);
@@ -51,11 +58,13 @@
       background-image: none;
     }
   }
-&__text{
-  margin-top: 19px;
-}
-  &__img-block{
-    &-img{
+
+  &__text {
+    margin-top: 19px;
+  }
+
+  &__img-block {
+    &-img {
       max-width: 100%;
       object-fit: contain;
       width: 100%;

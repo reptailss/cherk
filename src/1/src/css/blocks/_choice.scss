@@ -1,0 +1,53 @@
+.choice{
+  grid-column: 1 / 6;
+  &__inner{
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    padding: 65px 0 100px;
+    &.p0{
+      padding: 0;
+    }
+  }
+  &__title{
+    grid-column: 2/ 4;
+    padding-right: 10px;
+  }
+  &__button-map{
+    grid-column: 4/ 5;
+    margin-top: 43px;
+  }
+  &__rent-class{
+    grid-column: 2/ 5;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    margin: 0 -14px;
+    &-item{
+      display: flex;
+      margin: 0 14px;
+    }
+    &-img{
+      margin-right: 10px;
+      & img{
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  &__button-get{
+    grid-column: 2/ 5;
+    margin-top: 104px;
+    margin: 104px auto 0;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+  &--apartament{
+    margin-top: 67px;
+    grid-column: 1/6;
+  }
+  &__apartment{
+    grid-column: 1 / 6;
+  }
+}

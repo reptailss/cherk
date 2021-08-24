@@ -1,0 +1,309 @@
+.form {
+  &__home {
+    padding: 60px 0 49px;
+    @include respond-to('700') {
+      padding: 20px 0 20px;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    width: 100%;
+    @include respond-to('320') {
+      flex-wrap: wrap;
+    }
+
+
+    &-text {
+      margin-bottom: 20px;
+    }
+
+    &-one-type {
+      margin: 0 -8.5px;
+      @include respond-to('700') {
+        margin: 0 -5px;
+
+      }
+    }
+
+    &-label {
+      cursor: pointer;
+      transition: all .5s;
+      display: block;
+    }
+
+    &-label-text {
+      transition: all .5s;
+    }
+
+    &-one-type &-item {
+      text-align: center;
+      position: relative;
+      margin: 0 8.5px;
+      @include respond-to('500') {
+        margin: 0 5px;
+        width:calc(33.3% - 2.5px);
+
+
+      }
+      @include respond-to('320') {
+        margin: 5px 5px;
+      }
+    }
+
+    &-one-type &-label {;
+      text-align: center;
+      background-color: #000000;
+      padding: 11px 14px 10px 34px;
+      color: #ffffff;
+      @include respond-to('500') {
+        padding: 11px 5px 10px 27px;
+
+      }
+
+    }
+
+    &-one-type &-input {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+
+      @include respond-to('500') {
+      left: 10px;
+
+      }
+
+      &.viber.jq-radio {
+        background-image: url(../img/icons/viber-1.svg);
+      }
+
+      &.telegram.jq-radio {
+        background-image: url(../img/icons/telegram-1.svg);
+      }
+
+      &.telegram-2.jq-radio {
+        background-image: url(../img/icons/telegram-2-1.svg);
+      }
+    }
+
+    &-one-type &-input.viber.jq-radio.checked {
+      background-image: url(../img/icons/viber-1-hover.svg);
+    }
+
+    &-one-type &-input.telegram.jq-radio.checked {
+      background-image: url(../img/icons/telegram-1-hover.svg);
+    }
+
+    &-one-type &-input.telegram-2.jq-radio.checked {
+      background-image: url(../img/icons/telegram-2-1-hover.svg);
+    }
+
+  }
+
+  &__input {
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    outline: none;
+    padding: 11px 17px;
+    transition: all .3s;
+    width: 100%;
+
+
+    :focus ~ &-label:after {
+      background: linear-gradient(90deg, rgba(238, 206, 131, 1) 0%, rgba(200, 162, 55, 1) 20%, rgba(255, 222, 135, 1) 36%, rgba(232, 201, 112, 1) 53%, rgba(215, 174, 68, 1) 73%, rgba(162, 106, 13, 1) 100%);
+    }
+
+    &-label {
+      width: 100%;
+      display: block;
+      position: relative;
+      transition: all .3s;
+
+      &::after {
+        transition: all .3s;
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(#fff, .6);
+      }
+
+    }
+
+    &::placeholder {
+      color: rgba(#fff, .6)
+    }
+
+  }
+
+  &__item {
+    &-mt {
+      margin-top: 59px;
+      @include respond-to('700') {
+        margin-top: 35px;
+      }
+
+    }
+
+    &-phone {
+      position: relative;
+      display: flex;
+      position: relative;
+overflow: hidden;
+      &:After {
+        transition: all .3s;
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -11px;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(#fff, .6);
+      }
+
+      &.focus:After {
+
+        background: linear-gradient(90deg, rgba(238, 206, 131, 1) 0%, rgba(200, 162, 55, 1) 20%, rgba(255, 222, 135, 1) 36%, rgba(232, 201, 112, 1) 53%, rgba(215, 174, 68, 1) 73%, rgba(162, 106, 13, 1) 100%)
+      }
+    }
+  }
+
+  &__phone-input {
+    position: absolute;
+    left: 82px;
+    top: 0;
+    padding: 6px 17px;
+  }
+  &__select{
+    &-inner{
+      display: flex;
+      margin-left: -17px;
+      margin-right: -17px;
+      @include respond-to('700') {
+        margin: 0;
+        flex-direction: column;
+
+      }
+      &-wrap{
+        flex-wrap: wrap;
+      }
+
+    }
+    &-item{
+      width: 100%;
+      margin: 0 17px;
+      @include respond-to('700') {
+        margin: 0;
+
+      }
+      &-w50{
+        width: calc(50% - 34px)
+      }&-w100{
+               width: 100%;
+             }
+      &-mt{
+        margin-top: 59px;
+      }
+    }
+
+  }
+  &__textarea{
+    resize: none;
+    @extend %g-400;
+  }
+  &__button{
+
+  }
+  &__text-mt{
+    margin-top: 44px;
+  }
+}
+
+
+//viber
+.form__radio-one-type .jq-radio.checked.viber + .form__radio-label {
+  background-color: #A226DC;
+  border: 1px solid transparent;
+}
+
+.form__radio-one-type .jq-radio.viber + .form__radio-label {
+  border: 1px solid #A226DC;
+}
+
+//telegram
+.form__radio-one-type .jq-radio.checked.telegram + .form__radio-label {
+  background-color: #10ADDE;
+  border: 1px solid transparent;
+}
+
+.form__radio-one-type .jq-radio.telegram + .form__radio-label {
+  border: 1px solid #10ADDE;
+}
+
+//telegram2
+.form__radio-one-type .jq-radio.checked.telegram-2 + .form__radio-label {
+  background-color: #23CF35;
+  border: 1px solid transparent;
+}
+
+.form__radio-one-type .jq-radio.telegram-2 + .form__radio-label {
+  border: 1px solid #23CF35;
+}
+
+
+.form__radio-one-type .form__radio-item:hover .jq-radio + .form__radio-label {
+  -webkit-box-shadow: 6px 0px 41px 7px rgba(219, 199, 44, 0.2);
+  -moz-box-shadow: 6px 0px 41px 7px rgba(219, 199, 44, 0.2);
+  box-shadow: 6px 0px 41px 7px rgba(219, 199, 44, 0.2);
+
+}
+
+.form__radio-one-type .form__radio-item:hover .jq-radio.checked + .form__radio-label {
+  box-shadow: none;
+  cursor: default;
+
+}
+
+.jq-radio {
+  transition: all .3s;
+}
+
+.select__fo-type-inner .option{
+  letter-spacing: 0.055em;
+  @include respond-to('700') {
+    font-size: 14px;
+
+  }
+
+}
+
+.label-js{
+  position: relative;
+  margin-left: 3px;
+  padding-left: 3px;
+  &:after{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background-color: rgba(#fff,.6);
+    content: '';
+  }
+}
+
+.form__radio-label .text-2{
+  font-size: 11px;
+}
+
+.form__item-phone .text-2{
+   font-size: 14px;
+   font-weight: 300;
+   @extend %g-300;
+ }

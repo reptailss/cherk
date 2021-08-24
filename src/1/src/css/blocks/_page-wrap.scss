@@ -1,0 +1,100 @@
+.page-wrap{
+  display: grid;
+  grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+  &-top{
+    position: relative;
+    transition: all .3s;
+    &:after{
+      content:'';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      max-width: 805px;
+      background-image: url(../img/top-fon.png);
+      z-index: -2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include respond-to('1250') {
+        display: none;
+      }
+    }
+    &.hide:after{
+      background-image: none;
+    }
+  }
+  &-apartment{
+    padding-top: 102px;
+    @include respond-to('1500') {
+      padding-top: 0px;
+    }
+    @include respond-to('1100') {
+      padding-top: 0px;
+    }
+    @include respond-to('700') {
+      padding-top: 0px;
+    }
+
+  }
+  &-garant{
+    padding-top: 101px;
+    @include respond-to('1500') {
+      padding-top: 70px;
+    }
+    @include respond-to('1100') {
+      padding-top: 50px;
+    }
+    @include respond-to('700') {
+      padding-top: 40px;
+    }
+  }
+  &-crew{
+    padding-top: 101px;
+      @include respond-to('1500') {
+      padding-top: 70px;
+    }
+    @include respond-to('1100') {
+      padding-top: 50px;
+    }
+    @include respond-to('700') {
+      padding-top: 40px;
+    }
+  }
+  &-contact{
+    padding-top: 100px;
+      @include respond-to('1500') {
+      padding-top: 70px;
+    }
+    @include respond-to('1100') {
+      padding-top: 50px;
+    }
+    @include respond-to('700') {
+      padding-top: 40px;
+    }
+  }
+  &-social{
+    padding-top: 100px;
+      @include respond-to('1500') {
+      padding-top: 70px;
+    }
+    @include respond-to('1100') {
+      padding-top: 50px;
+    }
+    @include respond-to('700') {
+      padding-top: 40px;
+    }
+  }
+  &-hit-on{
+    padding-bottom: 100px;
+      @include respond-to('1500') {
+      padding-top: 70px;
+    }
+    @include respond-to('1100') {
+      padding-top: 50px;
+    }
+    @include respond-to('700') {
+      padding-top: 40px;
+    }
+  }
+}

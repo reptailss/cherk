@@ -1,5 +1,6 @@
 .catalog {
   grid-column: 1 / 6;
+
   &__inner {
     padding: 46px 0 43px;
     grid-column: 1 / 6;
@@ -7,28 +8,34 @@
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
   }
-  &__crumb{
+
+  &__crumb {
     grid-column: 2/5;
   }
-  &__title{
+
+  &__title {
     grid-column: 2/5;
     margin-top: 22px;
   }
-  &__map{
+
+  &__map {
     grid-column: 2/5;
     margin-top: 51px;
-    &-btn{
+
+    &-btn {
       margin-top: 21px;
-      border-bottom: 1px solid rgba(#fff,.5);
+      border-bottom: 1px solid rgba(#fff, .5);
       display: inline-block;
       cursor: pointer;
       transition: all .3s;
     }
   }
-  &--button-get{
+
+  &--button-get {
     margin: 0 auto;
   }
-  &--info-title{
+
+  &--info-title {
     max-width: 600px;
   }
 }

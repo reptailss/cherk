@@ -1,0 +1,135 @@
+
+.page-wrap-menu{
+  min-height: calc(100vh - 102px);
+  @include respond-to('1500') {
+    min-height: calc(100vh - 68px);
+  }
+  @include respond-to('500') {
+    min-height: calc(100vh - 49px);
+  }
+}
+.menu {
+  grid-column: 1 / 6;
+  min-height: calc(100vh - 102px);
+  position: absolute;
+  top: 103px;
+  left: 0;
+  transform: translateX(-120vw);
+  background-color: #000;
+  z-index: 50;
+  width: 100%;
+  transition: all .9s;
+  @include respond-to('700') {
+    top: 65px;
+    min-height: calc(100vh - 68px);
+  }
+  @include respond-to('500') {
+    top: 50px;
+    min-height: calc(100vh - 49px);
+  }
+
+
+  &.active {
+    transform: translate(0);
+  }
+
+  &__inner {
+    grid-column: 1 / 6;
+    padding: 0 0 102px;
+    position: relative;
+    display: grid;
+    width: 100%!important;
+    grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+  }
+
+  &__list {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 98px;
+    @include respond-to('1500') {
+      grid-column: 1/6;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    grid-column: 4/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    height: 100%;
+    max-width: 925px;
+    width: 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    @include respond-to('1500') {
+      display: none;
+    }
+    &-hover {
+      -webkit-animation: opaciti-anime 1s; /* Safari 4+ */
+      -moz-animation: opaciti-anime 1s; /* Fx 5+ */
+      -o-animation: opaciti-anime 1s; /* Opera 12+ */
+      animation: opaciti-anime 1s; /* IE 10+, Fx 29+ */
+    }
+
+    &-item {
+      transition: background 700ms linear;
+      height: 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      position: relative;
+      @include respond-to('1900') {
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        background-position: center center;
+      }
+      &-text{
+        position: absolute;
+        transition: background 700ms linear;
+        left: -67px;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        @include respond-to('1800') {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin-top: 115px;
+    cursor: pointer;
+    transition: all .3s;
+    @include respond-to('1500') {
+      margin-top: 40px;
+    }
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+
+}
+
+@-webkit-keyframes opaciti-anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

@@ -6,16 +6,35 @@
     padding: 82px 0 73px;
 
     position: relative;
+    @include respond-to('1500') {
+      padding: 40px 0 40px;
+    }
   }
 
   &__accor {
     grid-column: 2/3;
     &-item{
       margin-top: 30px;
+      @include respond-to('700') {
+        margin-top: 25px;
+      }
+    }
+    @include respond-to('1500') {
+      grid-column: 2/5;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
     }
   }
   &__form{
     grid-column: 4/5;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      margin-top: 36px;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
   &__img{
     grid-column: 3/4;
@@ -29,5 +48,8 @@
     position: absolute;
     left: 0;
     z-index: -1;
+    @include respond-to('1500') {
+      display: none;
+    }
   }
 }

@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    // costumn scrollBar 
 
 
     //burger
@@ -19,12 +20,12 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerOpen() {
         document.documentElement.style.marginRight = `${scrollbarWidth()}px`;
         $('.menu').toggleClass('active')
-        setTimeout($('body').toggleClass('bg000'),
-            500
-        )
+        // setTimeout($('body').toggleClass('bg000'),
+        //     500
+        // )
         document.documentElement.classList.add('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
-        setTimeout($('.burger-js').toggleClass('active'), 500)
+        $('.burger-js').toggleClass('active')
 
 
     }
@@ -32,13 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerClose() {
 
         $('.menu').toggleClass('active')
-        setTimeout($('body').toggleClass('bg000'),
-            500
-        )
+        // setTimeout($('body').toggleClass('bg000'),
+        //     500
+        // )
 
         document.documentElement.classList.remove('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
-        setTimeout($('.burger-js').toggleClass('active'), 500)
+        $('.burger-js').toggleClass('active')
         document.documentElement.style.marginRight = "";
 
 
@@ -110,273 +111,97 @@ window.addEventListener('DOMContentLoaded', () => {
     // slider
 
 
-    function swiperAppartment() {
-        let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
-
-        sliderWrapperGalerry.forEach(item => {
-
-            let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 4,
-                spaceBetween: 0,
-                loopedSlides: 4,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                loop: false,
-                direction: 'vertical',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
-
-
-            })
-            let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
-                calculateHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: swiperAprtNav,
-                },
-
-
-            })
-            swiperAprtMain.update();
-            swiperAprtNav.update();
-
-
-        })
-    }
-
-    swiperAppartment();
-
-    function reinitSwiper(swiper) {
-        setTimeout(function () {
-            swiper.update();
-        }, 500);
-    }
-
-    function swiperAppartmentCard() {
-        let sliderWrapperGalerry2 = document.querySelectorAll('.slider-apartment-card-js');
-
-        sliderWrapperGalerry2.forEach(item => {
-
-            let swiperAprtNav2 = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 4,
-                spaceBetween: 0,
-                loopedSlides: 4,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                loop: false,
-                direction: 'vertical',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
-
-
-            })
-            let swiperAprtMain2 = new Swiper(item.querySelector('.slider-main'), {
-                calculateHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: swiperAprtNav2,
-                },
-
-
-            })
-            swiperAprtMain2.update();
-            swiperAprtNav2.update();
-
-
-        })
-    }
-
-    swiperAppartmentCard();
-
-    function swiperFeedback() {
-        let sliderWrapperGalerry2 = document.querySelectorAll('.slider-feedback-js');
-
-        sliderWrapperGalerry2.forEach(item => {
-
-
-            let mySwiper2 = new Swiper(item.querySelector('.slider-feedback__container'), {
-                slidesPerView: 2,
-                spaceBetween: 50,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                autoHeight: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperFeedback();
-
-    function swiperCrew() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                slidesPerView: 4.76,
-                spaceBetween: 30,
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperCrew();
-
-
-    function swiperHitOn() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                slidesPerView: 4,
-                spaceBetween: 100,
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperHitOn();
-
-
-    function swiperCardAppartment() {
-        let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
-
-        sliderWrapperGalerry5.forEach(item => {
-
-            let mySwiperNav5 = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 7.5,
-                spaceBetween: 15,
-                loopedSlides: 4,
-
-                direction: 'horizontal',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
-
-
-            })
-            let mySwiper5 = new Swiper(item.querySelector('.slider-main'), {
-                autoHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: mySwiperNav5,
-                },
-
-
-            })
-
-
-        })
-    }
-
-    swiperCardAppartment();
-
-    function swiperRecommend() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-recommendation-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
-                slidesPerView: 2.425,
-                spaceBetween: 123,
-                calculateHeight: true,
-
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-
-        })
-    }
-
-    swiperRecommend();
-
+    const feedbackSlider = new Swiper('.slider-feedback__container', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: false,
+    })
+    $('.slider-feedback-button-prev').on('click', function () { feedbackSlider.slidePrev() })
+    $('.slider-feedback-button-next').on('click', function () { feedbackSlider.slideNext() })
+
+
+    const crewSlider = new Swiper('.slider-crew__container', {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+    })
+
+    $('.slider-crew-button-prev').on('click', function () { crewSlider.slidePrev() })
+    $('.slider-crew-button-next').on('click', function () { crewSlider.slideNext() })
+
+    const garantSlider = new Swiper('.slider-garant__container', {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+    })
+
+    $('.slider-garant-button-prev').on('click', function () { garantSlider.slidePrev() })
+    $('.slider-garant-button-next').on('click', function () { garantSlider.slideNext() })
+
+
+    // function swiperHitOn() {
+    //     let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
+
+    //     sliderWrapperGalerry3.forEach(item => {
+
+
+    //         let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
+    //             slidesPerView: 4,
+    //             spaceBetween: 100,
+    //             loop: true,
+    //             navigation: {
+    //                 nextEl: item.querySelector('.swiper-button-next-btn'),
+    //                 prevEl: item.querySelector('.swiper-button-prev-btn'),
+    //             },
+    //         })
+
+    //             ;
+    //     })
+    // }
+
+    // swiperHitOn();
+
+    const recomendedSwiper = new Swiper(".slider-recommendation__container", {
+        slidesPerView: "auto",
+        spaceBetween: 125,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    $('.slider-recommendation-button-prev').on('click', function () { recomendedSwiper.slidePrev() })
+    $('.slider-recommendation-button-next').on('click', function () { recomendedSwiper.slideNext() })
 
     //phone mask
 
     function maskPhonefun(selectorInput) {
 
+        $('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+        $('.phone-input-js').mask("+375 (999) 999-99-99");
 
-        function maskPhone() {
-            var country = $('.select-lang-js option:selected').val();
 
-
-            switch (country) {
-                case "by":
-                    selectorInput.attr("placeholder", "+375 (___) ___-__-__");
-                    selectorInput.mask("+375 (999) 999-99-99");
-                    break;
-                case "ru":
-                    selectorInput.attr("placeholder", "+7 (___) ___-__-__");
-                    selectorInput.mask("+7 (999) 999-99-99");
-                    break;
-
-            }
-        }
-
-        maskPhone();
         $('.select-lang-js').change(function () {
-            maskPhone();
-        });
+            let value = $(this).val()
+            let parentBlock = $(this).parents('.form__item-phone')
 
+            console.log(value);
+
+            if (value === "by") {
+                console.log('1');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+375 (999) 999-99-99");
+            } else if (value === "ru") {
+                console.log('2');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+7 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+7 (999) 999-99-99");
+            }
+        });
     }
 
-    maskPhonefun($('.phone-input-js'));
+    maskPhonefun();
+
     $(".phone-input-js-focus").focus(function () {
         $(this).parent().addClass('focus');
     });
@@ -425,7 +250,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 text.removeClass('active')
                 ths.removeClass('active')
             }
-            setTimeout(hide, 700)
+            // setTimeout(hide, 700)
 
         } else {
             text.animate({
@@ -448,7 +273,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     function scrollingPagination() {
-        console.log(pageYOffset);
         scrollProgressItem.forEach(el => {
             const progressSectionHeight = el.offsetHeight;
             const progressSectionOffset = offset(el).top;
@@ -514,21 +338,35 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // change appart photos
 
+    $('.apartment__item-photos-item').on('click', function () {
+        const srcImg = $(this).attr('data-src')
+        $(this).addClass('current').siblings().removeClass('current')
+        $(this).parents('.apartment__item').find('.apartment__item-body').css('background', `url(../${srcImg})`)
+    })
+
+    $('.card-apart__gallery-item').on('click', function () {
+        const srcImg = $(this).attr('data-src')
+        $(this).addClass('current').siblings().removeClass('current')
+        $(this).parents('.card-apart__slider').find('.card-apart__img').attr('src', srcImg)
+    })
+
+    $('.menu').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.apartment__item-photos').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.feedback__item-info-box-text-2').mCustomScrollbar({
+        axis: "y",
+    }); $('.feedback-slide__text').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.card-apart__gallery').mCustomScrollbar({
+        axis: "x",
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
