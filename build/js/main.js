@@ -1,5 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-
+    // costumn scrollBar 
+    // $('.menu').mCustomScrollbar({
+    //     axis: "y",
+    // });
+    $('.apartment__item-photos').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.card-apart__gallery-scroll').mCustomScrollbar({
+        axis: "x",
+    });
 
     //burger
 
@@ -280,44 +289,44 @@ window.addEventListener('DOMContentLoaded', () => {
     swiperHitOn();
 
 
-    function swiperCardAppartment() {
-        let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
+    // function swiperCardAppartment() {
+    //     let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
 
-        sliderWrapperGalerry5.forEach(item => {
+    //     sliderWrapperGalerry5.forEach(item => {
 
-            let mySwiperNav5 = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 7.5,
-                spaceBetween: 15,
-                loopedSlides: 4,
+    //         let mySwiperNav5 = new Swiper(item.querySelector('.slider-nav'), {
+    //             slidesPerView: 7.5,
+    //             spaceBetween: 15,
+    //             loopedSlides: 4,
 
-                direction: 'horizontal',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
+    //             direction: 'horizontal',
+    //             scrollbar: {
+    //                 el: item.querySelector('.swiper-scrollbar'),
+    //                 draggable: true,
 
 
-            })
-            let mySwiper5 = new Swiper(item.querySelector('.slider-main'), {
-                autoHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: mySwiperNav5,
-                },
+    //             },
+    //             autoHeight: true,
 
 
-            })
+    //         })
+    //         let mySwiper5 = new Swiper(item.querySelector('.slider-main'), {
+    //             autoHeight: true,
+    //             spaceBetween: 0,
+    //             loop: true,
+    //             loopedSlides: 5,
+    //             thumbs: {
+    //                 swiper: mySwiperNav5,
+    //             },
 
 
-        })
-    }
+    //         })
 
-    swiperCardAppartment();
+
+    //     })
+    // }
+
+    // swiperCardAppartment();
 
     function swiperRecommend() {
         let sliderWrapperGalerry3 = document.querySelectorAll('.slider-recommendation-js');
@@ -425,7 +434,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 text.removeClass('active')
                 ths.removeClass('active')
             }
-            setTimeout(hide, 700)
+            // setTimeout(hide, 700)
 
         } else {
             text.animate({
@@ -512,13 +521,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    // costumn scrollBar 
-    $('.menu').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.apartment__item-photos').mCustomScrollbar({
-        axis: "y",
-    });
 
     // change appart photos
 

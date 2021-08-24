@@ -10,7 +10,7 @@
   width: 100%;
   transition: all .9s;
   height: calc(100vh - 102px);
-  // overflow: auto;
+  overflow: auto;
 
   &.active {
     transform: translate(0);
