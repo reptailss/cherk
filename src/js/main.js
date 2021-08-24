@@ -113,10 +113,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const feedbackSlider = new Swiper('.slider-feedback__container', {
         slidesPerView: 2,
-        spaceBetween: 50,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        autoHeight: true,
+        spaceBetween: 30,
+        loop: false,
     })
     $('.slider-feedback-button-prev').on('click', function () { feedbackSlider.slidePrev() })
     $('.slider-feedback-button-next').on('click', function () { feedbackSlider.slideNext() })
@@ -178,32 +176,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function maskPhonefun(selectorInput) {
 
+        $('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+        $('.phone-input-js').mask("+375 (999) 999-99-99");
 
-        function maskPhone() {
-            var country = $('.select-lang-js option:selected').val();
 
-
-            switch (country) {
-                case "by":
-                    selectorInput.attr("placeholder", "+375 (___) ___-__-__");
-                    selectorInput.mask("+375 (999) 999-99-99");
-                    break;
-                case "ru":
-                    selectorInput.attr("placeholder", "+7 (___) ___-__-__");
-                    selectorInput.mask("+7 (999) 999-99-99");
-                    break;
-
-            }
-        }
-
-        maskPhone();
         $('.select-lang-js').change(function () {
-            maskPhone();
-        });
+            let value = $(this).val()
+            let parentBlock = $(this).parents('.form__item-phone')
 
+            console.log(value);
+
+            if (value === "by") {
+                console.log('1');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+375 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+375 (999) 999-99-99");
+            } else if (value === "ru") {
+                console.log('2');
+
+                parentBlock.children('.phone-input-js').attr("placeholder", "+7 (___) ___-__-__");
+                parentBlock.children('.phone-input-js').mask("+7 (999) 999-99-99");
+            }
+        });
     }
 
-    maskPhonefun($('.phone-input-js'));
+    maskPhonefun();
+
     $(".phone-input-js-focus").focus(function () {
         $(this).parent().addClass('focus');
     });
@@ -361,6 +359,8 @@ window.addEventListener('DOMContentLoaded', () => {
         axis: "y",
     });
     $('.feedback__item-info-box-text-2').mCustomScrollbar({
+        axis: "y",
+    }); $('.feedback-slide__text').mCustomScrollbar({
         axis: "y",
     });
     $('.card-apart__gallery').mCustomScrollbar({

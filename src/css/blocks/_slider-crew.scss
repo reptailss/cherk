@@ -1,19 +1,15 @@
 .slider-crew {
 
-
   &__container {
     position: relative;
     padding: 0;
   }
-
-
 
   &__slide {
     max-width: 336px;
     width: 100%;
     height: 100%;
   }
-
 
   &__arrow {
     grid-column: 1/6;
