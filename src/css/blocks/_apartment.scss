@@ -15,7 +15,6 @@
     align-items: center;
 
     &-item {
-      background: url('../img/content/21.jpg');
       display: flex;
       max-width: 272px;
       width: 100%;
@@ -124,14 +123,12 @@
     grid-column: 1/4;
     justify-content: space-between;
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin: -25px 0;
   }
 
-  &__item {
-    width: calc(41.85% - 0px);
-    margin: 25px 0;
-  }
+  &__item {}
 
   &__more {
     cursor: pointer;
@@ -169,4 +166,93 @@
 .slider__apartment img {
   max-width: 100%;
   width: 100%;
+}
+
+.apartment {
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: calc(41.85% - 0px);
+    margin: 25px 0;
+    overflow: visible;
+  }
+
+  &__item-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    min-height: 401px;
+    background: url('../img/content/21.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item-price-box {
+    background: #1F1F1F;
+    padding: 8px 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__item-photos {
+    max-height: 401px;
+    max-width: 127px;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    background: #000;
+    overflow: auto;
+  }
+
+  &__item-photos-item {
+    padding-right: 10px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+    &.current {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      background: rgba(#000, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.apartment__item-photos {
+  .mCSB_scrollTools .mCSB_draggerContainer {
+    right: -19px;
+  }
 }

@@ -516,6 +516,18 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.menu').mCustomScrollbar({
         axis: "y",
     });
+    $('.apartment__item-photos').mCustomScrollbar({
+        axis: "y",
+    });
+
+    // change appart photos
+
+    $('.apartment__item-photos-item').on('click', function () {
+        const srcImg = $(this).attr('data-src')
+        $(this).addClass('current').siblings().removeClass('current')
+        $(this).parents('.apartment__item').find('.apartment__item-body').css('background', `url(../${srcImg})`)
+    })
+
 
 });
 
