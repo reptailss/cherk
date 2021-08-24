@@ -360,7 +360,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     $('.feedback__item-info-box-text-2').mCustomScrollbar({
         axis: "y",
-    }); $('.feedback-slide__text').mCustomScrollbar({
+    });
+    $('.feedback-slide__text').mCustomScrollbar({
         axis: "y",
     });
     $('.card-apart__gallery').mCustomScrollbar({

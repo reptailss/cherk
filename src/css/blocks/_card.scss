@@ -98,6 +98,7 @@
     max-width: 100%;
     width: 100%;
 
+
     .mCSB_horizontal.mCSB_inside>.mCSB_container {
       margin-bottom: 10px;
     }
@@ -112,12 +113,15 @@
     }
   }
 
+
   &__gallery-scroll {
     display: flex;
     flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
   &__gallery-item {
+    cursor: pointer;
     flex: 0 0 85px;
     max-width: 85px;
     width: 100%;

@@ -2361,9 +2361,11 @@ button {
   display: flex;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+          flex-wrap: nowrap;
+  overflow-x: auto; }
 
 .card-apart__gallery-item {
+  cursor: pointer;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 85px;
       -ms-flex: 0 0 85px;
