@@ -1,14 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     // costumn scrollBar 
-    // $('.menu').mCustomScrollbar({
-    //     axis: "y",
-    // });
-    $('.apartment__item-photos').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.card-apart__gallery-scroll').mCustomScrollbar({
-        axis: "x",
-    });
+
 
     //burger
 
@@ -119,242 +111,68 @@ window.addEventListener('DOMContentLoaded', () => {
     // slider
 
 
-    // function swiperAppartment() {
-    //     let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
+    const feedbackSlider = new Swiper('.slider-feedback__container', {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        autoHeight: true,
+    })
+    $('.slider-feedback-button-prev').on('click', function () { feedbackSlider.slidePrev() })
+    $('.slider-feedback-button-next').on('click', function () { feedbackSlider.slideNext() })
 
-    //     sliderWrapperGalerry.forEach(item => {
 
-    //         let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
+    const crewSlider = new Swiper('.slider-crew__container', {
+        slidesPerView: 4.76,
+        spaceBetween: 30,
+        loop: true,
+    })
+
+    $('.slider-crew-button-prev').on('click', function () { crewSlider.slidePrev() })
+    $('.slider-crew-button-next').on('click', function () { crewSlider.slideNext() })
+
+    const garantSlider = new Swiper('.slider-garant__container', {
+        slidesPerView: 4.76,
+        spaceBetween: 30,
+        loop: true,
+    })
+
+    $('.slider-garant-button-prev').on('click', function () { garantSlider.slidePrev() })
+    $('.slider-garant-button-next').on('click', function () { garantSlider.slideNext() })
+
+
+    // function swiperHitOn() {
+    //     let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
+
+    //     sliderWrapperGalerry3.forEach(item => {
+
+
+    //         let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
     //             slidesPerView: 4,
-    //             spaceBetween: 0,
-    //             loopedSlides: 4,
-    //             freeMode: true,
-    //             watchSlidesVisibility: true,
-    //             watchSlidesProgress: true,
-    //             loop: false,
-    //             direction: 'vertical',
-    //             scrollbar: {
-    //                 el: item.querySelector('.swiper-scrollbar'),
-    //                 draggable: true,
-
-
-    //             },
-    //             autoHeight: true,
-
-
-    //         })
-    //         let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
-    //             calculateHeight: true,
-    //             spaceBetween: 0,
+    //             spaceBetween: 100,
     //             loop: true,
-    //             loopedSlides: 5,
-    //             thumbs: {
-    //                 swiper: swiperAprtNav,
+    //             navigation: {
+    //                 nextEl: item.querySelector('.swiper-button-next-btn'),
+    //                 prevEl: item.querySelector('.swiper-button-prev-btn'),
     //             },
-
-
     //         })
-    //         swiperAprtMain.update();
-    //         swiperAprtNav.update();
 
-
+    //             ;
     //     })
     // }
 
-    // swiperAppartment();
+    // swiperHitOn();
 
-    // function reinitSwiper(swiper) {
-    //     setTimeout(function () {
-    //         swiper.update();
-    //     }, 500);
-    // }
-
-    function swiperAppartmentCard() {
-        let sliderWrapperGalerry2 = document.querySelectorAll('.slider-apartment-card-js');
-
-        sliderWrapperGalerry2.forEach(item => {
-
-            let swiperAprtNav2 = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 4,
-                spaceBetween: 0,
-                loopedSlides: 4,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                loop: false,
-                direction: 'vertical',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
-
-
-            })
-            let swiperAprtMain2 = new Swiper(item.querySelector('.slider-main'), {
-                calculateHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: swiperAprtNav2,
-                },
-
-
-            })
-            swiperAprtMain2.update();
-            swiperAprtNav2.update();
-
-
-        })
-    }
-
-    swiperAppartmentCard();
-
-    function swiperFeedback() {
-        let sliderWrapperGalerry2 = document.querySelectorAll('.slider-feedback-js');
-
-        sliderWrapperGalerry2.forEach(item => {
-
-
-            let mySwiper2 = new Swiper(item.querySelector('.slider-feedback__container'), {
-                slidesPerView: 2,
-                spaceBetween: 50,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                autoHeight: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperFeedback();
-
-    function swiperCrew() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                slidesPerView: 4.76,
-                spaceBetween: 30,
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperCrew();
-
-
-    function swiperHitOn() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-                slidesPerView: 4,
-                spaceBetween: 100,
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-        })
-    }
-
-    swiperHitOn();
-
-
-    // function swiperCardAppartment() {
-    //     let sliderWrapperGalerry5 = document.querySelectorAll('.slider-card-apartment-js');
-
-    //     sliderWrapperGalerry5.forEach(item => {
-
-    //         let mySwiperNav5 = new Swiper(item.querySelector('.slider-nav'), {
-    //             slidesPerView: 7.5,
-    //             spaceBetween: 15,
-    //             loopedSlides: 4,
-
-    //             direction: 'horizontal',
-    //             scrollbar: {
-    //                 el: item.querySelector('.swiper-scrollbar'),
-    //                 draggable: true,
-
-
-    //             },
-    //             autoHeight: true,
-
-
-    //         })
-    //         let mySwiper5 = new Swiper(item.querySelector('.slider-main'), {
-    //             autoHeight: true,
-    //             spaceBetween: 0,
-    //             loop: true,
-    //             loopedSlides: 5,
-    //             thumbs: {
-    //                 swiper: mySwiperNav5,
-    //             },
-
-
-    //         })
-
-
-    //     })
-    // }
-
-    // swiperCardAppartment();
-
-    function swiperRecommend() {
-        let sliderWrapperGalerry3 = document.querySelectorAll('.slider-recommendation-js');
-
-        sliderWrapperGalerry3.forEach(item => {
-
-
-            let mySwiper3 = new Swiper(item.querySelector('.slider-recommendation__container'), {
-                slidesPerView: 2.425,
-                spaceBetween: 123,
-                calculateHeight: true,
-
-                loop: true,
-                navigation: {
-                    nextEl: item.querySelector('.swiper-button-next-btn'),
-                    prevEl: item.querySelector('.swiper-button-prev-btn'),
-                },
-
-
-            })
-
-                ;
-
-        })
-    }
-
-    swiperRecommend();
-
+    const recomendedSwiper = new Swiper(".slider-recommendation__container", {
+        slidesPerView: "auto",
+        spaceBetween: 125,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    $('.slider-recommendation-button-prev').on('click', function () { recomendedSwiper.slidePrev() })
+    $('.slider-recommendation-button-next').on('click', function () { recomendedSwiper.slideNext() })
 
     //phone mask
 
@@ -530,5 +348,19 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).parents('.apartment__item').find('.apartment__item-body').css('background', `url(../${srcImg})`)
     })
 
+    $('.card-apart__gallery-item').on('click', function () {
+        const srcImg = $(this).attr('data-src')
+        $(this).addClass('current').siblings().removeClass('current')
+        $(this).parents('.card-apart__slider').find('.card-apart__img').attr('src', srcImg)
+    })
 
+    $('.menu').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.apartment__item-photos').mCustomScrollbar({
+        axis: "y",
+    });
+    $('.card-apart__gallery').mCustomScrollbar({
+        axis: "x",
+    });
 });

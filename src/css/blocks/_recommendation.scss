@@ -6,15 +6,18 @@
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 46x 0
-
   }
+
   &__slider {
     grid-column: 2/6;
     margin-top: 91px;
   }
-  &__title{
-    grid-column: 2/5;
-  }
 
+  &__title {
+    grid-column: 2/5;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
 }

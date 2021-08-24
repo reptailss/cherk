@@ -1,14 +1,10 @@
-.slider-recommendation{
+.slider-recommendation {
 
   &__container {
     position: relative;
     padding: 0;
   }
 
-  &__wrapper {
-    display: flex;
-    align-items: stretch !important;
-  }
 
   &__slide {
     height: 100%;
@@ -45,5 +41,14 @@
       width: 35px;
       height: 20px;
     }
+  }
+}
+
+.recommendation__slider {
+
+  .apartment__item {
+    display: flex;
+    max-width: 507px;
+    width: 100%;
   }
 }
