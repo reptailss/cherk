@@ -9,6 +9,8 @@
   z-index: 50;
   width: 100%;
   transition: all .9s;
+  height: calc(100vh - 102px);
+  // overflow: auto;
 
   &.active {
     transform: translate(0);
@@ -44,10 +46,14 @@
     background-size: contain;
 
     &-hover {
-      -webkit-animation: opaciti-anime 1s; /* Safari 4+ */
-      -moz-animation: opaciti-anime 1s; /* Fx 5+ */
-      -o-animation: opaciti-anime 1s; /* Opera 12+ */
-      animation: opaciti-anime 1s; /* IE 10+, Fx 29+ */
+      -webkit-animation: opaciti-anime 1s;
+      /* Safari 4+ */
+      -moz-animation: opaciti-anime 1s;
+      /* Fx 5+ */
+      -o-animation: opaciti-anime 1s;
+      /* Opera 12+ */
+      animation: opaciti-anime 1s;
+      /* IE 10+, Fx 29+ */
     }
 
     &-item {
@@ -58,7 +64,8 @@
       -webkit-background-size: cover;
       background-size: cover;
       position: relative;
-      &-text{
+
+      &-text {
         position: absolute;
         transition: background 700ms linear;
         left: -67px;
@@ -91,8 +98,8 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-

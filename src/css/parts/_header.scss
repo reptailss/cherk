@@ -1,43 +1,53 @@
-.header{
+.header {
     grid-column: 2 / 5;
     min-height: 102px;
-    &__inner{
+
+    &__inner {
         justify-content: space-between;
         display: flex;
         align-items: center;
         padding: 27px 0 25px;
     }
-    &__info-gup{
+
+    &__info-gup {
         margin: 0 - 21.5px;
     }
-    &__info-item-gup{
+
+    &__info-item-gup {
         margin: 0 21.5px;
     }
-    &__info{
+
+    &__info {
         display: flex;
         align-items: center;
     }
-    &__info-phone{
+
+    &__info-phone {
         display: flex;
         align-items: center;
-        &--thanks{
+
+        &--thanks {
             flex-direction: column;
             align-items: flex-end;
         }
-        &-wrap{
+
+        &-wrap {
             display: flex;
             align-items: center;
         }
-        &-text{
+
+        &-text {
             margin-top: 5px;
         }
     }
-    &__info-phone-img{
+
+    &__info-phone-img {
         margin-right: 7px;
         width: 14px;
         height: 14px;
     }
-    &__info-phone-text{
+
+    &__info-phone-text {
         font-size: 18px;
         line-height: 21px;
         color: #FFFFFF;

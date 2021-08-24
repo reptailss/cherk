@@ -19,12 +19,12 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerOpen() {
         document.documentElement.style.marginRight = `${scrollbarWidth()}px`;
         $('.menu').toggleClass('active')
-        setTimeout($('body').toggleClass('bg000'),
-            500
-        )
+        // setTimeout($('body').toggleClass('bg000'),
+        //     500
+        // )
         document.documentElement.classList.add('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
-        setTimeout($('.burger-js').toggleClass('active'), 500)
+        $('.burger-js').toggleClass('active')
 
 
     }
@@ -32,13 +32,13 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerClose() {
 
         $('.menu').toggleClass('active')
-        setTimeout($('body').toggleClass('bg000'),
-            500
-        )
+        // setTimeout($('body').toggleClass('bg000'),
+        //     500
+        // )
 
         document.documentElement.classList.remove('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
-        setTimeout($('.burger-js').toggleClass('active'), 500)
+        $('.burger-js').toggleClass('active')
         document.documentElement.style.marginRight = "";
 
 
@@ -110,55 +110,55 @@ window.addEventListener('DOMContentLoaded', () => {
     // slider
 
 
-    function swiperAppartment() {
-        let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
+    // function swiperAppartment() {
+    //     let sliderWrapperGalerry = document.querySelectorAll('.slider-apartment-js');
 
-        sliderWrapperGalerry.forEach(item => {
+    //     sliderWrapperGalerry.forEach(item => {
 
-            let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
-                slidesPerView: 4,
-                spaceBetween: 0,
-                loopedSlides: 4,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                loop: false,
-                direction: 'vertical',
-                scrollbar: {
-                    el: item.querySelector('.swiper-scrollbar'),
-                    draggable: true,
-
-
-                },
-                autoHeight: true,
+    //         let swiperAprtNav = new Swiper(item.querySelector('.slider-nav'), {
+    //             slidesPerView: 4,
+    //             spaceBetween: 0,
+    //             loopedSlides: 4,
+    //             freeMode: true,
+    //             watchSlidesVisibility: true,
+    //             watchSlidesProgress: true,
+    //             loop: false,
+    //             direction: 'vertical',
+    //             scrollbar: {
+    //                 el: item.querySelector('.swiper-scrollbar'),
+    //                 draggable: true,
 
 
-            })
-            let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
-                calculateHeight: true,
-                spaceBetween: 0,
-                loop: true,
-                loopedSlides: 5,
-                thumbs: {
-                    swiper: swiperAprtNav,
-                },
+    //             },
+    //             autoHeight: true,
 
 
-            })
-            swiperAprtMain.update();
-            swiperAprtNav.update();
+    //         })
+    //         let swiperAprtMain = new Swiper(item.querySelector('.slider-main'), {
+    //             calculateHeight: true,
+    //             spaceBetween: 0,
+    //             loop: true,
+    //             loopedSlides: 5,
+    //             thumbs: {
+    //                 swiper: swiperAprtNav,
+    //             },
 
 
-        })
-    }
+    //         })
+    //         swiperAprtMain.update();
+    //         swiperAprtNav.update();
 
-    swiperAppartment();
 
-    function reinitSwiper(swiper) {
-        setTimeout(function () {
-            swiper.update();
-        }, 500);
-    }
+    //     })
+    // }
+
+    // swiperAppartment();
+
+    // function reinitSwiper(swiper) {
+    //     setTimeout(function () {
+    //         swiper.update();
+    //     }, 500);
+    // }
 
     function swiperAppartmentCard() {
         let sliderWrapperGalerry2 = document.querySelectorAll('.slider-apartment-card-js');
@@ -448,7 +448,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     function scrollingPagination() {
-        console.log(pageYOffset);
         scrollProgressItem.forEach(el => {
             const progressSectionHeight = el.offsetHeight;
             const progressSectionOffset = offset(el).top;
@@ -513,7 +512,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
+    // costumn scrollBar 
+    $('.menu').mCustomScrollbar({
+        axis: "y",
+    });
 
 });
 
