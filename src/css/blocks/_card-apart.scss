@@ -10,62 +10,122 @@
     position: relative;
 
   }
-  &__atribute{
+
+  &__atribute {
     grid-column: 2/ 5;
     margin-top: 2px;
     display: flex;
     align-items: center;
     margin: 0 -14px;
-    &-item{
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
+
+    @media(max-width: $md5) {
+      display: block;
+    }
+
+    &-item {
       display: flex;
       margin: 0 14px;
+
+      @media(max-width: $md5) {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
     }
-    &-img{
+
+    &-img {
       margin-right: 10px;
-      & img{
+
+      & img {
         width: 18px;
         height: 18px;
       }
     }
   }
-  &__box{
+
+  &__box {
     grid-column: 2/5;
-    display: flex;justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: $md2) {
+      flex-direction: column-reverse;
+    }
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
-  &__btn{
+
+  &__btn {
     display: flex;
     padding: 23px 40px;
     align-items: center;
     background-color: #000000;
-    &-img{
+
+    @media(max-width: $md2) {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    &-img {
       margin-right: 10px;
       width: 18px;
       height: 18px;
       object-fit: contain;
     }
   }
-  &__atribute{
+
+  &__atribute {
     margin-top: 19px;
   }
-  &__slider{
+
+  &__slider {
     grid-column: 2/4;
     padding-right: 125px;
     margin-top: 51px;
+
+    @media(max-width: $md1) {
+      grid-column: 2/5;
+      padding-right: 0;
+    }
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
-  &__info{
+
+  &__info {
     margin-top: 51px;
     grid-column: 4/5;
-    &-price{
+
+    @media(max-width: $md1) {
+      grid-column: 2/5;
+      padding-right: 0;
+    }
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
+
+    &-price {
       padding-bottom: 30px;
 
       position: relative;
 
-      &-text{
+      &-text {
         position: relative;
         display: inline-block;
         padding-right: 33px;
       }
-      &-i{
+
+      &-i {
         background-image: url(../img/icons/i.svg);
         width: 15px;
         display: block;
@@ -73,72 +133,114 @@
         -webkit-background-size: cover;
         background-size: cover;
         position: absolute;
-        right:  3px;
+        right: 3px;
         top: 30px;
 
       }
 
     }
-    &-box{
+
+    &-box {
       width: 50%;
       padding-top: 15px;
       padding-bottom: 41px;
-      &-item{
+      padding-right: 5px;
+
+      @media(max-width: $md1) {
+        border-right: none;
+        width: calc(41.85% - 0px);
+      }
+
+      @media(max-width: $md5) {
+        width: 100%;
+      }
+
+      &-item {
         display: flex;
         align-items: center;
         margin-top: 23px;
 
-        &-name{
+        &-name {
           margin-right: 5px;
         }
       }
     }
-    &-inner{
+
+    &-inner {
 
       display: flex;
       align-items: stretch;
+      justify-content: space-between;
+
+      @media(max-width: $md5) {
+        display: block;
+      }
     }
   }
 
-  &__description{
+  &__description {
     grid-column: 2/3;
     margin-top: 112px;
-    &-text{
+
+    @media(max-width: $md2) {
+      grid-column: 2/5;
+    }
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
+
+    &-text {
       margin-top: 37px;
-      &-item{
-        & p{
+
+      &-item {
+        & p {
           margin-top: 15px;
         }
       }
     }
   }
-  &__map{
+
+  &__map {
     grid-column: 4/5;
     margin-top: 112px;
+
+    @media(max-width: $md2) {
+      grid-column: 2/5;
+    }
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
-  &__map-inner{
+
+  &__map-inner {
     margin-top: 37px;
   }
-  &__wrap{
+
+  &__wrap {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
   }
-  &__wrap-desc{
+
+  &__wrap-desc {
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
-    &-1{
+
+    &-1 {
       grid-column: 1/2;
     }
-    &-4{
+
+    &-4 {
       grid-column: 5/6;
     }
   }
 
-  &__map{
-    &-inner{
-      & img{
+  &__map {
+    &-inner {
+      & img {
         max-width: 100%;
       }
     }

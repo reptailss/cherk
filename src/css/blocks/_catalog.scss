@@ -11,16 +11,28 @@
 
   &__crumb {
     grid-column: 2/5;
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
 
   &__title {
     grid-column: 2/5;
     margin-top: 22px;
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
 
   &__map {
     grid-column: 2/5;
     margin-top: 51px;
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
 
     &-btn {
       margin-top: 21px;

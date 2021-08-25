@@ -249,29 +249,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     $('.accor-title-js').on('click', function () {
-        let text = $(this).parent().find('.accor-text-js');
-        let ths = $(this);
-
-        if ($(this).hasClass('active')) {
-            text.animate({
-                opacity: 0
-            }, "slow");
-            function hide() {
-                text.removeClass('active')
-                ths.removeClass('active')
-            }
-            // setTimeout(hide, 700)
-
-        } else {
-            text.animate({
-                opacity: 1
-            }, "slow");
-            function show() {
-
-            }
-            $(this).addClass('active');
-            text.addClass('active');
-        }
+        $(this).toggleClass('active')
+        $(this).next().slideToggle()
 
     })
 
@@ -361,6 +340,10 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).addClass('current').siblings().removeClass('current')
         $(this).parents('.card-apart__slider').find('.card-apart__img').attr('src', srcImg)
     })
+
+    const browserIdChrome = navigator.userAgent.search(/Chrome/)
+    const browserIdOpera = navigator.userAgent.search(/Opera/)
+
     const addScrollbar = function () {
         let windowWidth = $(window).width();
         if (windowWidth > 767) {
@@ -382,10 +365,13 @@ window.addEventListener('DOMContentLoaded', () => {
             $('.feedback__item-info-box-text-2').mCustomScrollbar("destroy");
             $('.feedback-slide__text').mCustomScrollbar("destroy");
         }
+        if (browserIdChrome > 0 || browserIdOpera > 0) {
+            $('.card-apart__gallery').mCustomScrollbar({
+                axis: "x",
+                updateOnContentResize: true,
+            });
+        }
 
-        $('.card-apart__gallery').mCustomScrollbar({
-            axis: "x",
-        });
     }
     addScrollbar()
     $(window).resize(function () {

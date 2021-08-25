@@ -29,6 +29,10 @@
         margin-bottom: 104px;
         top: 85px;
 
+        @media(max-width: 700px) {
+            grid-column: 1/6;
+        }
+
         span {
             line-height: 115%;
         }
@@ -37,6 +41,16 @@
     &__wrapper {
         padding-top: 350px;
         grid-column: 2/3;
+        max-width: 470px;
+        width: 100%;
+
+        @media(max-width: $md2) {
+            grid-column: 2/5;
+        }
+
+        @media(max-width: 700px) {
+            grid-column: 1/6;
+        }
     }
 
     &__description {
@@ -57,6 +71,21 @@
         z-index: 2;
         padding: 106px 103px;
 
+        @media(max-width: 1650px) {
+            padding: 50px;
+        }
+
+        @media(max-width: $md2) {
+            grid-column: 2/5;
+        }
+
+        @media(max-width: 700px) {
+            grid-column: 1/6;
+        }
+
+        @media(max-width: $md5) {
+            padding: 50px 20px;
+        }
     }
 
     &__window-content {

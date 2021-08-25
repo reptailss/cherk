@@ -7,10 +7,12 @@
     position: relative;
 
   }
+
   &__title {
     grid-column: 2/5;
   }
-  &__list{
+
+  &__list {
     grid-column: 2/5;
     display: flex;
     justify-content: space-between;
@@ -19,30 +21,68 @@
     margin-bottom: -13px;
     margin-top: 44px;
     padding-left: 1px;
+
+    @media(max-width: 700px) {
+      grid-column: 1/6;
+    }
   }
-  &__item{
-      width: calc(41.58% - 0px);
-      margin: 25px 0;
+
+  &__item {
+    width: calc(41.58% - 0px);
+    margin: 25px 0;
     margin: 13px 0;
     padding: 26px 50px 26px 26px;
     display: flex;
     align-items: center;
     background-color: #000000;
-    &-img{
+
+    @media(max-width: $md2) {
+      width: 48%;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 2%;
+      }
+    }
+
+    @media(max-width: $md3) {
+      width: 100%;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+    }
+
+    @media(max-width: $md6) {
+      padding: 30px 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-img {
       padding: 26px;
       background: #101211;
       border: 1px solid rgba(0, 0, 0, 0.1);
       margin-right: 46px;
-      &-img{
+
+      @media(max-width: $md6) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+
+      &-img {
         max-width: 100%;
       }
     }
-    &-text{
+
+    &-text {
       margin-top: 14px;
     }
 
   }
-  &__img{
+
+  &__img {
 
     background-image: url(../img/mask-2.png);
     background-repeat: repeat;
@@ -54,10 +94,12 @@
     position: absolute;
     left: 0;
     z-index: -1;
-    &-1{
+
+    &-1 {
       grid-column: 2/3;
     }
-    &-2{
+
+    &-2 {
       grid-column: 4/5;
     }
   }
