@@ -113,15 +113,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const feedbackSlider = new Swiper('.slider-feedback__container', {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 15,
         loop: false,
-        autoHeight: false,
+        autoHeight: true,
         breakpoints: {
             1200: {
                 slidesPerView: 2,
             },
             768: {
-                autoHeight: true,
+                autoHeight: false,
                 spaceBetween: 30,
             }
         }
@@ -131,9 +131,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const crewSlider = new Swiper('.slider-crew__container', {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        breakpoints: {
+            500: {
+                slidesPerView: "auto",
+            },
+        }
     })
 
     $('.slider-crew-button-prev').on('click', function () { crewSlider.slidePrev() })
