@@ -6,7 +6,9 @@
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
     padding: 65px 0 100px;
-
+    @include respond-to('700') {
+      padding: 20px 0 20px;
+    }
     &.p0 {
       padding: 0;
     }
@@ -79,6 +81,7 @@
     @include respond-to('700') {
       grid-column: 1/6;
       width: 100%;
+      margin-top: 30px;
     }
   }
 

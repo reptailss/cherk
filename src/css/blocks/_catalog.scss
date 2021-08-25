@@ -7,6 +7,9 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+    @media(max-width: 700px) {
+      padding: 20px 0 20px;
+    }
   }
 
   &__crumb {

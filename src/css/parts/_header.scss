@@ -49,7 +49,7 @@
         &-burger {
             @include respond-to('700') {
                 position: absolute;
-                left: 15px;
+                left: 20px;
                 margin: 0;
             }
         }
@@ -57,7 +57,7 @@
         &-lang {
             @include respond-to('700') {
                 position: absolute;
-                right: 15px;
+                right: 20px;
                 margin: 0;
             }
         }
