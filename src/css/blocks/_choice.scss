@@ -88,6 +88,10 @@
   &--apartament {
     margin-top: 67px;
     grid-column: 1/6;
+    @include respond-to('700') {
+      margin-top: 20px;
+    }
+
   }
 
   &__apartment {
