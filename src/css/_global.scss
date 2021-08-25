@@ -4,54 +4,71 @@
   @include respond-to('2300') {
     font-size: 28px;
   }
+
   @include respond-to('1850') {
     font-size: 28px;
   }
+
   @include respond-to('1800') {
     font-size: 18px;
   }
+
   @include respond-to('1700') {
     font-size: 16px;
   }
+
   @include respond-to('1900') {
     font-size: 16px;
   }
+
   @include respond-to('1600') {
     font-size: 16px;
   }
+
   @include respond-to('1500') {
     font-size: 16px;
   }
+
   @include respond-to('1300') {
     font-size: 16px;
   }
+
   @include respond-to('1250') {
     font-size: 16px;
   }
+
   @include respond-to('1100') {
     font-size: 16px;
   }
+
   @include respond-to('900') {
     font-size: 16px;
   }
+
   @include respond-to('850') {
     font-size: 16px;
   }
+
   @include respond-to('700') {
     font-size: 16px;
   }
+
   @include respond-to('600') {
     font-size: 16px;
   }
+
   @include respond-to('500') {
     font-size: 16px;
   }
+
   @include respond-to('400') {
     font-size: 16px;
   }
+
   @include respond-to('320') {
     font-size: 16px;
   }
+
   @include respond-to('310') {
     font-size: 16px;
   }
@@ -113,51 +130,67 @@ button {
   @include respond-to('2300') {
     font-size: 28px;
   }
+
   @include respond-to('1850') {
     font-size: 28px;
   }
+
   @include respond-to('1800') {
     font-size: 18px;
   }
+
   @include respond-to('1700') {
     font-size: 16px;
   }
+
   @include respond-to('1900') {
     font-size: 16px;
   }
+
   @include respond-to('1600') {
     font-size: 16px;
   }
+
   @include respond-to('1500') {
     font-size: 16px;
   }
+
   @include respond-to('1300') {
     font-size: 16px;
   }
+
   @include respond-to('1250') {
     font-size: 16px;
   }
+
   @include respond-to('1100') {
     font-size: 16px;
   }
+
   @include respond-to('900') {
     font-size: 16px;
   }
+
   @include respond-to('850') {
     font-size: 16px;
   }
+
   @include respond-to('700') {
     font-size: 16px;
   }
+
   @include respond-to('600') {
     font-size: 16px;
   }
+
   @include respond-to('500') {
     font-size: 16px;
   }
+
   @include respond-to('400') {
     font-size: 16px;
   }
+
   @include respond-to('320') {
     font-size: 16px;
   }
@@ -170,6 +203,7 @@ button {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
+
   @include respond-to('700') {
     padding: 0 20px;
   }

@@ -15,10 +15,12 @@
     overflow: hidden;
     grid-column: 2/6;
     margin-top: 83px;
+
     @include respond-to('1500') {
       grid-column: 2/5;
       margin-top: 36px;
     }
+
     @include respond-to('700') {
       grid-column: 1/6;
     }
@@ -41,6 +43,10 @@
       background-image: url(../img/mask-3.png);
       padding-bottom: 91px;
       padding-top: 82px;
+
+      @media(max-width: $md2) {
+        padding: 40px 0;
+      }
     }
 
   }

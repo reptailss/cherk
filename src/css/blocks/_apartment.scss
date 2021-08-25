@@ -18,28 +18,36 @@
       grid-column: 2/5;
 
     }
+
     @include respond-to('700') {
       grid-column: 1/6;
       flex-direction: column;
     }
+
     &-item {
       display: flex;
       max-width: 272px;
       width: 100%;
+
       @include respond-to('1500') {
-       max-width: 100%;
-        &:nth-child(1){
+        max-width: 100%;
+
+        &:nth-child(1) {
           margin-right: 15px;
         }
+
         width: 100%;
-        & .select__two-type-inner{
+
+        & .select__two-type-inner {
           width: 100%;
         }
+
         @include respond-to('700') {
 
-          &:nth-child(1){
+          &:nth-child(1) {
             margin: 0;
           }
+
           margin-top: 10px;
         }
       }
@@ -56,12 +64,14 @@
     align-items: center;
     justify-content: space-between;
     margin-left: -111px;
+
     @include respond-to('1500') {
       grid-column: 2/5;
       margin: 0;
       margin-top: 32px;
 
     }
+
     @include respond-to('700') {
       grid-column: 1/6;
       flex-direction: column;
@@ -72,17 +82,21 @@
   &__nav-sort {
     display: flex;
     align-items: center;
-    & .text-5{
+
+    & .text-5 {
       font-size: 12px;
     }
+
     @include respond-to('700') {
       justify-content: space-between;
     }
+
     &-inner {
       margin-left: 15px;
       display: flex;
       align-items: center;
       margin: 0 -10px 0 5px;
+
       @include respond-to('500') {
         margin: 0 -5px 0 5px;
       }
@@ -94,6 +108,7 @@
       margin: 0 10px;
       transition: all .3s;
       cursor: pointer;
+
       @include respond-to('500') {
         margin: 0 5px;
       }
@@ -116,11 +131,13 @@
   &__nav-instock {
     display: flex;
     align-items: center;
+
     @include respond-to('700') {
-        margin-top: 35px;
-      }
+      margin-top: 35px;
+    }
+
     @include respond-to('500') {
-      & .text-5{
+      & .text-5 {
         font-size: 12px;
       }
     }
@@ -152,9 +169,11 @@
     grid-column: 1/6;
     display: grid;
     grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
+
     @include respond-to('1500') {
       padding: 50px 0 0;
     }
+
     @include respond-to('700') {
       padding: 35px 0 0;
     }
@@ -164,6 +183,7 @@
       grid-column: 2/5;
       display: grid;
       grid-template-columns: 3.175fr 1.25fr 3.175fr;
+
       @include respond-to('700') {
         grid-column: 1/6;
       }
@@ -205,6 +225,7 @@
     align-items: center;
     padding: 23px 5px;
     transition: all .3s;
+
     @include respond-to('1500') {
       grid-column: 2/5;
       margin: 0;
@@ -212,10 +233,12 @@
       padding: 12px 0;
 
     }
+
     @include respond-to('700') {
       grid-column: 1/6;
       margin-top: 47px;
     }
+
     &-text {
       margin-right: 8px;
       transition: all .3s;
@@ -252,10 +275,14 @@
     width: calc(41.85% - 0px);
     margin: 25px 0;
     overflow: visible;
+
     @include respond-to('1500') {
       width: 100%;
     }
 
+    @media(max-width: $md4) {
+      display: block;
+    }
   }
 
   &__item-body {
@@ -290,8 +317,11 @@
     padding: 10px 0 10px 10px;
     background: #000;
     overflow: auto;
-    @include respond-to('700') {
-      display: none;
+
+    @media(max-width: $md4) {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
     }
   }
 
@@ -300,6 +330,10 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+
+    @media(max-width: $md4) {
+      flex: 0 0 80px
+    }
 
     &.current {
       &::before {

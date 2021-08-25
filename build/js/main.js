@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     //burger
 
     function scrollbarWidth() {
-        var block = $('<div>').css({'height': '50px', 'width': '50px'}),
-            indicator = $('<div>').css({'height': '200px'});
+        var block = $('<div>').css({ 'height': '50px', 'width': '50px' }),
+            indicator = $('<div>').css({ 'height': '200px' });
 
         $('body').append(block.append(indicator));
         var w1 = $('div', block).innerWidth();
@@ -112,26 +112,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const feedbackSlider = new Swiper('.slider-feedback__container', {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 0,
         loop: false,
+        autoHeight: false,
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-
-            },
-            1500: {
+            1200: {
                 slidesPerView: 2,
-
+            },
+            768: {
+                autoHeight: true,
+                spaceBetween: 30,
             }
-        },
+        }
     })
-    $('.slider-feedback-button-prev').on('click', function () {
-        feedbackSlider.slidePrev()
-    })
-    $('.slider-feedback-button-next').on('click', function () {
-        feedbackSlider.slideNext()
-    })
+    $('.slider-feedback-button-prev').on('click', function () { feedbackSlider.slidePrev() })
+    $('.slider-feedback-button-next').on('click', function () { feedbackSlider.slideNext() })
 
 
     const crewSlider = new Swiper('.slider-crew__container', {
@@ -140,12 +136,8 @@ window.addEventListener('DOMContentLoaded', () => {
         loop: true,
     })
 
-    $('.slider-crew-button-prev').on('click', function () {
-        crewSlider.slidePrev()
-    })
-    $('.slider-crew-button-next').on('click', function () {
-        crewSlider.slideNext()
-    })
+    $('.slider-crew-button-prev').on('click', function () { crewSlider.slidePrev() })
+    $('.slider-crew-button-next').on('click', function () { crewSlider.slideNext() })
 
     const garantSlider = new Swiper('.slider-garant__container', {
         slidesPerView: "auto",
@@ -153,12 +145,8 @@ window.addEventListener('DOMContentLoaded', () => {
         loop: true,
     })
 
-    $('.slider-garant-button-prev').on('click', function () {
-        garantSlider.slidePrev()
-    })
-    $('.slider-garant-button-next').on('click', function () {
-        garantSlider.slideNext()
-    })
+    $('.slider-garant-button-prev').on('click', function () { garantSlider.slidePrev() })
+    $('.slider-garant-button-next').on('click', function () { garantSlider.slideNext() })
 
 
     // function swiperHitOn() {
@@ -191,12 +179,8 @@ window.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
-    $('.slider-recommendation-button-prev').on('click', function () {
-        recomendedSwiper.slidePrev()
-    })
-    $('.slider-recommendation-button-next').on('click', function () {
-        recomendedSwiper.slideNext()
-    })
+    $('.slider-recommendation-button-prev').on('click', function () { recomendedSwiper.slidePrev() })
+    $('.slider-recommendation-button-next').on('click', function () { recomendedSwiper.slideNext() })
 
     //phone mask
 
@@ -261,6 +245,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
+
     $('.accor-title-js').on('click', function () {
         let text = $(this).parent().find('.accor-text-js');
         let ths = $(this);
@@ -269,23 +256,19 @@ window.addEventListener('DOMContentLoaded', () => {
             text.animate({
                 opacity: 0
             }, "slow");
-
             function hide() {
                 text.removeClass('active')
                 ths.removeClass('active')
             }
-
             // setTimeout(hide, 700)
 
         } else {
             text.animate({
                 opacity: 1
             }, "slow");
-
             function show() {
 
             }
-
             $(this).addClass('active');
             text.addClass('active');
         }
@@ -334,15 +317,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 el.classList.remove('active')
             }
         })
-
         function offset(el) {
             const rect = el.getBoundingClientRect();
             const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+            return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
         }
     }
-
     scrollingPagination()
     window.addEventListener('scroll', scrollingPagination)
 
@@ -380,20 +361,35 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).addClass('current').siblings().removeClass('current')
         $(this).parents('.card-apart__slider').find('.card-apart__img').attr('src', srcImg)
     })
+    const addScrollbar = function () {
+        let windowWidth = $(window).width();
+        if (windowWidth > 767) {
+            $('.menu').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.apartment__item-photos').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.feedback__item-info-box-text-2').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.feedback-slide__text').mCustomScrollbar({
+                axis: "y",
+            });
+        } else {
+            $('.menu').mCustomScrollbar("destroy");
+            $('.apartment__item-photos').mCustomScrollbar("destroy");
+            $('.feedback__item-info-box-text-2').mCustomScrollbar("destroy");
+            $('.feedback-slide__text').mCustomScrollbar("destroy");
+        }
 
-    $('.menu').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.apartment__item-photos').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.feedback__item-info-box-text-2').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.feedback-slide__text').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.card-apart__gallery').mCustomScrollbar({
-        axis: "x",
-    });
+        $('.card-apart__gallery').mCustomScrollbar({
+            axis: "x",
+        });
+    }
+    addScrollbar()
+    $(window).resize(function () {
+        addScrollbar()
+    })
+
 });
