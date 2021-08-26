@@ -1,23 +1,25 @@
-.accor{
-  &__box{
+.accor {
+  &__box {}
 
-  }
-  &__item{
+  &__item {
     margin: 15px 0;
   }
-  &__title{
+
+  &__title {
     padding: 27px 31px;
     position: relative;
     background-color: #000000;
     cursor: pointer;
     transition: all .3s;
     border: 1px solid transparent;
-    &.active{
+
+    &.active {
 
       border: 1px solid #EECE83;
-      border-image: linear-gradient(90deg, rgba(238,206,131,1) 0%, rgba(200,162,55,1) 20%, rgba(255,222,135,1) 36%, rgba(232,201,112,1) 53%, rgba(215,174,68,1) 73%, rgba(162,106,13,1) 100%);
+      border-image: linear-gradient(90deg, rgba(238, 206, 131, 1) 0%, rgba(200, 162, 55, 1) 20%, rgba(255, 222, 135, 1) 36%, rgba(232, 201, 112, 1) 53%, rgba(215, 174, 68, 1) 73%, rgba(162, 106, 13, 1) 100%);
       border-image-slice: 1
     }
+
     &:after {
       content: '';
       position: absolute;
@@ -33,14 +35,14 @@
     }
 
   }
-  &__text{
-    transition: all .3s;
+
+  &__text {
     padding: 31px 32px;
     //opacity: 0;
     display: none;
 
-    &.active{
-      opacity:1;
+    &.active {
+      opacity: 1;
       display: block;
     }
 
@@ -49,5 +51,5 @@
 }
 
 .active.accor__title:after {
-  transform: translateY(-50%)  rotate(0);
+  transform: translateY(-50%) rotate(0);
 }

@@ -3738,9 +3738,6 @@ input[pseudo="-webkit-media-controls-timeline" i]::-internal-track-segment-highl
     transition: all .3s; }
 
 .accor__text {
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
   padding: 31px 32px;
   display: none; }
   .accor__text.active {
