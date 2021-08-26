@@ -113,11 +113,14 @@
     }
   }
 
+  &__gallery-hiden {
+    display: none;
+  }
 
   &__gallery-scroll {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    // overflow-x: auto;
   }
 
   &__gallery-item {
@@ -151,7 +154,7 @@
     img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     &:not(:last-child) {

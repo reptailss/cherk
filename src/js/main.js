@@ -112,18 +112,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const feedbackSlider = new Swiper('.slider-feedback__container', {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 15,
         loop: false,
+        autoHeight: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+            },
+            768: {
+                autoHeight: false,
+                spaceBetween: 30,
+            }
+        }
     })
     $('.slider-feedback-button-prev').on('click', function () { feedbackSlider.slidePrev() })
     $('.slider-feedback-button-next').on('click', function () { feedbackSlider.slideNext() })
 
 
     const crewSlider = new Swiper('.slider-crew__container', {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        breakpoints: {
+            500: {
+                slidesPerView: "auto",
+            },
+        }
     })
 
     $('.slider-crew-button-prev').on('click', function () { crewSlider.slidePrev() })
@@ -239,30 +254,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     $('.accor-title-js').on('click', function () {
-        let text = $(this).parent().find('.accor-text-js');
-        let ths = $(this);
-
-        if ($(this).hasClass('active')) {
-            text.animate({
-                opacity: 0
-            }, "slow");
-            function hide() {
-                text.removeClass('active')
-                ths.removeClass('active')
-            }
-            // setTimeout(hide, 700)
-
-        } else {
-            text.animate({
-                opacity: 1
-            }, "slow");
-            function show() {
-
-            }
-            $(this).addClass('active');
-            text.addClass('active');
-        }
-
+        $(this).toggleClass('active')
+        $(this).next().slideToggle()
     })
 
     // scroll
@@ -352,38 +345,41 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).parents('.card-apart__slider').find('.card-apart__img').attr('src', srcImg)
     })
 
-    $('.menu').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.apartment__item-photos').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.feedback__item-info-box-text-2').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.feedback-slide__text').mCustomScrollbar({
-        axis: "y",
-    });
-    $('.card-apart__gallery').mCustomScrollbar({
-        axis: "x",
-    });
+    const browserIdChrome = navigator.userAgent.search(/Chrome/)
+    const browserIdOpera = navigator.userAgent.search(/Opera/)
+
+    const addScrollbar = function () {
+        let windowWidth = $(window).width();
+        if (windowWidth > 767) {
+            $('.menu').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.apartment__item-photos').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.feedback__item-info-box-text-2').mCustomScrollbar({
+                axis: "y",
+            });
+            $('.feedback-slide__text').mCustomScrollbar({
+                axis: "y",
+            });
+        } else {
+            $('.menu').mCustomScrollbar("destroy");
+            $('.apartment__item-photos').mCustomScrollbar("destroy");
+            $('.feedback__item-info-box-text-2').mCustomScrollbar("destroy");
+            $('.feedback-slide__text').mCustomScrollbar("destroy");
+        }
+        if (browserIdChrome > 0 || browserIdOpera > 0) {
+            $('.card-apart__gallery').mCustomScrollbar({
+                axis: "x",
+                updateOnContentResize: true,
+            });
+        }
+
+    }
+    addScrollbar()
+    $(window).resize(function () {
+        addScrollbar()
+    })
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
