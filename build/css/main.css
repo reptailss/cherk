@@ -2802,9 +2802,6 @@ button {
   .card-apart__gallery .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
     height: 3px; }
 
-.card-apart__gallery-hiden {
-  display: none; }
-
 .card-apart__gallery-scroll {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3462,8 +3459,7 @@ button {
   padding: 10px 0 10px 10px;
   background: #000;
   overflow-x: auto;
-  overflow-y: hidden;
-  max-height: 70px; }
+  overflow-y: hidden; }
   @media (max-width: 767px) {
     .apartment__item-photos {
       max-width: 100%;
@@ -3480,9 +3476,8 @@ button {
   cursor: pointer;
   height: 100%; }
   .apartment__item-photos-item img {
-    display: block;
-    height: 100%;
-    width: auto; }
+    max-height: 85px;
+    display: block; }
   @media (max-width: 767px) {
     .apartment__item-photos-item {
       -webkit-box-flex: 0;
