@@ -91,8 +91,6 @@
     padding: 10px 10px 0 10px;
     max-width: 100%;
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: auto;
 
     .mCSB_horizontal.mCSB_inside>.mCSB_container {
       margin-bottom: 10px;
@@ -108,12 +106,18 @@
     }
   }
 
+  &__gallery-hiden {
+    display: none;
+  }
+
   &__gallery-scroll {
-    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   &__gallery-item {
-    display: inline-block;
+    cursor: pointer;
+    flex: 0 0 85px;
     max-width: 85px;
     width: 100%;
     position: relative;

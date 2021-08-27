@@ -1,7 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    // costumn scrollBar 
-
-
     //burger
 
     function scrollbarWidth() {
@@ -20,9 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerOpen() {
         document.documentElement.style.marginRight = `${scrollbarWidth()}px`;
         $('.menu').toggleClass('active')
-        // setTimeout($('body').toggleClass('bg000'),
-        //     500
-        // )
         document.documentElement.classList.add('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
         $('.burger-js').toggleClass('active')
@@ -33,10 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function burgerClose() {
 
         $('.menu').toggleClass('active')
-        // setTimeout($('body').toggleClass('bg000'),
-        //     500
-        // )
-
         document.documentElement.classList.remove('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
         $('.burger-js').toggleClass('active')
@@ -60,8 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     //menu
-
-
     $('.hover-menu-js').hover(
         function () {
             $(this).toggleClass('active-hover');
@@ -153,29 +141,6 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.slider-garant-button-prev').on('click', function () { garantSlider.slidePrev() })
     $('.slider-garant-button-next').on('click', function () { garantSlider.slideNext() })
 
-
-    // function swiperHitOn() {
-    //     let sliderWrapperGalerry3 = document.querySelectorAll('.slider-crew-hit-on-js');
-
-    //     sliderWrapperGalerry3.forEach(item => {
-
-
-    //         let mySwiper3 = new Swiper(item.querySelector('.slider-crew__container'), {
-    //             slidesPerView: 4,
-    //             spaceBetween: 100,
-    //             loop: true,
-    //             navigation: {
-    //                 nextEl: item.querySelector('.swiper-button-next-btn'),
-    //                 prevEl: item.querySelector('.swiper-button-prev-btn'),
-    //             },
-    //         })
-
-    //             ;
-    //     })
-    // }
-
-    // swiperHitOn();
-
     const recomendedSwiper = new Swiper(".slider-recommendation__container", {
         slidesPerView: "auto",
         spaceBetween: 125,
@@ -256,7 +221,6 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.accor-title-js').on('click', function () {
         $(this).toggleClass('active')
         $(this).next().slideToggle()
-
     })
 
     // scroll
@@ -337,7 +301,7 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.apartment__item-photos-item').on('click', function () {
         const srcImg = $(this).attr('data-src')
         $(this).addClass('current').siblings().removeClass('current')
-        $(this).parents('.apartment__item').find('.apartment__item-body').css('background', `url(../${srcImg})`)
+        $(this).parents('.apartment__item').find('.apartment__item-body-bg').attr('src', srcImg)
     })
 
     $('.card-apart__gallery-item').on('click', function () {
