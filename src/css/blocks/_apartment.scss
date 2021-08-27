@@ -295,6 +295,8 @@
     max-width: 100%;
     width: 100%;
     min-height: 401px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 
   &__item-body-bg {

@@ -300,8 +300,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     $('.apartment__item-photos-item').on('click', function () {
         const srcImg = $(this).attr('data-src')
+        console.log(srcImg);
+
         $(this).addClass('current').siblings().removeClass('current')
-        $(this).parents('.apartment__item').find('.apartment__item-body-bg').attr('src', srcImg)
+        $(this).parents('.apartment__item').find('.apartment__item-body').css('background-image', 'url(' + srcImg + ')');
     })
 
     $('.card-apart__gallery-item').on('click', function () {
