@@ -1,92 +1,112 @@
-.header{
+.header {
     grid-column: 2 / 5;
     min-height: 102px;
+
     @include respond-to('700') {
         min-height: 68px;
     }
+
     @include respond-to('500') {
         min-height: 49px;
     }
-    &__inner{
+
+    &__inner {
         justify-content: space-between;
         display: flex;
         align-items: center;
         padding: 27px 0 25px;
+
         @include respond-to('700') {
-           justify-content: center;
+            justify-content: center;
         }
+
         @include respond-to('700') {
             padding: 9px 0;
         }
     }
-    &__info-gup{
+
+    &__info-gup {
         margin: 0 - 21.5px;
+
         @include respond-to('700') {
             margin: 0;
         }
     }
-    &__info-item-gup{
+
+    &__info-item-gup {
         margin: 0 21.5px;
+
         @include respond-to('700') {
             margin: 0;
         }
 
     }
-    &__info{
+
+    &__info {
         display: flex;
         align-items: center;
 
-        &-burger{
+        &-burger {
             @include respond-to('700') {
                 position: absolute;
-                left: 0;
+                left: 20px;
                 margin: 0;
             }
         }
-        &-lang{
+
+        &-lang {
             @include respond-to('700') {
                 position: absolute;
-                right: 0;
+                right: 20px;
                 margin: 0;
             }
         }
     }
-    &__info-phone{
+
+    &__info-phone {
         display: flex;
         align-items: center;
+
         @include respond-to('700') {
             display: none;
         }
-        &--thanks{
+
+        &--thanks {
             flex-direction: column;
             align-items: flex-end;
         }
-        &-wrap{
+
+        &-wrap {
             display: flex;
             align-items: center;
         }
-        &-text{
+
+        &-text {
             margin-top: 5px;
         }
     }
-    &__info-phone-img{
+
+    &__info-phone-img {
         margin-right: 7px;
         width: 14px;
         height: 14px;
     }
-    &__info-phone-text{
+
+    &__info-phone-text {
         font-size: 18px;
         line-height: 21px;
         color: #FFFFFF;
     }
-&__logo{
-    @include respond-to('500') {
-max-width: 123px;
-        & img{
-            max-width: 100%;
-            width: 100%;
+
+    &__logo {
+        @include respond-to('500') {
+            max-width: 123px;
+
+            & img {
+                max-width: 100%;
+                width: 100%;
+            }
         }
     }
-}
 
 }

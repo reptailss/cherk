@@ -1,5 +1,8 @@
 .page-wrap-purchase {
     padding-top: 101px;
+    @include respond-to('700') {
+        padding-top: 30px;
+    }
 }
 
 .purchase {
@@ -11,13 +14,38 @@
         grid-column: 1/6;
         grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
         position: relative;
+
+        @media(max-width: $md3) {
+            padding: 30px 15px;
+            background: url(../img/purchase.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     &__title {
+        grid-column: 2/5;
         position: absolute;
         max-width: 1000px;
         right: 12%;
         top: 82px;
+
+        @media(max-width: $md1) {
+            right: auto;
+            left: 20px;
+        }
+
+        @media(max-width: $md3) {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:700px) {
+            grid-column: 1/6;
+        }
 
         span {
             display: inline;
@@ -32,11 +60,20 @@
     &__info {
         max-width: 100%;
         width: 100%;
+        background: url(../img/purchase.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         grid-column: 2/4;
         z-index: -1;
-        background: url(../img/purchase.jpg);
+
+
+        @media(max-width: $md3) {
+            display: none;
+        }
+
+        @media(max-width:700px) {
+            grid-column: 1/6;
+        }
     }
 
     &__content {
@@ -44,6 +81,24 @@
         align-items: center;
         justify-content: center;
         padding: 436px 0 114px 60px;
+
+        @media(max-width: $md1) {
+            padding: 300px 0 114px 60px;
+        }
+
+        @media(max-width: $md2) {
+            padding: 200px 0 30px 30px;
+        }
+
+        @media(max-width: $md3) {
+
+            padding: 0;
+            grid-column: 2/5;
+        }
+
+        @media(max-width:700px) {
+            grid-column: 1/6;
+        }
     }
 }
 
@@ -52,6 +107,10 @@
     width: 100%;
     font-size: 24px;
     line-height: 31px;
+
+    @media(max-width: $md4) {
+        font-size: 18px;
+    }
 
     &__elem {
         display: flex;

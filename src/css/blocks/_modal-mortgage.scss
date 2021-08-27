@@ -17,6 +17,13 @@
     padding: 33px 0 40px;
     margin-top: 53px;
     padding-right: 140px;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      padding: 33px 0 40px;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
     &-item{
       margin-top: 10px;
       &-line{
@@ -39,6 +46,13 @@
   &__info-block {
     grid-column: 4/5;
     margin: -20px 0;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      order: -1;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
     &-item{
       max-width: 463px;
       margin: 20px 0;
@@ -46,6 +60,9 @@
       background-color: #000000;
       display: flex;
       align-items: center;
+      @include respond-to('1500') {
+        max-width: 100%;
+      }
       &-img{
         margin-right: 41px;
       }
@@ -57,5 +74,8 @@
   }
   &__form{
     max-width: 470px;
+    @include respond-to('1500') {
+      max-width: 100%;
+    }
   }
 }

@@ -1,5 +1,9 @@
 .page-wrap-benefits {
     padding-top: 101px;
+    @include respond-to('700') {
+        padding-top: 30px;
+    }
+
 }
 
 .benefits {
@@ -10,6 +14,9 @@
         grid-column: 1/6;
         grid-template-columns: 1fr 3.175fr 1.25fr 3.175fr 1fr;
         position: relative;
+        @include respond-to('700') {
+            padding: 20px 0 20px;
+        }
     }
 
     &__mask {
@@ -21,6 +28,12 @@
         width: 100%;
         grid-column: 2/5;
         margin-bottom: 104px;
+        @include respond-to('700') {
+            margin-bottom: 20px;
+        }
+        @media(max-width:700px) {
+            grid-column: 1/6;
+        }
 
         span {
             line-height: 115%;
@@ -34,6 +47,14 @@
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+
+        @media(max-width: $md2) {
+            display: block;
+        }
+
+        @media(max-width:700px) {
+            grid-column: 1/6;
+        }
     }
 
     &-item {
@@ -43,6 +64,21 @@
         flex-direction: column;
         height: 100%;
 
+        @media(max-width: $md2) {
+            height: auto;
+            margin: 0 auto;
+        }
+
+        &:not(:last-child) {
+            margin-right: 15px;
+
+            @media(max-width: $md2) {
+                margin: 0 auto;
+                margin-bottom: 20px;
+                height: auto;
+            }
+        }
+
         &__header {
             padding: 38px 4px 33px 50px;
             display: flex;
@@ -51,6 +87,10 @@
             font-weight: 600;
             font-size: 24px;
             line-height: 29px;
+
+            @media(max-width: $md1) {
+                padding: 30px 15px;
+            }
         }
 
         &__label {
@@ -72,6 +112,10 @@
             flex-grow: 1;
             padding: 47px 4px 15px 50px;
             background: #000;
+
+            @media(max-width: $md1) {
+                padding: 30px 15px;
+            }
         }
 
         &__text {

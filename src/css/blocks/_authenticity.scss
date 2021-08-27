@@ -113,17 +113,21 @@
   &__statistic{
     position: relative;
     z-index: 12;
-    @include respond-to('1500') {
-      display: none;
+    &-title{
+      @include respond-to('1500') {
+        display: flex;
+       & span:nth-child(1){
+         margin-right: 10px;
+       }; }
     }
+
     &-list{
       margin: -100px 0;
       padding-left: 26%;
       @include respond-to('1500') {
         margin: 0;
         padding: 0;
-        width: 50%;
-        margin-left: auto;
+        width: 100%;
 
       }
 
@@ -131,11 +135,23 @@
     &-item{
       margin: 100px 0;
       max-width:  100%;
+      @include respond-to('1500') {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+
+      }
 
     }
     &-text{
       max-width: 239px;
       margin-top: 22px;
+      @include respond-to('1500') {
+   max-width: 100%;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 4px;
+      }
     }
   }
 

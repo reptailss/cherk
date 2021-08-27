@@ -77,6 +77,10 @@
     background-size: cover;
     width: 100%;
     text-align: center;
+    @media(max-width: 700px) {
+      padding: 12px 0;
+
+    }
   }
   &-arrow{
     padding: 0 41px;

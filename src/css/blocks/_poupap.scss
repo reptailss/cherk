@@ -16,10 +16,23 @@
     grid-column: 2/4;
     padding: 33px 0 40px;
     padding-right: 150px;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+      padding: 33px 0 40px;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
 
   &__form-block {
     grid-column: 4/5;
+    @include respond-to('1500') {
+      grid-column: 2/5;
+    }
+    @include respond-to('700') {
+      grid-column: 1/6;
+    }
   }
 
   &__title {

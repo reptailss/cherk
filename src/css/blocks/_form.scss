@@ -12,6 +12,8 @@
     @include respond-to('320') {
       flex-wrap: wrap;
     }
+
+
     &-text {
       margin-bottom: 20px;
     }
@@ -68,6 +70,11 @@
       transform: translateY(-50%);
       width: 16px;
       height: 16px;
+
+      @include respond-to('500') {
+        left: 10px;
+
+      }
 
       &.viber.jq-radio {
         background-image: url(../img/icons/viber-1.svg);
@@ -138,14 +145,17 @@
   &__item {
     &-mt {
       margin-top: 59px;
+      @include respond-to('700') {
+        margin-top: 35px;
+      }
+
     }
 
     &-phone {
       position: relative;
       display: flex;
       position: relative;
-      overflow: hidden;
-
+      //overflow: hidden;
       &:After {
         transition: all .3s;
         position: absolute;
@@ -169,7 +179,6 @@
     left: 82px;
     top: 0;
     padding: 6px 17px;
-
   }
   &__select{
     &-inner{
@@ -194,10 +203,15 @@
 
       }
       &-w50{
-        width: calc(50% - 34px)
+        width: calc(50% - 34px);
+        @include respond-to('700') {
+          width: 100%;
+
+        }
+
       }&-w100{
-               width: 100%;
-             }
+         width: 100%;
+       }
       &-mt{
         margin-top: 59px;
       }
@@ -273,6 +287,7 @@
   }
 
 }
+
 .label-js{
   position: relative;
   margin-left: 3px;
@@ -288,3 +303,19 @@
   }
 }
 
+.form__radio-label .text-2{
+  font-size: 11px;
+}
+
+.form__item-phone .text-2{
+  font-size: 14px;
+  font-weight: 300;
+  @extend %g-300;
+}
+
+.phone-input-js-focus.form__phone-input.form__input{
+  @include respond-to('700') {
+    width: 70%;
+
+  }
+}
