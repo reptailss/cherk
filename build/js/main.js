@@ -20,8 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.add('overflow-y');
         $('.page-wrap-top').toggleClass('hide');
         $('.burger-js').toggleClass('active')
-
-
     }
 
     function burgerClose() {
@@ -213,10 +211,6 @@ window.addEventListener('DOMContentLoaded', () => {
             ths.find('.tab-item').hide().eq($(this).index()).fadeIn(1000)
         }).eq(0).addClass('active');
     });
-
-
-
-
 
     $('.accor-title-js').on('click', function () {
         $(this).toggleClass('active')

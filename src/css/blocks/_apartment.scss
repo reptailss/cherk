@@ -327,7 +327,9 @@
     width: 100%;
     padding: 10px 0 10px 10px;
     background: #000;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: 70px;
 
     @media(max-width: $md4) {
       max-width: 100%;
@@ -341,6 +343,13 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+    height: 100%;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
 
     @media(max-width: $md4) {
       flex: 0 0 80px

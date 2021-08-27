@@ -102,7 +102,7 @@
     }
 
     .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
-      height: 1px;
+      height: 3px;
     }
   }
 
@@ -151,7 +151,7 @@
     img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     &:not(:last-child) {
