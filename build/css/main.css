@@ -1712,6 +1712,24 @@ button {
 .map {
   height: 350px; }
 
+input.error {
+  border-color: red; }
+
+input.error::-webkit-input-placeholder {
+  color: red; }
+
+input.error::-moz-placeholder {
+  color: red; }
+
+input.error:-ms-input-placeholder {
+  color: red; }
+
+input.error::-ms-input-placeholder {
+  color: red; }
+
+input.error::placeholder {
+  color: red; }
+
 .header {
   grid-column: 2 / 5;
   min-height: 102px; }

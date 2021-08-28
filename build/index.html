@@ -28,10 +28,11 @@
                             </div>
                         </div>
                         <div class="poupap__form-block">
-                            <form action="">
+                            <form id="form_1" action="">
                                 <div class="form__inner">
-                                    <input class=" text-2 input form__input" id="input-12" placeholder="Введите имя"
-                                        type="text"> <label class="form__input-label " for="input-12"></label>
+                                    <input name="name" class=" text-2 input form__input" id="input-12"
+                                        placeholder="Введите имя" type="text"> <label class="form__input-label "
+                                        for="input-12"></label>
                                     <div class="form__item-mt form__radio-inner">
                                         <div class="text-2 form__radio-text">
                                             Как с Вами удобнее связаться?
@@ -39,14 +40,14 @@
                                         <div class="form__radio form__radio-one-type">
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input checked class="form__radio-input viber" id="radio34"
-                                                    name="form-apartament" type="radio" />
+                                                    name="form-apartament" value="Viber" type="radio" />
                                                 <label class="form__radio-label text-2" for="radio34">
                                                     <span class="form__radio-label-text">
                                                         Viber</span>
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram" id="radio433"
+                                                <input class="form__radio-input telegram" id="radio433" value="Telegram"
                                                     name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio433">
                                                     <span class="text-2 form__radio-label-text">Telegram</span>
@@ -54,9 +55,9 @@
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram-2" id="radio553"
-                                                    name="form-apartament" type="radio" />
+                                                    value="WhatsUp" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio553">
-                                                    <span class="text-2 form__radio-label-text">Telegram</span>
+                                                    <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -77,7 +78,7 @@
                                         </div>
                                         <input
                                             class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                            id="phone32" type="text">
+                                            name="phone" id="phone32" type="text" required>
                                         <label class="text-2 form__input-label label-js" for="phone32">
                                         </label>
                                     </div>
@@ -85,7 +86,8 @@
                                         <div class="form__select-inner-wrap form__select-inner ">
                                             <div class=" form__select-item-w50 form__select-item">
                                                 <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select" name="form-cat">
+                                                    <select class="select__fo-type district__select" name="form-cat"
+                                                        required>
                                                         <option class="option option-top" selected
                                                             value="form-name-cat">
                                                             Категории объекта
@@ -108,7 +110,8 @@
                                             </div>
                                             <div class=" form__select-item-w50 form__select-item">
                                                 <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select" name="form-room">
+                                                    <select class="select__fo-type district__select" name="form-room"
+                                                        required>
                                                         <option class="option option-top" selected
                                                             value="form-name-room">
                                                             Кол. комнат
@@ -132,7 +135,7 @@
 
                                             <div class="form__select-item-mt form__select-item-w100 form__select-item">
                                                 <div class="select__fo-type-inner">
-                                                    <select class="select__fo-type district__select" name="form-room">
+                                                    <select class="select__fo-type district__select" name="form-budjet">
                                                         <option class="option option-top" selected
                                                             value="form-name-budget">
                                                             Бюджет
@@ -187,10 +190,11 @@
                             </div>
                         </div>
                         <div class="poupap__form-block">
-                            <form action="">
+                            <form id="form_2" action="">
                                 <div class="form__inner">
-                                    <input class=" text-2 input form__input" id="input-122" placeholder="Введите имя"
-                                        type="text"> <label class="form__input-label " for="input-122"></label>
+                                    <input class=" text-2 input form__input" id="input-122" name="name"
+                                        placeholder="Введите имя" type="text"> <label class="form__input-label "
+                                        for="input-122"></label>
                                     <div class="form__item-mt form__radio-inner">
                                         <div class="text-2 form__radio-text">
                                             Как с Вами удобнее связаться?
@@ -198,7 +202,7 @@
                                         <div class="form__radio form__radio-one-type">
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input checked class="form__radio-input viber" id="radio344"
-                                                    name="form-apartament" type="radio" />
+                                                    value="Viber" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label text-2" for="radio344">
                                                     <span class="form__radio-label-text">
                                                         Viber</span>
@@ -206,16 +210,16 @@
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram" id="radio4333"
-                                                    name="form-apartament" type="radio" />
+                                                    value="Telegram" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio4333">
                                                     <span class="text-2 form__radio-label-text">Telegram</span>
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram-2" id="radio5532"
-                                                    name="form-apartament" type="radio" />
+                                                    value="WhatsUp" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio5532">
-                                                    <span class="text-2 form__radio-label-text">Telegram</span>
+                                                    <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -236,7 +240,7 @@
                                         </div>
                                         <input
                                             class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                            id="phone323" type="text">
+                                            name="phone" id="phone323" type="text">
                                         <label class="text-2 form__input-label label-js" for="phone323">
                                         </label>
                                     </div>
@@ -344,7 +348,7 @@
                             </div>
                         </div>
                         <div class="poupap__form-block">
-                            <form action="">
+                            <form id="form_3" action="">
                                 <div class="form__inner">
                                     <input class=" text-2 input form__input" id="input-12234" placeholder="Введите имя"
                                         type="text"> <label class="form__input-label " for="input-12234"></label>
@@ -355,7 +359,7 @@
                                         <div class="form__radio form__radio-one-type">
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input checked class="form__radio-input viber" id="radio34443"
-                                                    name="form-apartament" type="radio" />
+                                                    value="Viber" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label text-2" for="radio34443">
                                                     <span class="form__radio-label-text">
                                                         Viber</span>
@@ -363,16 +367,16 @@
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram" id="radio433343"
-                                                    name="form-apartament" type="radio" />
+                                                    value="Telegram" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio433343">
                                                     <span class="text-2 form__radio-label-text">Telegram</span>
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram-2" id="radio553234"
-                                                    name="form-apartament" type="radio" />
+                                                    value="WhatsUp" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio553234">
-                                                    <span class="text-2 form__radio-label-text">Telegram</span>
+                                                    <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -393,7 +397,7 @@
                                         </div>
                                         <input
                                             class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                            id="phone32334" type="text">
+                                            id="phone32334" name="phone" type="text">
                                         <label class="text-2 form__input-label label-js" for="phone32334">
                                         </label>
                                     </div>
@@ -449,9 +453,9 @@
                                 </div>
                             </div>
                             <div class="modal-mortgage__form">
-                                <form action="">
+                                <form id="form_4" action="">
                                     <div class="form__inner">
-                                        <input class=" text-2 input form__input" id="input-1222"
+                                        <input class=" text-2 input form__input" id="input-1222" name="name"
                                             placeholder="Введите имя" type="text"> <label class="form__input-label "
                                             for="input-1222"></label>
                                         <div class="form__item-mt form__radio-inner">
@@ -461,7 +465,7 @@
                                             <div class="form__radio form__radio-one-type">
                                                 <div class="form__radio-item form__radio-item-button ">
                                                     <input checked class="form__radio-input viber" id="radio3444"
-                                                        name="form-apartament" type="radio" />
+                                                        name="form-apartament" type="radio" value="Viber" />
                                                     <label class="form__radio-label text-2" for="radio3444">
                                                         <span class="form__radio-label-text">
                                                             Viber</span>
@@ -469,16 +473,17 @@
                                                 </div>
                                                 <div class="form__radio-item form__radio-item-button ">
                                                     <input class="form__radio-input telegram" id="radio43334"
-                                                        name="form-apartament" type="radio" />
+                                                        name="form-apartament" type="radio" value="Telegram" />
                                                     <label class="form__radio-label" for="radio43334">
                                                         <span class="text-2 form__radio-label-text">Telegram</span>
                                                     </label>
                                                 </div>
                                                 <div class="form__radio-item form__radio-item-button ">
                                                     <input class="form__radio-input telegram-2" id="radio553243"
-                                                        name="form-apartament" type="radio" />
+                                                        name="form-apartament" type="radio" value="WhatsUp" />
                                                     <label class="form__radio-label" for="radio553243">
-                                                        <span class="text-2 form__radio-label-text">Telegram</span>
+                                                        <label
+                                                            class="text-2 form__radio-label-text">WhatsUp</label>span>
                                                     </label>
                                                 </div>
                                             </div>
@@ -499,7 +504,7 @@
                                             </div>
                                             <input
                                                 class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                                id="phone32323" type="text">
+                                                name='phone' id="phone32323" type="text">
                                             <label class="text-2 form__input-label label-js" for="phone32323">
                                             </label>
                                         </div>
@@ -2124,9 +2129,9 @@
                             </div>
                             <div class="tabs-content">
                                 <div class="tab-item">
-                                    <form action="" class="form form__home">
+                                    <form id="form-arend" action="" class="form form__home">
                                         <div class="form__inner">
-                                            <input class=" text-2 input form__input" id="input-1"
+                                            <input name="name" class=" text-2 input form__input" id="input-1"
                                                 placeholder="Введите имя" type="text"> <label class="form__input-label "
                                                 for="input-1"></label>
                                             <div class="form__item-mt form__radio-inner">
@@ -2136,7 +2141,7 @@
                                                 <div class="form__radio form__radio-one-type">
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input checked class="form__radio-input viber" id="radio3"
-                                                            name="form-apartament" type="radio" />
+                                                            name="form-apartament" value="viber" type="radio" />
                                                         <label class="form__radio-label text-2" for="radio3">
                                                             <span class="form__radio-label-text">
                                                                 Viber</span>
@@ -2144,16 +2149,16 @@
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input class="form__radio-input telegram" id="radio4"
-                                                            name="form-apartament" type="radio" />
+                                                            name="form-apartament" value="Telegram" type="radio" />
                                                         <label class="form__radio-label" for="radio4">
                                                             <span class="text-2 form__radio-label-text">Telegram</span>
                                                         </label>
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input class="form__radio-input telegram-2" id="radio5"
-                                                            name="form-apartament" type="radio" />
+                                                            name="form-apartament" type="radio" value="WhatsUp" />
                                                         <label class="form__radio-label" for="radio5">
-                                                            <span class="text-2 form__radio-label-text">Telegram</span>
+                                                            <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -2175,7 +2180,7 @@
                                                 </div>
                                                 <input
                                                     class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                                    id="phone" type="text">
+                                                    id="phone" name="phone" type="text">
                                                 <label class="text-2 form__input-label label-js" for="phone">
                                                 </label>
                                             </div>
@@ -2303,9 +2308,9 @@
                                     </form>
                                 </div>
                                 <div class="tab-item">
-                                    <form action="" class="form form__home">
+                                    <form id="form_5" action="" class="form form__home">
                                         <div class="form__inner">
-                                            <input class=" text-2 input form__input" id="input-23"
+                                            <input class=" text-2 input form__input" id="input-23" name="name"
                                                 placeholder="Введите имя" type="text"> <label class="form__input-label "
                                                 for="input-23"></label>
                                             <div class="form__item-mt form__radio-inner">
@@ -2315,7 +2320,7 @@
                                                 <div class="form__radio form__radio-one-type">
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input checked class="form__radio-input viber" id="radio44"
-                                                            name="form-apartament" type="radio" />
+                                                            value="Viber" name="form-apartament" type="radio" />
                                                         <label class="form__radio-label text-2" for="radio44">
                                                             <span class="form__radio-label-text">
                                                                 Viber</span>
@@ -2323,16 +2328,16 @@
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input class="form__radio-input telegram" id="radio43"
-                                                            name="form-apartament" type="radio" />
+                                                            name="form-apartament" type="radio" value="Telegram" />
                                                         <label class="form__radio-label" for="radio43">
                                                             <span class="text-2 form__radio-label-text">Telegram</span>
                                                         </label>
                                                     </div>
                                                     <div class="form__radio-item form__radio-item-button ">
                                                         <input class="form__radio-input telegram-2" id="radio42"
-                                                            name="form-apartament" type="radio" />
+                                                            name="form-apartament" type="radio" value="WhatsUp" />
                                                         <label class="form__radio-label" for="radio42">
-                                                            <span class="text-2 form__radio-label-text">Telegram</span>
+                                                            <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -2353,8 +2358,8 @@
                                                     </select>
                                                 </div>
                                                 <input
-                                                    class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                                    id="phone-60" type="text">
+                                                    class="text-2 phone-input-js phone-input-js-focus  form__phone-input form__input"
+                                                    id="phone-60" name="phone" type="text">
                                                 <label class="text-2 form__input-label label-js" for="phone-60">
                                                 </label>
                                             </div>
@@ -3526,7 +3531,7 @@
                             <span class="title black  w100 question__title-span">Задайте свой</span>
                             <span class="title white  question__title-span ">вопрос агенту</span>
                         </div>
-                        <form action="" class="form form__home">
+                        <form id="form_8" action="" class="form form__home">
                             <div class="form__inner">
                                 <div class="text-2 form__radio-text color05 pl-19">
                                     Например, можно ли снять квартиру с маленькой собачкой?
@@ -3537,7 +3542,7 @@
 
                                     <div class="form__radio form__radio-one-type">
                                         <div class="form__radio-item form__radio-item-button ">
-                                            <input checked class="form__radio-input viber" id="radio8"
+                                            <input checked class="form__radio-input viber" id="radio8" value="Viber"
                                                 name="form-apartament" type="radio" />
                                             <label class="form__radio-label text-2" for="radio8">
                                                 <span class="form__radio-label-text">
@@ -3546,16 +3551,16 @@
                                         </div>
                                         <div class="form__radio-item form__radio-item-button ">
                                             <input class="form__radio-input telegram" id="radio9" name="form-apartament"
-                                                type="radio" />
+                                                type="radio" value="Telegram" />
                                             <label class="form__radio-label" for="radio9">
                                                 <span class="text-2 form__radio-label-text">Telegram</span>
                                             </label>
                                         </div>
                                         <div class="form__radio-item form__radio-item-button ">
-                                            <input class="form__radio-input telegram-2" id="radio10"
+                                            <input class="form__radio-input telegram-2" id="radio10" value="WhatsUp"
                                                 name="form-apartament" type="radio" />
                                             <label class="form__radio-label" for="radio10">
-                                                <span class="text-2 form__radio-label-text">Telegram</span>
+                                                <span class="text-2 form__radio-label-text">WhatsUp</span>
                                             </label>
                                         </div>
                                     </div>
@@ -3576,7 +3581,7 @@
                                     </div>
                                     <input
                                         class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                        id="phone-23" type="text">
+                                        id="phone-23" type="text" name="phone">
                                     <label class="text-2 form__input-label label-js" for="phone-23">
                                     </label>
                                 </div>
@@ -3655,7 +3660,7 @@
                 <div class="form-apartment__inner border-top">
                     <div class="form-apartment__form">
                         <div class="form-apartment-box1">
-                            <form action="" class="form form__home">
+                            <form id="form_7" action="" class="form form__home">
                                 <div class="form__inner">
                                     <div class="form__title-block">
                                         <span class="title black  form__title-block__title-span">Подберите бесплатно
@@ -3673,14 +3678,14 @@
                                         <div class="form__radio form__radio-one-type">
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input checked class="form__radio-input viber" id="radio-31"
-                                                    name="form-apartament" type="radio" />
+                                                    value="Viber" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label text-2" for="radio-31">
                                                     <span class="form__radio-label-text">
                                                         Viber</span>
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram" id="radio-32"
+                                                <input class="form__radio-input telegram" id="radio-32" value="Telegram"
                                                     name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio-32">
                                                     <span class="text-2 form__radio-label-text">Telegram</span>
@@ -3688,9 +3693,9 @@
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
                                                 <input class="form__radio-input telegram-2" id="radio-33"
-                                                    name="form-apartament" type="radio" />
+                                                    value="WhatsUp" name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio-33">
-                                                    <span class="text-2 form__radio-label-text">Telegram</span>
+                                                    <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -3711,7 +3716,7 @@
                                         </div>
                                         <input
                                             class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                            id="phone-34" type="text">
+                                            name="phone" id="phone-34" type="text">
                                         <label class="text-2 form__input-label label-js" for="phone-34">
                                         </label>
                                     </div>
@@ -3894,9 +3899,11 @@
             </div>
         </div>
     </footer>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;" type="text/javascript"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/swiper.min.js"></script>

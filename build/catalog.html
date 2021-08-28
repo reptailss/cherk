@@ -117,8 +117,8 @@
                     </div>
                     <div class="title-9 catalog__title">Каталог</div>
                     <div class="catalog__map">
-                        <div class="map-block">
-                            <img alt="" src="img/map-catalog.png">
+                        <div id="ymap" class="map-block map">
+                            <!-- <img alt="" src="img/map-catalog.png"> -->
                         </div>
                         <div class="text-hover-gradient catalog__map-btn">Развернуть карту</div>
                     </div>
@@ -1282,35 +1282,36 @@
             <div class="page-wrap page-wrap-apartment">
                 <div class="form-apartment__inner ">
                     <div class="form-apartment__form">
-                        <form action="" class="form form__home">
+                        <form id="form_1" action="">
                             <div class="form__inner">
-                                <input class=" text-2 input form__input" id="input-1" placeholder="Введите имя"
-                                    type="text"> <label class="form__input-label " for="input-1"></label>
+                                <input name="name" class=" text-2 input form__input" id="input-12"
+                                    placeholder="Введите имя" type="text"> <label class="form__input-label "
+                                    for="input-12"></label>
                                 <div class="form__item-mt form__radio-inner">
                                     <div class="text-2 form__radio-text">
                                         Как с Вами удобнее связаться?
                                     </div>
                                     <div class="form__radio form__radio-one-type">
                                         <div class="form__radio-item form__radio-item-button ">
-                                            <input checked class="form__radio-input viber" id="radio3"
-                                                name="form-apartament" type="radio" />
-                                            <label class="form__radio-label text-2" for="radio3">
+                                            <input checked class="form__radio-input viber" id="radio34"
+                                                name="form-apartament" value="Viber" type="radio" />
+                                            <label class="form__radio-label text-2" for="radio34">
                                                 <span class="form__radio-label-text">
                                                     Viber</span>
                                             </label>
                                         </div>
                                         <div class="form__radio-item form__radio-item-button ">
-                                            <input class="form__radio-input telegram" id="radio4" name="form-apartament"
-                                                type="radio" />
-                                            <label class="form__radio-label" for="radio4">
+                                            <input class="form__radio-input telegram" id="radio433" value="Telegram"
+                                                name="form-apartament" type="radio" />
+                                            <label class="form__radio-label" for="radio433">
                                                 <span class="text-2 form__radio-label-text">Telegram</span>
                                             </label>
                                         </div>
                                         <div class="form__radio-item form__radio-item-button ">
-                                            <input class="form__radio-input telegram-2" id="radio5"
+                                            <input class="form__radio-input telegram-2" id="radio553" value="WhatsUp"
                                                 name="form-apartament" type="radio" />
-                                            <label class="form__radio-label" for="radio5">
-                                                <span class="text-2 form__radio-label-text">Telegram</span>
+                                            <label class="form__radio-label" for="radio553">
+                                                <span class="text-2 form__radio-label-text">WhatsUp</span>
                                             </label>
                                         </div>
                                     </div>
@@ -1331,76 +1332,39 @@
                                     </div>
                                     <input
                                         class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                        id="phone" type="text">
-                                    <label class="text-2 form__input-label label-js" for="phone">
+                                        name="phone" id="phone32" type="text" required>
+                                    <label class="text-2 form__input-label label-js" for="phone32">
                                     </label>
                                 </div>
                                 <div class="form__item-mt">
-                                    <div class="form__select-inner">
-                                        <div class="form__select-item">
+                                    <div class="form__select-inner-wrap form__select-inner ">
+                                        <div class=" form__select-item-w50 form__select-item">
                                             <div class="select__fo-type-inner">
-                                                <select class="select__fo-type district__select" name="form-district">
-                                                    <option class="option option-top" selected
-                                                        value="form-name-district">
-                                                        Выберите район
+                                                <select class="select__fo-type district__select" name="form-cat"
+                                                    required>
+                                                    <option class="option option-top" selected value="form-name-cat">
+                                                        Категории объекта
                                                     </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 1
+                                                    <option class="option option-js" value="form-name-cat">
+                                                        Категории объекта
                                                     </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 2
+                                                    <option class="option option-js" value="form-name-cat">
+                                                        Категории объекта
                                                     </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 3
+                                                    <option class="option option-js" value="form-namecatn">
+                                                        Категории объекта
                                                     </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 4
+                                                    <option class="option option-js" value="form-name-cat">Категории
+                                                        объекта
                                                     </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 5
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 6
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 7
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 8
-                                                    </option>
-                                                    <option class="option" value="form-name-district">Название
-                                                        района 9
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 10
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 11
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 12
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 13
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 14
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 15
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 16
-                                                    </option>
-                                                    <option class="option option-js" value="form-name-district">Название
-                                                        района 17
-                                                    </option>
+
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form__select-item">
+                                        <div class=" form__select-item-w50 form__select-item">
                                             <div class="select__fo-type-inner">
-                                                <select class="select__fo-type district__select" name="form-room">
+                                                <select class="select__fo-type district__select" name="form-room"
+                                                    required>
                                                     <option class="option option-top" selected value="form-name-room">
                                                         Кол. комнат
                                                     </option>
@@ -1410,10 +1374,34 @@
                                                     <option class="option option-js" value="form-name-room">
                                                         2 комнатная
                                                     </option>
-                                                    <option class="option option-js" value="form-name-room"> 3 комнатная
+                                                    <option class="option option-js" value="form-name-room"> 3
+                                                        комнатная
                                                     </option>
-                                                    <option class="option option-js" value="form-name-room">Название
+                                                    <option class="option option-js" value="form-name-room">
                                                         4-х комнатная
+                                                    </option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form__select-item-mt form__select-item-w100 form__select-item">
+                                            <div class="select__fo-type-inner">
+                                                <select class="select__fo-type district__select" name="form-budjet">
+                                                    <option class="option option-top" selected value="form-name-budget">
+                                                        Бюджет
+                                                    </option>
+                                                    <option class="option option-js" value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js" value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js" value="form-name-budget">
+                                                        1000-2000
+                                                    </option>
+                                                    <option class="option option-js" value="form-name-budget">
+                                                        1000-2000
                                                     </option>
 
                                                 </select>
@@ -1421,13 +1409,10 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form__item-mt">
-                                    <textarea class="form__textarea text-2 input form__input" id="textarea"
-                                        name="textarea" placeholder="Ваш комментарий / пожелания"></textarea>
-                                    <label class="form__input-label " for="textarea"></label>
-                                </div>
-                                <div class="form__item-mt">
-                                    <button class="button gradient-btn form__btn">Оценить стоимость и сроки
+                                    <button type="submit" class="button gradient-btn form__btn">Оценить стоимость и
+                                        сроки
                                     </button>
                                 </div>
                             </div>
@@ -1489,6 +1474,8 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/magnififc.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
         integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="

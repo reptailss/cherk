@@ -173,17 +173,18 @@
                         </div>
                         <img alt="" class="get-block__img" src="img/get-img.jpg">
                         <div class="get-block__form-block">
-                            <form action="">
+                            <form id="form_1" action="">
                                 <div class="form__inner">
                                     <input class=" text-2 input form__input" id="input-1" placeholder="Введите имя"
-                                        type="text"> <label class="form__input-label " for="input-1"></label>
+                                        name="name" type="text"> <label class="form__input-label "
+                                        for="input-1"></label>
                                     <div class="form__item-mt form__radio-inner">
                                         <div class="text-2 form__radio-text">
                                             Как с Вами удобнее связаться?
                                         </div>
                                         <div class="form__radio form__radio-one-type">
                                             <div class="form__radio-item form__radio-item-button ">
-                                                <input checked class="form__radio-input viber" id="radio3"
+                                                <input checked class="form__radio-input viber" id="radio3" value="Viber"
                                                     name="form-apartament" type="radio" />
                                                 <label class="form__radio-label text-2" for="radio3">
                                                     <span class="form__radio-label-text">
@@ -191,17 +192,17 @@
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram" id="radio4"
+                                                <input class="form__radio-input telegram" id="radio4" value="Telegram"
                                                     name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio4">
                                                     <span class="text-2 form__radio-label-text">Telegram</span>
                                                 </label>
                                             </div>
                                             <div class="form__radio-item form__radio-item-button ">
-                                                <input class="form__radio-input telegram-2" id="radio5"
+                                                <input class="form__radio-input telegram-2" id="radio5" value="WhatsUp"
                                                     name="form-apartament" type="radio" />
                                                 <label class="form__radio-label" for="radio5">
-                                                    <span class="text-2 form__radio-label-text">Telegram</span>
+                                                    <span class="text-2 form__radio-label-text">WhatsUp</span>
                                                 </label>
                                             </div>
                                         </div>
@@ -222,7 +223,7 @@
                                         </div>
                                         <input
                                             class="text-2 phone-input-js phone-input-js-focus form__phone-input form__input"
-                                            id="phone" type="text">
+                                            name="phone" id="phone" type="text">
                                         <label class="text-2 form__input-label label-js" for="phone">
                                         </label>
                                     </div>
@@ -300,7 +301,8 @@
                                     </div>
 
                                     <div class="form__item-mt">
-                                        <button type="submit" class="button gradient-btn form__btn">Оценить стоимость и сроки
+                                        <button type="submit" class="button gradient-btn form__btn">Оценить стоимость и
+                                            сроки
                                         </button>
                                     </div>
                                 </div>
@@ -350,6 +352,7 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/magnififc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
         integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="

@@ -348,35 +348,184 @@ window.addEventListener('DOMContentLoaded', () => {
     addScrollbar()
     $(window).resize(function () {
         addScrollbar()
-    })
+    });
 
-        // map
-        ; (function () {
-            if (typeof ymaps === 'undefined') {
-                return
-            }
+    // map
+    ; (function () {
+        if (typeof ymaps === 'undefined') {
+            return
+        }
 
-            ymaps.ready(function () {
-                var myMap = new ymaps.Map('ymap', {
-                    center: [55.794887, 37.712812],
-                    zoom: 16
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('ymap', {
+                center: [55.794887, 37.712812],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
                 }, {
-                    searchControlProvider: 'yandex#search'
-                }),
-                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    iconLayout: 'default#image',
+                    iconImageHref: '../img/icons/geo.svg',
+                    iconImageSize: [40, 63],
+                    iconImageOffset: [-50, -38]
+                });
 
-                    }, {
-                        iconLayout: 'default#image',
-                        iconImageHref: '../img/icons/geo.svg',
-                        iconImageSize: [40, 63],
-                        iconImageOffset: [-50, -38]
-                    });
-
-                myMap.geoObjects
-                    .add(myPlacemark)
-            });
-        })();
+            myMap.geoObjects
+                .add(myPlacemark)
+        });
+    })();
     // map
 
+    // formvalidate
 
+    $('#form-arend').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: '',
+            },
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_1').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: '',
+            },
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_2').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: '',
+            },
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_3').validate({
+        rules: {
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_4').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: '',
+            },
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_5').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+            },
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            name: {
+                required: '',
+                minlength: '',
+            },
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_6').validate({
+        rules: {
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_7').validate({
+        rules: {
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            phone: {
+                required: '',
+            },
+        }
+    })
+    $('#form_8').validate({
+        rules: {
+            phone: {
+                required: true,
+            },
+        },
+        messages: {
+            phone: {
+                required: '',
+            },
+        }
+    })
 });

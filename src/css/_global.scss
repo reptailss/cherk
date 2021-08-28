@@ -261,3 +261,11 @@ button {
 .map {
   height: 350px;
 }
+
+input.error {
+  border-color: red;
+}
+
+input.error::placeholder {
+  color: red;
+}
