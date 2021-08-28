@@ -109,7 +109,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 2,
             },
             768: {
-                autoHeight: false,
+                // autoHeight: false,
+                //   autoHeight: true,
                 spaceBetween: 30,
             }
         }
@@ -348,5 +349,34 @@ window.addEventListener('DOMContentLoaded', () => {
     $(window).resize(function () {
         addScrollbar()
     })
+
+        // map
+        ; (function () {
+            if (typeof ymaps === 'undefined') {
+                return
+            }
+
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('ymap', {
+                    center: [55.794887, 37.712812],
+                    zoom: 16
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: '../img/icons/geo.svg',
+                        iconImageSize: [40, 63],
+                        iconImageOffset: [-50, -38]
+                    });
+
+                myMap.geoObjects
+                    .add(myPlacemark)
+            });
+        })();
+    // map
+
 
 });
