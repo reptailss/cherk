@@ -528,4 +528,32 @@ window.addEventListener('DOMContentLoaded', () => {
             },
         }
     })
+    const headerSelectsLi = document.querySelectorAll('.lang__select--header .jq-selectbox__dropdown li')
+    headerSelectsLi.forEach(el => {
+        el.innerHTML = `
+        <a href="">${el.textContent}</a>
+        `
+    })
+
+    const forms = document.querySelectorAll('.form')
+
+    forms.forEach(el => {
+        el.addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.log('test');
+
+            const formData = [...new FormData(el)]
+                .reduce((acc, [field, value]) => ({ ...acc, [field]: value }), {})
+            console.log(formData);
+            $.ajax({
+                type: "POST",
+                url: "/mail.php", //Change
+                data: formData
+            })
+
+        })
+    })
+
+
+
 });

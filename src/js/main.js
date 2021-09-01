@@ -528,4 +528,15 @@ window.addEventListener('DOMContentLoaded', () => {
             },
         }
     })
+    const headerSelectsLi = document.querySelectorAll('.lang__select--header .jq-selectbox__dropdown li')
+    headerSelectsLi.forEach(el => {
+        el.innerHTML = `
+        <a href="">${el.textContent}</a>
+        `
+    })
+
+    const forms = document.querySelectorAll('.form')
+    console.log(forms);
+
+
 });
